@@ -14,45 +14,45 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Quicksand",  sans-serif;
-  --nav-font: "Open Sans",  sans-serif;
+  --default-font: "Inter",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Space Grotesk",  sans-serif;
+  --nav-font: "Inter",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #314862; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #13447f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #065cc2; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #0a1628; /* Background color for the entire website, including individual sections */
+  --default-color: #c9d6e3; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #22d3ee; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #12233d; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #06101f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #314862;  /* The default color of the main navmenu links */
-  --nav-hover-color: #065cc2; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #11427d; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #065cc2; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #acc4e0; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-color: #c9d6e3;  /* The default color of the main navmenu links */
+  --nav-hover-color: #22d3ee; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #06101f; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #0f2036; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #a8d8e8; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f7faff;
-  --surface-color: #ffffff;
+  --background-color: #10213a;
+  --surface-color: #16294a;
 }
 
 .dark-background {
-  --background-color: #065cc2;
+  --background-color: #06101f;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #afcdf1;
-  --surface-color: #2973cc;
-  --contrast-color: #ffffff;
+  --accent-color: #22d3ee;
+  --surface-color: #0f2036;
+  --contrast-color: #06101f;
 }
 
 /* Smooth scroll */
@@ -375,7 +375,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin: 0 5px;
   transition: 0.3s;
 }
@@ -467,7 +467,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
 }
 
 /*--------------------------------------------------------------
@@ -509,7 +509,7 @@ section,
 }
 
 .section-title p {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin: 5px 0 0 0;
   font-size: 16px;
   font-weight: 500;
@@ -589,7 +589,7 @@ section,
 
 .hero .lead {
   font-size: 1.2rem;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   margin-bottom: 3rem;
   line-height: 1.6;
 }
@@ -637,7 +637,7 @@ section,
 
 .hero .hero-stats .stat-item .stat-label {
   font-size: 0.9rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-top: 0.25rem;
 }
 
@@ -761,7 +761,7 @@ section,
   left: 20px;
   right: -20px;
   bottom: -20px;
-  background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 30%));
+  background: color-mix(in srgb, var(--background-color), black 25%);
   border-radius: 20px;
   z-index: 1;
 }
@@ -906,7 +906,7 @@ section,
 
 .about .profile-image-wrapper .signature-section .quote {
   font-style: italic;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
   font-size: 14px;
   margin: 0;
   max-width: 350px;
@@ -933,7 +933,7 @@ section,
 .about .about-content .intro p {
   font-size: 16px;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 @media (max-width: 768px) {
@@ -984,7 +984,7 @@ section,
 
 .about .about-content .skills-grid .skill-item p {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
   margin: 0;
 }
 
@@ -1021,7 +1021,7 @@ section,
 }
 
 .about .about-content .journey-timeline .timeline-item .description {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   font-size: 15px;
   line-height: 1.5;
 }
@@ -1055,7 +1055,7 @@ section,
 }
 
 .about .about-content .cta-section .fun-fact .text {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   font-size: 14px;
   font-weight: 500;
 }
@@ -1147,6 +1147,18 @@ section,
   transform: translateY(-10px);
   box-shadow: 0 20px 40px color-mix(in srgb, var(--accent-color), transparent 80%);
   border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.skills .skills-grid .skill-card .bg-light {
+  background-color: #eef4fa !important;
+}
+
+.skills .skills-grid .skill-card .bg-light span {
+  color: #0b2a4a;
+}
+
+.skills .skills-grid .skill-card .bg-light i {
+  color: #0891b2 !important;
 }
 
 .skills .skills-grid .skill-card .skill-header {
@@ -1246,7 +1258,7 @@ section,
 }
 
 .skills .skills-summary p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   margin-bottom: 30px;
   line-height: 1.6;
 }
@@ -1292,7 +1304,7 @@ section,
 
 .skills .skills-summary .summary-stats .stat-item .stat-info .stat-label {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
 .skills .skills-summary .skills-badges h4 {
@@ -1391,7 +1403,7 @@ section,
 }
 
 .resume .section-header .section-subtitle {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -1458,7 +1470,7 @@ section,
 }
 
 .resume .experience-section .experience-cards .experience-card .card-body p {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
   margin-bottom: 1rem;
   line-height: 1.6;
 }
@@ -1473,7 +1485,7 @@ section,
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: color-mix(in srgb, var(--default-color), transparent 8%);
   font-size: 0.9rem;
 }
 
@@ -1574,7 +1586,7 @@ section,
 }
 
 .resume .education-section .education-timeline .education-item .education-content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -1700,7 +1712,7 @@ section,
 }
 
 .services .service-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -1871,7 +1883,7 @@ section,
 
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title {
-  color: var(--contrast-color);
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   margin: 0 0 20px;
@@ -2131,7 +2143,7 @@ section,
 
 .testimonials .testimonials-container .testimonial-item .testimonial-profile div h4 {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
   margin: 0;
   font-weight: normal;
 }
@@ -2438,7 +2450,7 @@ section,
 }
 
 .contact .contact-form p {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
   margin-bottom: 2rem;
 }
 
@@ -2459,7 +2471,7 @@ section,
 
 .contact .contact-form .form-control::placeholder,
 .contact .contact-form .form-select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
 
 .contact .contact-form .btn {
@@ -2609,7 +2621,7 @@ section,
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
 .portfolio-details .portfolio-details-content .project-meta .date-client .meta-item i {
@@ -2653,7 +2665,7 @@ section,
 .portfolio-details .portfolio-details-content .project-overview .lead {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: color-mix(in srgb, var(--default-color), transparent 8%);
   margin-bottom: 1.5rem;
 }
 
@@ -2704,7 +2716,7 @@ section,
 
 .portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-body p {
   margin-bottom: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
   line-height: 1.6;
 }
 
@@ -2735,7 +2747,7 @@ section,
   align-items: center;
   padding: 8px 0;
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: color-mix(in srgb, var(--default-color), transparent 8%);
 }
 
 .portfolio-details .portfolio-details-content .project-features .feature-list li i {
@@ -2870,7 +2882,7 @@ section,
 .service-details .service-content .service-header .service-intro {
   font-size: 18px;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 .service-details .service-content h4 {
@@ -2926,7 +2938,7 @@ section,
 .service-details .service-features .feature-item .feature-content p {
   font-size: 14px;
   margin: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
 .service-details .service-process {
@@ -2975,7 +2987,7 @@ section,
   font-size: 15px;
   line-height: 1.6;
   margin: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 .service-details .service-gallery {
@@ -3033,7 +3045,7 @@ section,
 .service-details .service-sidebar .service-menu .menu-list .menu-item i {
   margin-right: 12px;
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: color 0.3s ease;
 }
 
