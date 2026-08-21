@@ -21,38 +21,38 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #0a1628; /* Background color for the entire website, including individual sections */
-  --default-color: #c9d6e3; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #22d3ee; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #12233d; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #06101f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #314862; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #13447f; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #065cc2; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #c9d6e3;  /* The default color of the main navmenu links */
-  --nav-hover-color: #22d3ee; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #06101f; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #0f2036; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8d8e8; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-color: #314862;  /* The default color of the main navmenu links */
+  --nav-hover-color: #065cc2; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #11427d; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #065cc2; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #acc4e0; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #10213a;
-  --surface-color: #16294a;
+  --background-color: #f7faff;
+  --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #06101f;
+  --background-color: #065cc2;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #22d3ee;
-  --surface-color: #0f2036;
-  --contrast-color: #06101f;
+  --accent-color: #afcdf1;
+  --surface-color: #2973cc;
+  --contrast-color: #ffffff;
 }
 
 /* Smooth scroll */
@@ -761,7 +761,7 @@ section,
   left: 20px;
   right: -20px;
   bottom: -20px;
-  background: color-mix(in srgb, var(--background-color), black 25%);
+  background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 30%));
   border-radius: 20px;
   z-index: 1;
 }
@@ -1158,7 +1158,7 @@ section,
 }
 
 .skills .skills-grid .skill-card .bg-light i {
-  color: #0891b2 !important;
+  color: var(--accent-color) !important;
 }
 
 .skills .skills-grid .skill-card .skill-header {
@@ -1883,7 +1883,7 @@ section,
 
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title {
-  color: #ffffff;
+  color: var(--contrast-color);
   font-size: 14px;
   font-weight: 500;
   margin: 0 0 20px;
