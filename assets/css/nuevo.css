@@ -5,3 +5,14 @@
 .border-button {
     border-radius: 40px;
 }
+
+
+
+.figma-icon-img {
+  width: 1.80rem; /* Tamaño proporcional a fs-5 de Bootstrap */
+  height: 1.80rem;
+  vertical-align: middle;
+  object-fit: contain;
+  /* Aplica filtro para cambiar el color del SVG a azul (#065cc2) */
+  filter: invert(24%) sepia(88%) saturate(2250%) hue-rotate(200deg) brightness(92%) contrast(97%);
+}
