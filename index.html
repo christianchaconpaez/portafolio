@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- METADATOS SEO Y GEO (Optimizado para Santiago, Chile) -->
+    <title>Christian Chacón Páez | Consultoría en Marketing B2B y Desarrollo Digital en Chile</title>
+    <meta name="description" content="Ayudo a empresas y profesionales en Chile a transformar un servicio excelente en un negocio visible y creíble con una presencia web que realmente vende.">
+    <meta name="keywords" content="Consultoría Marketing B2B, Especialista WordPress, UX/UI, Desarrollo Digital, Santiago, Chile">
+    <meta name="geo.region" content="CL-RM">
+    <meta name="geo.placename" content="Santiago">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon-chacon-marketing-blanco.svg">
+    <link rel="alternate icon" href="img/favicon-chacon-marketing-blanco.svg">
+    
+    <!-- Bootstrap 5.3 (solo Grid + Utilidades; sin "reboot" para no alterar tu CSS).
+         IMPORTANTE: va ANTES de tus CSS para que tus estilos mantengan prioridad. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css">
+
+    <!-- Archivos CSS Modulares (sin cambios) -->
+    <link rel="stylesheet" href="CSS/variables.css">
+    <link rel="stylesheet" href="CSS/atomic.css">
+    <link rel="stylesheet" href="CSS/main.css">
+
+        <!-- Unified Main CSS -->
+  <link href="CSS/main-assets.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
+    <div class="top-bar">
+        <div>📞 +569 4783 9131 &nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div>Lun - Vie 9:00am - 6:00pm</div>
+    </div>
+
+    <!-- ================= NAVEGACIÓN PRINCIPAL ================= -->
+    <header>
+        <nav class="nav-container">
+            <div class="atom-logo">
+                <a href="index.html">
+                    <img src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" class="site-logo">
+                </a>
+            </div>
+
+            <!-- Botón Hamburguesa para Móviles y Tablets -->
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Marketing</a></li>
+                <li><a href="#servicios">Diseño Web</a></li>
+                <li><a href="christian-chacon.html#portfolio">Proyectos</a></li>
+                <li><a href="christian-chacon.html">Sobre mí</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+
+            <a href="#contacto" class="atom-btn atom-btn-danger nav-cta">Contacto</a>
+        </nav>
+    </header>
+
+
+    
+
+    <main>
+
+        <!-- ================= SECCIÓN: HERO PRINCIPAL (FOTO EQUILIBRADA AL 50/50) ================= -->
+        <section class="hero-parallax-full">
+            <div class="hero-inner-container">
+                
+                <!-- Columna de Textos Principal (Izquierda) -->
+                <div class="pb-5">
+                    
+                    <h1 class="atom-title-hero">
+                        Más consultas y mejores clientes<br>
+                        <span class="fw-semibold" style="font-size: 0.85em; color: var(--text-main);">con una presencia web que realmente vende.</span>
+                    </h1>
+
+                    <p class="atom-subtitle" style="margin-bottom: 2rem;">
+                        Ordenamos tu propuesta comercial, fortalecemos tu marca y la llevamos a un sitio web que genera consultas de clientes que sí valen la pena.
+                    </p>
+
+                    <!-- Botón -->
+                    <div class="mb-4">
+                        <a href="#contacto" class="atom-btn" style="background-color: #0066ff; color: #ffffff; font-size: 0.95rem; padding: 0.9rem 2rem; box-shadow: 0 4px 14px rgba(0, 102, 255, 0.3);">Pedir diagnóstico gratuito →</a>
+                    </div>
+
+                    <!-- Píldoras de Posicionamiento y Desarrollo -->
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <span class="atom-btn atom-btn-outline" style="font-size: 0.8rem; padding: 0.4rem 1rem;">✔ Posicionamiento B2B & Fidelización</span>
+                        <span class="atom-btn atom-btn-outline" style="font-size: 0.8rem; padding: 0.4rem 1rem;">✔ Desarrollo UX/UI</span>
+                    </div>
+
+                    <!-- Tarjeta Inferior de WordPress y Protección de Datos -->
+                    <div class="hero-badges-card">
+                        <div class="hero-badge-item">
+                            <span style="color: var(--accent-cyan);">🌐</span> <strong>WordPress</strong>
+                        </div>
+                        <div style="width: 1px; height: 20px; background: var(--border-color);"></div>
+                        <div class="hero-badge-item">
+                            <span style="color: var(--accent-cyan);">🛡️</span> Ley 21.719 de Protección de Datos
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de Imagen con el Distintivo Flotante (Derecha) -->
+                <div class="hero-image-wrapper">
+                    
+                    <!-- Tarjeta Flotante a la altura de la cintura -->
+                    <div class="hero-floating-badge">
+                        <h2 class="fw-bold" style="color: var(--accent-cyan); font-size: 0.9rem; letter-spacing: 0.5px; margin-bottom: 0.2rem;">CHRISTIAN CHACÓN PÁEZ</h2>
+                        <p class="fw-semibold text-uppercase" style="color: var(--text-muted); font-size: 0.6rem; letter-spacing: 0.8px; line-height: 1.3;">Consultor en Marketing B2B & Desarrollo Digital</p>
+                    </div>
+
+                    <!-- Fotografía principal -->
+                    <div class="position-relative w-100" style="max-width: 580px; line-height: 0;">
+                        <img src="img/christian-chacon-paez-01.webp" alt="Christian Chacón Páez" class="d-block w-100 h-auto object-fit-cover">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN DELGADA: INDUSTRIAS CLAVE ================= -->
+        <div class="industrias-section-full">
+            <p class="industrias-title">ESTRATEGIAS DIGITALES, DESARROLLO WEB Y POSICIONAMIENTO PARA INDUSTRIAS CLAVE:</p>
+            <div class="industrias-grid">
+                <!-- Minería e Industria B2B -->
+                <a href="#contacto" class="industria-pill">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>
+                    Minería e Industria B2B
+                </a>
+
+                <!-- Transporte y Logística -->
+                <a href="#contacto" class="industria-pill">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.3 19.1 6 18 6H4c-1.1 0-2.1.3-2.6 1.6l-1.4 5c-.1.4-.2.8-.2 1.2 0 .4.1.8.2 1.2.3 1.1.8 2.8.8 2.8h3"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
+                    Transporte y Logística
+                </a>
+
+                <!-- Retail y Venta Masiva -->
+                <a href="#contacto" class="industria-pill">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    Retail y Venta Masiva
+                </a>
+
+                <!-- Salud y Servicios -->
+                <a href="#contacto" class="industria-pill">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+                    Salud y Servicios
+                </a>
+
+                <!-- Ingeniería y Tecnología -->
+                <a href="#contacto" class="industria-pill">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Ingeniería y Tecnología
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= SECCIÓN: ¿QUÉ HACEMOS POR TU NEGOCIO? ================= -->
+        <section id="servicios" class="features-parallax-full">
+            <div class="features-inner-container">
+                <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+                    <span class="fw-bold text-uppercase" style="color: var(--accent-cyan); font-size: 0.85rem; letter-spacing: 1px;">NUESTRAS SOLUCIONES</span>
+                    <h2 class="atom-title-section-center mt-2">¿Qué hacemos por tu negocio?</h2>
+                    <p class="atom-subtitle">Diseñamos estrategias digitales y herramientas orientadas a maximizar tus conversiones y simplificar tus operaciones.</p>
+                </div>
+
+                <!-- Grilla Bootstrap: 4 columnas (xl) / 2 columnas (md) / 1 columna (móvil) -->
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="feature-card-main h-100">
+                            <div>
+                                <div class="mb-3" style="color: var(--accent-cyan); font-size: 1.8rem;">📢</div>
+                                <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.8rem;">Marketing B2B</h3>
+                                <p class="atom-text-body">Una propuesta clara y un mensaje estructurado que atrae, educa y convierte a tu cliente ideal en oportunidades reales.</p>
+                            </div>
+                            <div class="feature-inner-preview">
+                                <span class="d-block mb-2" style="font-size: 0.75rem; color: var(--text-muted);">Estrategia de atracción</span>
+                                <div style="background: rgba(34, 211, 238, 0.08); border-left: 3px solid var(--accent-cyan); padding: 0.8rem; border-radius: 4px; font-size: 0.8rem;">
+                                    ✔ Posicionamiento y leads calificados.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="feature-card-main h-100">
+                            <div>
+                                <div class="mb-3" style="color: var(--accent-mint); font-size: 1.8rem;">🤝</div>
+                                <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.8rem;">Fidelización</h3>
+                                <p class="atom-text-body">Clientes que vuelven, compran más y te recomiendan, creando un flujo de ingresos constante y predecible.</p>
+                            </div>
+                            <div class="feature-inner-preview">
+                                <span class="d-block mb-2" style="font-size: 0.75rem; color: var(--text-muted);">Retención y valor</span>
+                                <div style="background: rgba(52, 211, 153, 0.08); border-left: 3px solid var(--accent-mint); padding: 0.8rem; border-radius: 4px; font-size: 0.8rem;">
+                                    ✔ Automatización post-venta.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="feature-card-main h-100">
+                            <div>
+                                <div class="mb-3" style="color: var(--accent-cyan); font-size: 1.8rem;">🎨</div>
+                                <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.8rem;">Branding</h3>
+                                <p class="atom-text-body">Una imagen coherente y profesional que transmite absoluta confianza desde el primer contacto visual.</p>
+                            </div>
+                            <div class="feature-inner-preview">
+                                <span class="d-block mb-2" style="font-size: 0.75rem; color: var(--text-muted);">Identidad visual</span>
+                                <div style="background: rgba(34, 211, 238, 0.08); border-left: 3px solid var(--accent-cyan); padding: 0.8rem; border-radius: 4px; font-size: 0.8rem;">
+                                    ✔ Diseño alineado al mercado B2B.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="feature-card-main h-100">
+                            <div>
+                                <div class="mb-3" style="color: var(--accent-mint); font-size: 1.8rem;">🌐</div>
+                                <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.8rem;">Diseño Web</h3>
+                                <p class="atom-text-body">Un sitio web rápido, claro, optimizado para SEO y diseñado estratégicamente para generar contactos.</p>
+                            </div>
+                            <div class="feature-inner-preview">
+                                <span class="d-block mb-2" style="font-size: 0.75rem; color: var(--text-muted);">Desarrollo digital</span>
+                                <div style="background: rgba(52, 211, 153, 0.08); border-left: 3px solid var(--accent-mint); padding: 0.8rem; border-radius: 4px; font-size: 0.8rem;">
+                                    ✔ WordPress, UX/UI y normativas.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: ¿TE PASA ALGUNO DE ESTOS PROBLEMAS? ================= -->
+        <section style="padding: 6rem 2rem;">
+            <!-- Grilla Bootstrap 50/50 con separación de 4rem (igual que el original) -->
+            <div class="row align-items-center" style="--bs-gutter-x: 4rem; --bs-gutter-y: 4rem;">
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex justify-content-center">
+                        <div class="position-relative w-100 overflow-hidden" style="max-width: 480px; border-radius: 1.5rem; border: 1px solid var(--border-color); box-shadow: 0 20px 30px rgba(0,0,0,0.4);">
+                            <img src="img/reunion-03.jpg" alt="Reunión de trabajo y consultoría" class="d-block w-100 h-auto object-fit-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <span class="d-block fw-bold text-uppercase" style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                        PUNTOS DE PARTIDA CONCRETOS
+                    </span>
+                    <h2 class="atom-title-section-left">
+                        ¿Te pasa alguno de estos problemas?
+                    </h2>
+                    <ul class="d-flex flex-column" style="list-style: none; gap: 1.2rem;">
+                        <li class="d-flex align-items-start gap-3 lh-base" style="font-size: 1.05rem; color: var(--text-main);">
+                            <span class="fw-bold" style="color: var(--accent-cyan); font-size: 1.2rem; line-height: 1;">→</span>
+                            <span>¿Tu web existe, pero nadie te escribe a partir de ella?</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 lh-base" style="font-size: 1.05rem; color: var(--text-main);">
+                            <span class="fw-bold" style="color: var(--accent-cyan); font-size: 1.2rem; line-height: 1;">→</span>
+                            <span>¿Tus clientes no entienden rápido qué haces y por qué elegirte?</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 lh-base" style="font-size: 1.05rem; color: var(--text-main);">
+                            <span class="fw-bold" style="color: var(--accent-cyan); font-size: 1.2rem; line-height: 1;">→</span>
+                            <span>¿Dependes solo del boca a boca para conseguir clientes?</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 lh-base" style="font-size: 1.05rem; color: var(--text-main);">
+                            <span class="fw-bold" style="color: var(--accent-cyan); font-size: 1.2rem; line-height: 1;">→</span>
+                            <span>¿Tu imagen no refleja la calidad de tu servicio?</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: METODOLOGÍAS QUE RESUELVEN PROBLEMAS ================= -->
+        <section class="metodologias-parallax-full">
+            <div class="metodologias-inner-container">
+                <div class="text-start mx-auto" style="max-width: 1200px;">
+                    <span class="d-block fw-bold text-uppercase" style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                        SERVICIOS
+                    </span>
+                    <h2 class="atom-title-section-left">
+                        Metodologías que resuelven problemas
+                    </h2>
+                </div>
+
+                <div class="metodologias-grid-4">
+                    <!-- CARD 1 -->
+                    <div class="metodologia-card">
+                        <div>
+                            <div style="color: var(--accent-cyan); font-size: 2rem; margin-bottom: 1.2rem;">📈</div>
+                            <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.4rem;">Consultoría y Marketing B2B</h3>
+                            <p class="fw-semibold" style="color: var(--accent-cyan); font-size: 0.85rem; margin-bottom: 1.2rem;">Empaquetamiento y Posicionamiento</p>
+                            <ul class="metodologia-list">
+                                <li><span class="check">✔</span> Empaquetamiento de servicios técnicos en productos comerciales.</li>
+                                <li><span class="check">✔</span> Definición de Buyer Persona y mensaje de valor corporativo.</li>
+                                <li><span class="check">✔</span> Estrategia de autoridad y presencia en LinkedIn.</li>
+                                <li><span class="check">✔</span> Campañas en Google Ads orientadas a intención de compra.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#contacto" class="atom-btn atom-btn-primary w-100" style="padding: 0.7rem;">Impulsar estrategia B2B →</a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="metodologia-card">
+                        <div>
+                            <div style="color: var(--accent-cyan); font-size: 2.2rem; margin-bottom: 1.2rem;">💎</div>
+                            <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.4rem;">Branding e Identidad Visual</h3>
+                            <p class="fw-semibold" style="color: var(--accent-cyan); font-size: 0.85rem; margin-bottom: 1.2rem;">Solidez Comercial y Credibilidad</p>
+                            <ul class="metodologia-list">
+                                <li><span class="check">✔</span> Diseño o rediseño integral de logotipo y manual de marca.</li>
+                                <li><span class="check">✔</span> Fichas técnicas y presentaciones de alto impacto comercial.</li>
+                                <li><span class="check">✔</span> Material para ferias, eventos corporativos y flotas vehiculares.</li>
+                                <li><span class="check">✔</span> Plantillas modulares para consistencia en redes sociales.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#contacto" class="atom-btn atom-btn-primary w-100" style="padding: 0.7rem;">Mejorar mi imagen →</a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="metodologia-card">
+                        <div>
+                            <div style="color: var(--accent-mint); font-size: 2rem; margin-bottom: 1.2rem;">💚</div>
+                            <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.4rem;">Fidelización y Retención</h3>
+                            <p class="fw-semibold" style="color: var(--accent-mint); font-size: 0.85rem; margin-bottom: 1.2rem;">Lealtad de Clientes y Recompra</p>
+                            <ul class="metodologia-list">
+                                <li><span class="check">✔</span> Diseño estratégico de programas de lealtad y beneficios.</li>
+                                <li><span class="check">✔</span> Mecánicas de incentivos y promociones para clientes habituales.</li>
+                                <li><span class="check">✔</span> Campañas digitales de reactivación de clientes inactivos.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#contacto" class="atom-btn atom-btn-primary w-100" style="padding: 0.7rem;">Plan de fidelización →</a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="metodologia-card">
+                        <div>
+                            <div style="color: var(--accent-cyan); font-size: 2rem; margin-bottom: 1.2rem;">💻</div>
+                            <h3 class="fw-bold" style="font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.4rem;">Diseño y Desarrollo Web</h3>
+                            <p class="fw-semibold" style="color: var(--accent-cyan); font-size: 0.85rem; margin-bottom: 1.2rem;">Orientado a Conversión y Autogestionable</p>
+                            <ul class="metodologia-list">
+                                <li><span class="check">✔</span> Prototipado UX/UI en Figma y arquitectura de contenidos.</li>
+                                <li><span class="check">✔</span> Desarrollo completo en WordPress, ultra rápido y responsivo.</li>
+                                <li><span class="check">✔</span> Optimización SEO On-Page base para Chile.</li>
+                                <li><span class="check">✔</span> Adaptación Web a la Ley N° 21.719 de Protección de Datos.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#contacto" class="atom-btn atom-btn-primary w-100" style="padding: 0.7rem;">Quiero mi sitio web →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: PRUEBA SOCIAL Y OPINIONES ================= -->
+        <section class="testimonios-section">
+            <div class="text-start mx-auto" style="max-width: 1200px;">
+                <span class="d-block fw-bold text-uppercase" style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                    PRUEBA SOCIAL Y OPINIONES
+                </span>
+                <h2 class="atom-title-section-left">
+                    La confianza de quienes han trabajado conmigo
+                </h2>
+                <p class="atom-subtitle mt-2">
+                    Validaciones reales de colegas y directivos sobre el compromiso y rigor en cada trabajo.
+                </p>
+            </div>
+
+            <div class="testimonios-grid-3">
+                <!-- Testimonio 1 -->
+                <div class="testimonio-card">
+                    <div>
+                        <div class="testimonio-profile">
+                            <img src="img/testimonio-01.jpg" alt="Vinko Cikutovic Madariaga" class="testimonio-avatar">
+                            <div class="testimonio-info">
+                                <h4>Vinko Cikutovic Madariaga</h4>
+                                <p>Gerente General Cikbus Elité<br><span style="color: var(--accent-cyan);">✓ Perfil verificado en LinkedIn</span></p>
+                            </div>
+                        </div>
+                        <div class="testimonio-stars">★★★★★</div>
+                        <p class="testimonio-text">
+                            &laquo;El trabajo de marketing que Christian Chacón realizó con nosotros fue siempre notable. Su dedicación a la creación, desarrollo y crecimiento de nuestra marca CIKBUS desde un principio se tradujo en resultados de alta calidad...&raquo;
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonio-card">
+                    <div>
+                        <div class="testimonio-profile">
+                            <img src="img/testimonio-02.jpg" alt="Eduardo Peña M." class="testimonio-avatar">
+                            <div class="testimonio-info">
+                                <h4>Eduardo Peña M.</h4>
+                                <p>Director Creativo Agencia Bireal<br><span style="color: var(--accent-cyan);">✓ Perfil verificado en LinkedIn</span></p>
+                            </div>
+                        </div>
+                        <div class="testimonio-stars">★★★★★</div>
+                        <p class="testimonio-text">
+                            &laquo;Excelente profesional muy detallista y creativo. Su gran activo es la calidad de sus trabajos y el compromiso y pasión que coloca en todo. 100% recomendado...&raquo;
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonio-card">
+                    <div>
+                        <div class="testimonio-profile">
+                            <img src="img/testimonio-03.jpg" alt="Juan Carlos Espinoza" class="testimonio-avatar">
+                            <div class="testimonio-info">
+                                <h4>Juan Carlos Espinoza</h4>
+                                <p>Gerente General Hidrosistemas Chile<br><span style="color: var(--accent-cyan);">✓ Perfil verificado en LinkedIn</span></p>
+                            </div>
+                        </div>
+                        <div class="testimonio-stars">★★★★★</div>
+                        <p class="testimonio-text">
+                            &laquo;Recomiendo ampliamente a Christian como un publicista excepcional. Sus estrategias han sido clave para fortalecer nuestra marca y alcanzar nuestros objetivos comerciales...&raquo;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: ¿CÓMO TRABAJAMOS JUNTOS? ================= -->
+        <section class="metodologia-pasos-section">
+            <div class="metodologia-pasos-grid">
+                <div>
+                    <span class="d-block fw-bold text-uppercase" style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                        METODOLOGÍA
+                    </span>
+                    <h2 class="atom-title-section-left">
+                        ¿Cómo trabajamos juntos?
+                    </h2>
+                    <p class="atom-subtitle mt-3">
+                        Un proceso transparente y estructurado para llevar tu proyecto digital al siguiente nivel sin fricciones.
+                    </p>
+                </div>
+                <div class="pasos-cards-wrapper">
+                    <div class="paso-card-item">
+                        <div class="paso-number">1</div>
+                        <div class="paso-content">
+                            <h3>Conversamos</h3>
+                            <p>Entendemos tu negocio, tu cliente ideal y tu objetivo comercial para trazar la mejor ruta.</p>
+                        </div>
+                    </div>
+                    <div class="paso-card-item">
+                        <div class="paso-number">2</div>
+                        <div class="paso-content">
+                            <h3>Proponemos</h3>
+                            <p>Diseñamos un plan claro, a tu medida, con entregables, plazos definidos y precio transparente.</p>
+                        </div>
+                    </div>
+                    <div class="paso-card-item">
+                        <div class="paso-number">3</div>
+                        <div class="paso-content">
+                            <h3>Implementamos</h3>
+                            <p>Ejecutamos con rigor técnico y te dejamos operando, con acompañamiento y soporte posterior.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO? ================= -->
+        <section id="contacto" class="revision-digital-section">
+            <div class="revision-digital-grid">
+                <div>
+                    <div class="text-start mx-auto" style="max-width: 1200px;">
+                        <span class="d-block fw-bold text-uppercase" style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                            HABLEMOS DE TU PROYECTO
+                        </span>
+                        <h2 class="atom-title-section-left">
+                            ¿Revisamos tu presencia digital sin costo?
+                        </h2>
+                    </div>
+
+                    <p class="mt-4" style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+                        Agendemos una conversación de 20 minutos. Analizaremos tu situación actual, detectaremos qué está frenando tus consultas comerciales y definiremos los primeros pasos para resolverlo. Sin compromisos ni presiones.
+                    </p>
+
+                    <div class="d-flex flex-column" style="gap: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
+                        <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
+                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.8rem; font-size: 0.8rem; color: var(--text-muted);">
+                            <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong> en Chile.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta de Sesión de Diagnóstico con Formulario -->
+                <div class="sesion-card">
+                    <div>
+                        <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
+                        
+                        <h3 class="fw-bold mb-2" style="font-size: 1.5rem; color: var(--text-main);">
+                            Solicita tu sesión de diagnóstico
+                        </h3>
+                        
+                        <p class="fw-semibold mb-4" style="color: var(--accent-cyan); font-size: 0.9rem; line-height: 1.4;">
+                            Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
+                        </p>
+
+                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) — sin cambios de IDs, names, action ni target -->
+                        <form id="agendarForm" action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec" method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
+                            <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
+                                <div class="col-6">
+                                    <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Nombre *</label>
+                                    <input type="text" name="nombre" id="campoNombre" placeholder="Ej. Juan" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
+                                </div>
+                                <div class="col-6">
+                                    <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Apellido *</label>
+                                    <input type="text" name="apellido" id="campoApellido" placeholder="Ej. Pérez" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Correo Electrónico *</label>
+                                <input type="email" name="correo" id="campoCorreo" placeholder="correo@ejemplo.com" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
+                            </div>
+                            <div>
+                                <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Teléfono de Contacto *</label>
+                                <input type="tel" name="telefono" id="campoTelefono" placeholder="+56 9 1234 5678" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
+                            </div>
+
+                            <!-- Casilla de consentimiento -->
+                            <div class="d-flex align-items-start" style="gap: 0.6rem; margin-top: 0.3rem;">
+                                <input type="checkbox" name="consentimiento" id="campoConsentimiento" value="Sí" style="margin-top: 0.2rem; cursor: pointer; accent-color: var(--accent-cyan);">
+                                <label for="campoConsentimiento" style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; cursor: pointer;">
+                                    Acepto recibir mensajes y correos con información adicional y material de promociones.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <!-- Botón de Agendar (el estilo inline se mantiene porque main.js lo modifica al validar) -->
+                        <button type="button" id="btnAgendar" disabled class="atom-btn w-100" style="background-color: #334155; color: #94a3b8; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 9999px; font-weight: 600; border: none; cursor: not-allowed; text-align: center; display: block; transition: all 0.3s ease;">
+                            Agendar Reunión →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER MODULAR ================= -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4 class="mb-3" style="color: var(--text-main);">CHACONMARKETING</h4>
+                <p class="atom-text-body">Transformando servicios excelentes en negocios visibles y creíbles.</p>
+            </div>
+            <div>
+                <h4 class="mb-3" style="color: var(--text-main);">Contacto</h4>
+                <p class="atom-text-body">Providencia, Santiago - Chile<br>+562 2423 1970</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace al Script Modular (sin cambios) -->
+    <script src="js/main.js"></script>
+
+    <!-- ================= BOTÓN FLOTANTE DE WHATSAPP ================= -->
+    <a href="https://wa.me/56947839131?text=Hola,%20me%20gustaría%20más%20información%20sobre%20sus%20servicios%20de%20consultoría." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+    </a>
+
+    <!-- Iframe oculto para procesar el envío a Google Sheets y abrir Google Calendar (sin cambios) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" class="d-none" onload="if(window.submitted){window.open('https://calendar.app.google/jzTESP99Gii4eJC78', '_blank');}"></iframe>
+
+</body>
+</html>
