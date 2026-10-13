@@ -1,0 +1,932 @@
+/* ====================================================================
+   ESTILOS GENERALES Y LAYOUT
+   =================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+/* Top Bar superior de contacto */
+.top-bar {
+  background: #111827;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.5rem 2rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header Principal */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 10, 19, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.atom-logo {
+  display: flex;
+  align-items: center;
+}
+
+.atom-logo a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.atom-logo img,
+.site-logo {
+  height: 26px;
+  width: auto;
+  max-width: 230px;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  .atom-logo img,
+  .site-logo {
+    height: 22px;
+    max-width: 185px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--accent-cyan);
+}
+
+/* Secciones Generales (Excluyendo las que ocupan 100% de ancho) */
+section:not(.hero-parallax-full):not(.features-parallax-full):not(.metodologias-parallax-full) {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ====================================================================
+   SECCIÓN HERO PARALLAX - FULL DE LADO A LADO CON CONTENIDO EN CAJA
+   =================================================================== */
+.hero-parallax-full {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: url('../img/abstract-bg-01.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  /* Espacio para acercar el contenido al menú */
+  padding: 0.8rem 0 0 0;
+  
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.hero-parallax-full::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 10, 19, 0.50); 
+  z-index: -1;
+}
+
+/* Contenedor en caja que distribuye ambas columnas al 50% y 50% */
+.hero-inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Exactamente 50% para textos y 50% para la imagen */
+  gap: 3rem;
+  align-items: flex-end; /* Alinea los elementos contra la base inferior */
+}
+
+/* ====================================================================
+   SECCIÓN HERO PARALLAX - FULL DE LADO A LADO CON CONTENIDO EN CAJA
+   =================================================================== */
+
+
+
+
+
+/* ====================================================================
+   SECCIÓN: QUÉ HACEMOS POR TU NEGOCIO - PARALLAX FULL CON BG-02
+   =================================================================== */
+.features-parallax-full {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: url('../img/abstract-bg-02.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.features-parallax-full::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 10, 19, 0.50); 
+  z-index: -1;
+}
+
+.features-inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Tarjeta Principal Oscura */
+.feature-card-main {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.6) 0%, rgba(7, 10, 19, 0.8) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.feature-card-main:hover {
+  border-color: rgba(34, 211, 238, 0.25);
+  transform: translateY(-4px);
+}
+
+.feature-inner-preview {
+  background: rgba(4, 6, 11, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+/* ====================================================================
+   ESTILOS DE INDUSTRIAS Y COMPONENTES
+   =================================================================== */
+.hero-badges-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(11, 15, 25, 0.75);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(8px);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.hero-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.industrias-section-full {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #04060b;
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.industrias-title {
+  color: var(--accent-cyan);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.industrias-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.industria-pill {
+  background: rgba(17, 34, 64, 0.85);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  color: var(--text-main);
+  padding: 0.7rem 1.3rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.industria-pill:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(34, 211, 238, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Sistema de Pestañas Interactivas y Acordeones */
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.6rem 1.2rem;
+  border-radius: 99px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: var(--accent-mint);
+  color: #070a13;
+  border-color: var(--accent-mint);
+  font-weight: 600;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.faq-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.2rem;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Footer Modular */
+footer {
+  background: #04060b;
+  border-top: 1px solid var(--border-color);
+  padding: 4rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ====================================================================
+   SECCIÓN DE METODOLOGÍAS Y SERVICIOS DETALLADOS (4 CARDS)
+   =================================================================== */
+.metodologias-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1100px) {
+  .metodologias-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .metodologias-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metodologia-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.75) 0%, rgba(7, 10, 19, 0.9) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.metodologia-card:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.metodologia-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 1.5rem 0 2rem 0;
+  padding: 0;
+}
+
+.metodologia-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.metodologia-list li span.check {
+  color: var(--accent-cyan);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* ====================================================================
+   SECCIÓN DE TESTIMONIOS / PRUEBA SOCIAL
+   =================================================================== */
+.testimonios-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonios-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 960px) {
+  .testimonios-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonio-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.65) 0%, rgba(7, 10, 19, 0.85) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonio-card:hover {
+  border-color: rgba(34, 211, 238, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.testimonio-stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+}
+
+.testimonio-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.testimonio-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.2rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.testimonio-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-cyan);
+}
+
+.testimonio-info h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.testimonio-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* ====================================================================
+   SECCIÓN: METODOLOGÍAS - PARALLAX FULL CON BG-03
+   =================================================================== */
+.metodologias-parallax-full {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: url('../img/abstract-bg-03.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.metodologias-parallax-full::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 10, 19, 0.50); 
+  z-index: -1;
+}
+
+.metodologias-inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+  .hero-parallax-full, .features-parallax-full, .metodologias-parallax-full {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    background-attachment: scroll;
+  }
+  .hero-inner-container, .features-inner-container, .metodologias-inner-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .tab-pane.active, .faq-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ====================================================================
+   SECCIÓN: ¿CÓMO TRABAJAMOS? (ESTILO DOS COLUMNAS)
+   =================================================================== */
+.metodologia-pasos-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.metodologia-pasos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .metodologia-pasos-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.pasos-card-container {
+  background: linear-gradient(145deg, rgba(11, 15, 25, 0.95) 0%, rgba(4, 6, 11, 0.95) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.paso-item h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+}
+
+.paso-item p {
+  font-size: 0.95rem;
+  color: var(--accent-cyan);
+  line-height: 1.5;
+}
+
+
+
+/* ====================================================================
+   SECCIÓN: ¿CÓMO TRABAJAMOS? (3 CARDS SEPARADAS)
+   =================================================================== */
+.metodologia-pasos-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.metodologia-pasos-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .metodologia-pasos-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Contenedor de las 3 tarjetas en columna o grilla interna */
+.pasos-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Tarjeta individual para cada paso */
+.paso-card-item {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.7) 0%, rgba(7, 10, 19, 0.85) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 1.2rem;
+  padding: 1.8rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.paso-card-item:hover {
+  border-color: rgba(34, 211, 238, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.paso-number {
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--accent-cyan);
+  font-weight: 800;
+  font-size: 1.1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.paso-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+}
+
+.paso-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+
+/* ====================================================================
+   ETIQUETA FLOTANTE SOBRE LA IMAGEN DEL HERO
+   =================================================================== */
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.hero-floating-badge {
+  position: absolute;
+  right: -10%; /* Lo desplaza ligeramente hacia la izquierda para que muerda el borde de la imagen */
+  top: 60%;    /* Ubicado aproximadamente a la altura de la cintura */
+  transform: translateY(-50%);
+  background: rgba(11, 15, 25, 0.85); /* Fondo oscuro translúcido con efecto vidrio */
+  border: 1px solid rgba(34, 211, 238, 0.3); /* Borde cian sutil */
+  backdrop-filter: blur(10px);
+  padding: 0.9rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  max-width: 260px;
+}
+
+@media (max-width: 900px) {
+  /* En dispositivos móviles se adapta a la parte superior para evitar solapamientos */
+  .hero-floating-badge {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+}
+
+
+
+/* ====================================================================
+   BOTÓN FLOTANTE DE WHATSAPP (ESQUINA INFERIOR DERECHA)
+   =================================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+
+
+/* ====================================================================
+   SECCIÓN FINAL: REVISIÓN DE PRESENCIA DIGITAL / CONTACTO
+   =================================================================== */
+.revision-digital-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.revision-digital-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+@media (max-width: 950px) {
+  .revision-digital-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Tarjeta derecha de agendamiento */
+.sesion-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(7, 10, 19, 0.95) 100%);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.sesion-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-mint), var(--accent-cyan));
+}
+
+
+
+
+
+/* ====================================================================
+   CORRECCIÓN Y ESTILOS RESPONSIVOS PARA EL MENÚ HAMBURGUESA
+   =================================================================== */
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Forzar la limpieza de viñetas o puntos blancos indeseados en la navegación */
+.nav-container ul, 
+.nav-container li {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botón Hamburguesa (Oculto por defecto en pantallas de escritorio) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-main, #ffffff);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animación del botón hamburguesa a una 'X' cuando se active */
+.menu-toggle.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Comportamiento Responsivo para Móviles y Tablets (Pantallas menores a 900px) */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-card, #0b0f19);
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        
+        /* Ocultar menú por defecto en dispositivos móviles */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Mostrar menú desplegable cuando tenga la clase active */
+    .nav-links.active {
+        max-height: 400px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Ocultar elementos de llamada a la acción flotantes si saturan el espacio móvil */
+    .nav-container .nav-cta {
+        display: none; 
+    }
+}
