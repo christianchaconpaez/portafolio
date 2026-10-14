@@ -1,0 +1,110 @@
+/* ====================================================================
+   BS-THEME · Estilo "aurora oscura" (activar con <body class="theme-bs">)
+   Cargar DESPUÉS de variables.css, atomic.css, main.css y main-assets.css.
+   No modifica nada fuera de body.theme-bs.
+   Colores estimados desde capturas: ajusta aquí si tienes los hex exactos.
+   =================================================================== */
+:root{
+  --bs-bg:#050814; --bs-surface:#0a1124; --bs-surface-2:#0e1730;
+  --bs-teal:#3fc1b0; --bs-blue:#3b82f6; --bs-coral:#f43f5e;
+  /* COLOR CTA DEL SITIO: barra superior, botón "Contacto" y clases .bg-cta / .text-cta. Cámbialo aquí. */
+  --bs-cta:var(--bs-coral); --bs-cta-text:#ffffff;
+  --bs-grad:linear-gradient(90deg,#3fc1b0,#3b82f6);
+  --bs-line:rgba(120,160,255,.16); --bs-glow:0 0 0 1px rgba(63,193,176,.35),0 20px 50px rgba(59,130,246,.22);
+}
+body.theme-bs{background:var(--bs-bg);color:#e6ecff;
+  background-image:radial-gradient(900px 500px at 85% -5%,rgba(63,193,176,.16),transparent 60%),radial-gradient(800px 600px at 0% 25%,rgba(59,130,246,.14),transparent 60%),radial-gradient(700px 500px at 100% 70%,rgba(63,193,176,.10),transparent 60%);
+  background-attachment:fixed}
+/* main-assets.css pinta TODAS las <section> con fondo sólido (var(--background-color)).
+   Aquí lo anulamos para que se vea el fondo azul con auroras del body. */
+body.theme-bs section,body.theme-bs .section{background-color:transparent}
+/* ---------- Barra superior y menú ---------- */
+.theme-bs .top-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 2rem;background:var(--bs-cta);color:var(--bs-cta-text);font-size:.8rem;font-weight:500}
+.theme-bs header{background:rgba(5,8,20,.82);border-bottom:1px solid var(--bs-line)}
+.theme-bs .nav-links a{font-weight:500;padding:.4rem 0;border-bottom:2px solid transparent}
+.theme-bs .nav-links a:hover,.theme-bs .nav-links a.active{color:#fff;border-bottom-color:var(--bs-teal)}
+.theme-bs .nav-cta{background:var(--bs-cta);color:var(--bs-cta-text);border-radius:6px;padding:.65rem 1.4rem}
+/* Clases reutilizables del color CTA */
+.theme-bs .bg-cta{background:var(--bs-cta);color:var(--bs-cta-text)}
+.theme-bs .text-cta{color:var(--bs-cta)}
+/* ---------- Átomos ---------- */
+.theme-bs .bs-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border:1px solid var(--bs-line);border-radius:9999px;background:rgba(255,255,255,.04);font-size:.72rem;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:#bcd0ff;margin-bottom:1.2rem}
+.theme-bs .bs-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bs-teal);box-shadow:0 0 10px var(--bs-teal)}
+.theme-bs .text-gradient{background:var(--bs-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.theme-bs .bs-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.8rem;border-radius:9999px;font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.25s}
+.theme-bs .bs-btn-teal{background:var(--bs-teal);color:#04141a}
+.theme-bs .bs-btn-teal:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(63,193,176,.35)}
+.theme-bs .bs-btn-ghost{border:1px solid var(--bs-line);color:#fff;background:rgba(255,255,255,.04)}
+.theme-bs .bs-btn-ghost:hover{border-color:var(--bs-teal)}
+.theme-bs .bs-glass{background:linear-gradient(160deg,rgba(18,28,56,.7),rgba(8,13,30,.85));border:1px solid var(--bs-line);border-radius:1.25rem;padding:2rem;backdrop-filter:blur(8px);transition:.3s}
+.theme-bs .bs-glass:hover{border-color:rgba(63,193,176,.4)}
+.theme-bs .bs-section{max-width:1200px;margin:0 auto;padding:5.5rem 2rem}
+.theme-bs .bs-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:.8rem}
+.theme-bs .bs-lead{color:var(--text-muted);font-size:1.05rem;line-height:1.6;max-width:760px}
+.theme-bs .bs-check{list-style:none;padding:0;margin:0 0 1.5rem}
+.theme-bs .bs-check li{display:flex;gap:.6rem;margin-bottom:.7rem;color:#cdd8f5;font-size:.95rem}
+.theme-bs .bs-check li::before{content:"✔";color:var(--bs-teal);font-weight:700}
+/* ---------- Hero ---------- */
+.theme-bs .bs-hero{max-width:1200px;margin:0 auto;padding:4.5rem 2rem 3rem;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.theme-bs .bs-hero h1{font-size:clamp(2.2rem,4.2vw,3.6rem);font-weight:700;line-height:1.12;color:#fff;margin-bottom:1.2rem}
+.theme-bs .bs-hero-img{border-radius:1.5rem;width:100%;box-shadow:var(--bs-glow)}
+/* ---------- Bento ---------- */
+.theme-bs .bs-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2rem;margin-top:2.5rem}
+.theme-bs .bs-bento-card{position:relative;overflow:hidden;border-radius:1.25rem;border:1px solid var(--bs-line);min-height:240px;display:flex;align-items:flex-end;background-size:cover;background-position:center}
+.theme-bs .bs-bento-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,20,.2),rgba(5,8,20,.92))}
+.theme-bs .bs-bento-card>div{position:relative;padding:1.6rem}
+.theme-bs .bs-bento-card h3{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.4rem}
+.theme-bs .bs-bento-card p{font-size:.88rem;color:#b6c4e6;margin:0;line-height:1.5}
+.theme-bs .bento-xl{grid-column:span 4;min-height:340px}.theme-bs .bento-md{grid-column:span 2}.theme-bs .bento-lg{grid-column:span 3}
+/* ---------- Planes (tipos de proyecto, sin precios) ---------- */
+.theme-bs .bs-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem;align-items:stretch}
+.theme-bs .bs-plan{position:relative;display:flex;flex-direction:column;justify-content:space-between}
+.theme-bs .bs-plan.popular{border-color:rgba(63,193,176,.6);box-shadow:var(--bs-glow);transform:translateY(-8px)}
+.theme-bs .bs-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--bs-blue);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.3rem .9rem;border-radius:9999px}
+.theme-bs .bs-plan .kicker{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bs-teal);font-weight:700}
+.theme-bs .bs-plan h3{font-size:1.4rem;color:#fff;font-weight:700;margin:.4rem 0 .6rem}
+.theme-bs .bs-ico{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:rgba(63,193,176,.12);border:1px solid rgba(63,193,176,.3);margin-bottom:1rem}
+/* ---------- Pasos, proyectos, FAQ ---------- */
+.theme-bs .bs-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
+.theme-bs .bs-step-n{font-size:2.4rem;font-weight:800;background:var(--bs-grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.theme-bs .bs-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem}
+.theme-bs .bs-project{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.theme-bs .bs-project img{width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:1px solid var(--bs-line)}
+.theme-bs .bs-project>div{padding:1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.theme-bs .bs-faq{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
+/* ---------- Formulario (se mantiene, solo cambia el aspecto) ---------- */
+.theme-bs .sesion-card{border-color:rgba(63,193,176,.35);box-shadow:var(--bs-glow)}
+.theme-bs .sesion-card::before{background:var(--bs-grad)}
+.theme-bs .sesion-card input,.theme-bs .sesion-card select,.theme-bs .sesion-card textarea{background:transparent!important;border:0!important;border-bottom:1px solid var(--bs-line)!important;border-radius:0!important}
+.theme-bs .sesion-card input:focus{outline:0;border-bottom-color:var(--bs-teal)!important}
+.theme-bs .sesion-card button[type=submit],.theme-bs .sesion-card .atom-btn-primary{background:var(--bs-teal);color:#04141a;border-radius:9999px;text-transform:uppercase;letter-spacing:1px}
+/* ---------- Footer ---------- */
+.theme-bs .bs-footer{margin-top:4rem;border-top:1px solid var(--bs-line);background:linear-gradient(180deg,transparent,rgba(5,8,20,.9))}
+.theme-bs .bs-footer-logo{display:block;margin:0 auto;padding:4rem 2rem 2rem;max-width:380px;width:70%}
+.theme-bs .bs-footer-grid{max-width:1200px;margin:0 auto;padding:2rem 2rem 3rem;display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:2.5rem}
+.theme-bs .bs-footer h4{font-size:1rem;color:#fff;padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);display:inline-block;margin-bottom:1rem}
+.theme-bs .bs-footer a{display:block;color:var(--text-muted);text-decoration:none;font-size:.88rem;margin-bottom:.6rem}
+.theme-bs .bs-footer a:hover{color:var(--bs-teal)}
+.theme-bs .bs-footer small{display:block;font-size:.7rem;letter-spacing:1.2px;text-transform:uppercase;color:#6f82b3;margin-top:.8rem}
+.theme-bs .bs-footer p{font-size:.88rem;color:#d3dcf5;margin:0}
+/* ---------- Compatibilidad: componentes del diseño anterior (index y otras páginas) ---------- */
+.theme-bs .feature-card-main,.theme-bs .metodologia-card,.theme-bs .testimonio-card,.theme-bs .paso-card-item,.theme-bs .atom-card{background:linear-gradient(160deg,rgba(18,28,56,.7),rgba(8,13,30,.85));border:1px solid var(--bs-line);border-radius:1.25rem}
+.theme-bs .feature-card-main:hover,.theme-bs .metodologia-card:hover,.theme-bs .testimonio-card:hover,.theme-bs .paso-card-item:hover,.theme-bs .atom-card:hover{border-color:rgba(63,193,176,.45)}
+.theme-bs .atom-btn-primary{background:var(--bs-teal);color:#04141a;text-transform:uppercase;letter-spacing:1px}
+.theme-bs .atom-btn-outline{border-color:var(--bs-line);background:rgba(255,255,255,.04)}
+.theme-bs .atom-btn-outline:hover{border-color:var(--bs-teal)}
+/* ---------- Compatibilidad: plantilla (christian-chacon.html) ---------- */
+body.theme-bs{--accent-color:var(--bs-teal);--heading-color:#ffffff}
+.theme-bs .skill-card,.theme-bs .experience-card,.theme-bs .service-item,.theme-bs .testimonial-item,.theme-bs .faq-item,.theme-bs .floating-card{background:linear-gradient(160deg,rgba(18,28,56,.7),rgba(8,13,30,.85));border:1px solid var(--bs-line)}
+.theme-bs .skill-card:hover,.theme-bs .experience-card:hover,.theme-bs .service-item:hover,.theme-bs .testimonial-item:hover,.theme-bs .faq-item:hover{border-color:rgba(63,193,176,.45)}
+/* Portafolio: título bajo el logo siempre en blanco (la plantilla lo pintaba con --contrast-color, que es oscuro) */
+.theme-bs .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title{color:#ffffff}
+/* ---------- Responsive ---------- */
+@media(max-width:991px){
+ .theme-bs .bs-hero,.theme-bs .bs-plans,.theme-bs .bs-projects,.theme-bs .bs-faq{grid-template-columns:1fr}
+ .theme-bs .bs-steps,.theme-bs .bs-footer-grid{grid-template-columns:1fr 1fr}
+ .theme-bs .bs-bento{grid-template-columns:1fr}.theme-bs .bento-xl,.theme-bs .bento-md,.theme-bs .bento-lg{grid-column:auto}
+ .theme-bs .bs-plan.popular{transform:none}
+ .theme-bs .top-bar>div:last-child{display:none}
+}
+@media(max-width:560px){.theme-bs .bs-steps,.theme-bs .bs-footer-grid{grid-template-columns:1fr}.theme-bs .bs-section{padding:3.5rem 1.2rem}}
