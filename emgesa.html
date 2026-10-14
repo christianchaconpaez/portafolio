@@ -33,15 +33,16 @@
 
     <!-- Unified Main CSS -->
   <link href="CSS/main-assets.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bs-theme.css">
 
 
 </head>
 
-<body class="portfolio-details-page">
+<body class="portfolio-details-page theme-bs">
 
      <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
     <div class="top-bar">
-        <div>📞 +569 4783 9131 &nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
         <div>Lun - Vie 9:00am - 6:00pm</div>
     </div>
 
@@ -63,8 +64,8 @@
 
             <!-- Enlaces de navegación -->
             <ul class="nav-links">
-                <li><a href="index.html">Marketing</a></li>
-                <li><a href="index.html#servicios">Diseño Web</a></li>
+                <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
+                <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
                 <li><a href="christian-chacon.html#portfolio" class="active">Proyectos</a></li>
                 <li><a href="christian-chacon.html">Sobre mí</a></li>
                 <li><a href="index.html#blog">Blog</a></li>
@@ -233,7 +234,7 @@
                                         <div id="portfolio-details-collapse-2" class="accordion-collapse "
                                             data-bs-parent="#portfolio-details-projectAccordion">
                                             <div class="accordion-body">
-                                                <p>Rediseñar el antiguo sitio web de acuerdo a los actuales estándares de diseño, agregando también contenidos de valor que reflejen el nivel de experiencia y especialización de EMGESA, ya que es una de poca empresas que prestan estos servicios para la industria minera.
+                                                <p>Rediseñar el antiguo sitio web de acuerdo a los actuales estándares de diseño, agregando también contenidos de valor que reflejen el nivel de experiencia y especialización de EMGESA, ya que es una de las pocas empresas que prestan estos servicios para la industria minera.
                                                     </p>
                                             </div>
                                         </div>
@@ -271,8 +272,7 @@
 
 
                                                 <p class="mb-1"><b>Diseño Interactivo y Moderno:</b> Utilicé Elementor
-                                                    para crear una experiencia visual dinámica, con la paleta de
-                                                    colores corporativa que refleja la innovación y amplio dominio de la gestión hídrica no sólo en industria agrícola sino también minera.</p>
+                                                    para crear una experiencia visual dinámica, con la paleta de colores corporativa que refleja la solidez y el rigor técnico de una empresa de ingeniería y montajes industriales para la minería.</p>
                                                 
                                                 <p class="mb-1"><b>Optimización de Activos Visuales:</b> Implementé el
                                                     uso de formatos .webp para todas las imágenes de productos y
@@ -280,8 +280,7 @@
                                                     alta velocidad de carga, esencial para la retención de usuarios.</p>
                                                 <p class="mb-1"><b>Enfoque en la Conversión:</b> Diseñé llamadas a la
                                                     acción (CTAs) estratégicas y formularios de contacto directo para
-                                                    facilitar la solicitud de presupuestos y asesorías técnicas en
-                                                    proyectos de seguridad a gran escala.</p>
+                                                    facilitar la solicitud de presupuestos y asesorías técnicas en proyectos de flushing, truck shop y montajes industriales.</p>
                                                 <p class="mb-1"><b>Adaptabilidad Total (Responsive):</b> El sitio fue
                                                     optimizado para garantizar una visualización perfecta en
                                                     dispositivos móviles, permitiendo que supervisores o administradores
@@ -337,17 +336,14 @@
 
     </main>
 
-    <!-- ================= FOOTER MODULAR ================= -->
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h4 class="mb-3" style="color: var(--text-main);">CHACONMARKETING</h4>
-                <p class="atom-text-body">Transformando servicios excelentes en negocios visibles y creíbles.</p>
-            </div>
-            <div>
-                <h4 class="mb-3" style="color: var(--text-main);">Contacto</h4>
-                <p class="atom-text-body">Providencia, Santiago - Chile<br>+562 2423 1970</p>
-            </div>
+    <!-- ================= FOOTER (estilo BS) ================= -->
+    <footer class="bs-footer">
+        <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+        <div class="bs-footer-grid">
+            <div><h4>Empresa</h4><p>Transformando servicios excelentes en negocios visibles y creíbles.</p></div>
+            <div><h4>Servicios</h4><a href="servicios-marketing-b2b.html">Marketing B2B</a><a href="servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a href="christian-chacon.html#portfolio">Proyectos</a><a href="christian-chacon.html">Sobre mí</a></div>
+            <div><h4>Contacto</h4><small>WhatsApp</small><p>+56 9 4783 9131</p><small>Email</small><p>christian.chacon.paez@gmail.com</p></div>
+            <div><h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
         </div>
     </footer>
 
@@ -376,6 +372,15 @@
 
   <!-- Main JS File -->
   <script src="JS/main-assets.js"></script>
+
+<!-- Menú hamburguesa (esta página no carga JS/main.js) -->
+  <script>
+  (function () {
+    var t = document.querySelector('.menu-toggle'), n = document.querySelector('.nav-links');
+    if (!t || !n) return;
+    t.addEventListener('click', function () { t.classList.toggle('open'); n.classList.toggle('active'); });
+  })();
+  </script>
 
 </body>
 

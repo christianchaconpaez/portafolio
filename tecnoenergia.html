@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Portafolio Tecnoenergía - Chacon Marketing</title>
+    <title>Portafolio Tecnoenergía - Chacón Marketing</title>
     <meta name="description" content="Rediseño de sitio web">
-    <meta name="keywords" content="portafolio, diseño web, diseño ux/ui, informática, soporte informático, tecnoenergía, wordpress, diseño gráfico, diseño de logo, diseño de branding, imagen corporativa">
+    <meta name="keywords" content="portafolio, diseño web, diseño ux/ui, energía solar, eficiencia energética, tecnoenergía, wordpress, diseño gráfico, diseño de logo, diseño de branding, imagen corporativa">
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="img/favicon-chacon-marketing-blanco.svg">
@@ -33,14 +33,15 @@
 
     <!-- Unified Main CSS -->
   <link href="CSS/main-assets.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bs-theme.css">
 
 </head>
 
-<body class="portfolio-details-page">
+<body class="portfolio-details-page theme-bs">
 
      <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
     <div class="top-bar">
-        <div>📞 +569 4783 9131 &nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
         <div>Lun - Vie 9:00am - 6:00pm</div>
     </div>
 
@@ -62,8 +63,8 @@
 
             <!-- Enlaces de navegación -->
             <ul class="nav-links">
-                <li><a href="index.html">Marketing</a></li>
-                <li><a href="index.html#servicios">Diseño Web</a></li>
+                <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
+                <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
                 <li><a href="christian-chacon.html#portfolio" class="active">Proyectos</a></li>
                 <li><a href="christian-chacon.html">Sobre mí</a></li>
                 <li><a href="index.html#blog">Blog</a></li>
@@ -281,20 +282,20 @@
 
 
                                                 <p class="mb-1"><b>Arquitectura de Información Estratégica:</b>
-                                                    Clasifiqué soluciones compleja en una
+                                                    Clasifiqué soluciones complejas en una
                                                     estructura de navegación simple, permitiendo que tanto hogares como
                                                     industrias comprendan rápidamente los beneficios de cada sistema.
                                                 </p>
                                                 <p class="mb-1"><b>Diseño UI con Enfoque en Sustentabilidad:</b>
                                                     Implementé una interfaz moderna utilizando Elementor, con una
                                                     estética limpia y profesional que utiliza una paleta de colores
-                                                    asociada a la tecnología limpia y matriz energética.</p>
+                                                    asociada a la tecnología limpia y a la matriz energética.</p>
                                                 <p class="mb-1"><b>Optimización de Performance (WebP):</b> Al igual que
                                                     en mis proyectos de alto estándar, utilicé formatos .webp para las
                                                     galerías de proyectos instalados, asegurando que el sitio cargue
                                                     velozmente sin perder el impacto visual.
                                                 </p>
-                                                <p class="mb-1"><b>Generación de Leads Cualificados:</b> Diseñé
+                                                <p class="mb-1"><b>Generación de Leads Calificados:</b> Diseñé
                                                     formularios de cotización específicos para proyectos de energía,
                                                     capturando datos técnicos necesarios para que el equipo comercial
                                                     pueda entregar propuestas precisas desde el primer contacto.</p>
@@ -353,17 +354,14 @@
 
     </main>
 
-    <!-- ================= FOOTER MODULAR ================= -->
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h4 class="mb-3" style="color: var(--text-main);">CHACONMARKETING</h4>
-                <p class="atom-text-body">Transformando servicios excelentes en negocios visibles y creíbles.</p>
-            </div>
-            <div>
-                <h4 class="mb-3" style="color: var(--text-main);">Contacto</h4>
-                <p class="atom-text-body">Providencia, Santiago - Chile<br>+562 2423 1970</p>
-            </div>
+    <!-- ================= FOOTER (estilo BS) ================= -->
+    <footer class="bs-footer">
+        <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+        <div class="bs-footer-grid">
+            <div><h4>Empresa</h4><p>Transformando servicios excelentes en negocios visibles y creíbles.</p></div>
+            <div><h4>Servicios</h4><a href="servicios-marketing-b2b.html">Marketing B2B</a><a href="servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a href="christian-chacon.html#portfolio">Proyectos</a><a href="christian-chacon.html">Sobre mí</a></div>
+            <div><h4>Contacto</h4><small>WhatsApp</small><p>+56 9 4783 9131</p><small>Email</small><p>christian.chacon.paez@gmail.com</p></div>
+            <div><h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
         </div>
     </footer>
 
@@ -392,6 +390,15 @@
 
   <!-- Main JS File -->
   <script src="JS/main-assets.js"></script>
+
+<!-- Menú hamburguesa (esta página no carga JS/main.js) -->
+  <script>
+  (function () {
+    var t = document.querySelector('.menu-toggle'), n = document.querySelector('.nav-links');
+    if (!t || !n) return;
+    t.addEventListener('click', function () { t.classList.toggle('open'); n.classList.toggle('active'); });
+  })();
+  </script>
 
 </body>
 

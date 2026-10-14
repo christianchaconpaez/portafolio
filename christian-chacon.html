@@ -15,18 +15,17 @@
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="vendor/aos/aos.css" rel="stylesheet">
-  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Core & Design Tokens CSS (mismo sistema que index.html) -->
+  <!-- Librerías (CDN, versiones fijas) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Estilos propios (misma carpeta CSS/ que index.html) -->
   <link rel="stylesheet" href="CSS/variables.css">
   <link rel="stylesheet" href="CSS/atomic.css">
-
-  <!-- Unified Main CSS -->
   <link href="CSS/main-assets.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/bs-theme.css">
 
   <!-- Tipografía unificada con index.html: manda var(--font-family) de css/variables.css.
        La plantilla usa estas 3 variables para el cuerpo, los títulos y el menú. -->
@@ -50,15 +49,15 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="index-page theme-bs">
 
-   <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
-    <div class="top-bar">
-        <div>📞 +569 4783 9131 &nbsp;&nbsp;|&nbsp;&nbsp;</div>
+  <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
+  <div class="top-bar">
+        <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
         <div>Lun - Vie 9:00am - 6:00pm</div>
     </div>
 
-  <!-- ================= NAVEGACIÓN PRINCIPAL (la misma de index.html) ================= -->
+      <!-- ================= NAVEGACIÓN PRINCIPAL (la misma de index.html) ================= -->
   <header>
     <nav class="nav-container">
       <div class="atom-logo">
@@ -76,8 +75,8 @@
 
       <!-- Enlaces de navegación -->
       <ul class="nav-links">
-        <li><a href="index.html">Marketing</a></li>
-        <li><a href="index.html#servicios">Diseño Web</a></li>
+        <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
+        <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
         <li><a href="#portfolio">Proyectos</a></li>
         <li><a href="christian-chacon.html" class="active">Sobre mí</a></li>
         <li><a href="index.html#blog">Blog</a></li>
@@ -129,7 +128,7 @@
 
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-                <a href="#portfolio" class="btn btn-primary">Portafolio</a>
+                <a href="#portfolio" class="bs-btn bs-btn-teal">Portafolio</a>
                 <!-- <a href="#contact" class="btn btn-outline">Get In Touch</a> -->
               </div>
 
@@ -1285,9 +1284,7 @@
             <div class="revision-digital-grid">
                 <div>
                     <div class="text-start mx-auto" style="max-width: 1200px;">
-                        <span class="d-block fw-bold text-uppercase" style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
-                            HABLEMOS DE TU PROYECTO
-                        </span>
+                        <span class="bs-chip">HABLEMOS DE TU PROYECTO</span>
                         <h2 class="atom-title-section-left ">
                             ¿Revisamos tu presencia digital sin costo?
                         </h2>
@@ -1459,40 +1456,76 @@
 
   </main>
 
-  <!-- ================= FOOTER MODULAR ================= -->
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <h4 class="mb-3" style="color: var(--text-main);">CHACONMARKETING</h4>
-        <p class="atom-text-body">Transformando servicios excelentes en negocios visibles y creíbles.</p>
-      </div>
-      <div>
-        <h4 class="mb-3" style="color: var(--text-main);">Contacto</h4>
-        <p class="atom-text-body">Providencia, Santiago - Chile<br>+562 2423 1970</p>
-      </div>
-    </div>
-  </footer>
+  <!-- ================= FOOTER (estilo BS) ================= -->
+  <footer class="bs-footer">
+        <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+        <div class="bs-footer-grid">
+            <div><h4>Empresa</h4><p>Transformando servicios excelentes en negocios visibles y creíbles.</p></div>
+            <div><h4>Servicios</h4><a href="servicios-marketing-b2b.html">Marketing B2B</a><a href="servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a href="christian-chacon.html#portfolio">Proyectos</a><a href="christian-chacon.html">Sobre mí</a></div>
+            <div><h4>Contacto</h4><small>WhatsApp</small><p>+56 9 4783 9131</p><small>Email</small><p>christian.chacon.paez@gmail.com</p></div>
+            <div><h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+        </div>
+    </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
-  <script src="vendor/aos/aos.js"></script>
-  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="vendor/typed.js/typed.umd.js"></script>
-  <script src="vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Librerías JS (CDN, versiones fijas) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="JS/main-assets.js"></script>
+  <!-- Inicialización de la plantilla (reemplaza assets/js/main.js) -->
+  <script>
+  (function () {
+    window.addEventListener('load', function () {
+      if (window.AOS) AOS.init({ duration: 600, easing: 'ease-in-out', once: true, mirror: false });
+      if (window.GLightbox) GLightbox({ selector: '.glightbox' });
+      // Texto animado del hero
+      var t = document.querySelector('.typed');
+      if (t && window.Typed) {
+        var items = (t.getAttribute('data-typed-items') || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+        new Typed('.typed', { strings: items, loop: true, typeSpeed: 100, backSpeed: 50, backDelay: 2000 });
+      }
+      // Carrusel de testimonios
+      document.querySelectorAll('.init-swiper').forEach(function (el) {
+        var cfg = el.querySelector('.swiper-config');
+        if (cfg && window.Swiper) new Swiper(el, JSON.parse(cfg.innerHTML.trim()));
+      });
+      // Portafolio con filtros
+      document.querySelectorAll('.isotope-layout').forEach(function (wrap) {
+        var cont = wrap.querySelector('.isotope-container');
+        if (!cont || !window.Isotope) return;
+        var iso;
+        imagesLoaded(cont, function () {
+          iso = new Isotope(cont, { itemSelector: '.isotope-item', layoutMode: wrap.getAttribute('data-layout') || 'masonry', filter: wrap.getAttribute('data-default-filter') || '*', sortBy: wrap.getAttribute('data-sort') || 'original-order' });
+        });
+        wrap.querySelectorAll('.isotope-filters li').forEach(function (li) {
+          li.addEventListener('click', function () {
+            var act = wrap.querySelector('.isotope-filters .filter-active');
+            if (act) act.classList.remove('filter-active');
+            li.classList.add('filter-active');
+            if (iso) iso.arrange({ filter: li.getAttribute('data-filter') });
+            if (window.AOS) AOS.refresh();
+          });
+        });
+      });
+    });
+    // Botón "volver arriba"
+    var st = document.getElementById('scroll-top');
+    if (st) {
+      st.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      window.addEventListener('scroll', function () { st.classList.toggle('active', window.scrollY > 100); });
+    }
+  })();
+  </script>
 
-  <!-- Enlace al Script Modular (sin cambios) -->
+  <!-- Script modular propio (menú hamburguesa y formulario) -->
   <script src="JS/main.js"></script>
 
   <!-- ================= BOTÓN FLOTANTE DE WHATSAPP ================= -->

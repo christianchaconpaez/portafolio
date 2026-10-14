@@ -33,14 +33,15 @@
 
     <!-- Unified Main CSS -->
   <link href="CSS/main-assets.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bs-theme.css">
 
 </head>
 
-<body class="portfolio-details-page">
+<body class="portfolio-details-page theme-bs">
 
      <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
     <div class="top-bar">
-        <div>📞 +569 4783 9131 &nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
         <div>Lun - Vie 9:00am - 6:00pm</div>
     </div>
 
@@ -62,8 +63,8 @@
 
             <!-- Enlaces de navegación -->
             <ul class="nav-links">
-                <li><a href="index.html">Marketing</a></li>
-                <li><a href="index.html#servicios">Diseño Web</a></li>
+                <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
+                <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
                 <li><a href="christian-chacon.html#portfolio" class="active">Proyectos</a></li>
                 <li><a href="christian-chacon.html">Sobre mí</a></li>
                 <li><a href="index.html#blog">Blog</a></li>
@@ -338,17 +339,14 @@
 
     </main>
 
-    <!-- ================= FOOTER MODULAR ================= -->
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h4 class="mb-3" style="color: var(--text-main);">CHACONMARKETING</h4>
-                <p class="atom-text-body">Transformando servicios excelentes en negocios visibles y creíbles.</p>
-            </div>
-            <div>
-                <h4 class="mb-3" style="color: var(--text-main);">Contacto</h4>
-                <p class="atom-text-body">Providencia, Santiago - Chile<br>+562 2423 1970</p>
-            </div>
+    <!-- ================= FOOTER (estilo BS) ================= -->
+    <footer class="bs-footer">
+        <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+        <div class="bs-footer-grid">
+            <div><h4>Empresa</h4><p>Transformando servicios excelentes en negocios visibles y creíbles.</p></div>
+            <div><h4>Servicios</h4><a href="servicios-marketing-b2b.html">Marketing B2B</a><a href="servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a href="christian-chacon.html#portfolio">Proyectos</a><a href="christian-chacon.html">Sobre mí</a></div>
+            <div><h4>Contacto</h4><small>WhatsApp</small><p>+56 9 4783 9131</p><small>Email</small><p>christian.chacon.paez@gmail.com</p></div>
+            <div><h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
         </div>
     </footer>
 
@@ -377,6 +375,15 @@
 
   <!-- Main JS File -->
   <script src="JS/main-assets.js"></script>
+
+<!-- Menú hamburguesa (esta página no carga JS/main.js) -->
+  <script>
+  (function () {
+    var t = document.querySelector('.menu-toggle'), n = document.querySelector('.nav-links');
+    if (!t || !n) return;
+    t.addEventListener('click', function () { t.classList.toggle('open'); n.classList.toggle('active'); });
+  })();
+  </script>
 
 </body>
 
