@@ -27,26 +27,40 @@
   <link href="CSS/main-assets.css" rel="stylesheet">
   <link rel="stylesheet" href="CSS/bs-theme.css">
 
-  <!-- Tipografía unificada con index.html: manda var(--font-family) de css/variables.css.
-       La plantilla usa estas 3 variables para el cuerpo, los títulos y el menú. -->
+  <!-- Tipografía unificada con index.html: manda var(--font-family) de css/variables.css. -->
   <style>
     :root {
       --default-font: var(--font-family);
       --heading-font: var(--font-family);
       --nav-font: var(--font-family);
     }
-    /* Comillas decorativas de los testimonios (antes Georgia) */
+    /* Comillas decorativas de los testimonios */
     .testimonials .critic-reviews .critic-review .review-quote { font-family: var(--font-family); }
+
+    /* ===== Hero: foto de cuerpo entero con badge + fondo y paddings compactos ===== */
+    .theme-bs .hero-image-wrapper { position: relative; display: flex; justify-content: center; align-self: flex-end; width: 100%; }
+    .theme-bs .hero-floating-badge { position: absolute; right: -10%; top: 60%; transform: translateY(-50%); z-index: 10; max-width: 260px; padding: .9rem 1.2rem; border-radius: 1rem; background: rgba(11,15,25,.85); border: 1px solid rgba(63,193,176,.35); backdrop-filter: blur(10px); box-shadow: 0 15px 30px rgba(0,0,0,.5); }
+    .theme-bs #hero.hero { padding: .8rem 0 0; min-height: 0; align-items: flex-end; background: url('img/abstract-bg-01.webp') center/cover no-repeat fixed; }
+    .theme-bs #hero.hero::before { background: rgba(7,10,19,.5); opacity: 1; z-index: 0; }
+    @media (min-width: 992px) {
+      .theme-bs #hero .row { align-items: flex-end !important; }
+      .theme-bs #hero .hero-content { padding-bottom: 3rem; }
+      .theme-bs #hero .hero-image { padding: 0; }
+    }
+    @media (max-width: 900px) {
+      .theme-bs .hero-floating-badge { position: relative; left: 0; top: 0; transform: none; margin-bottom: 1.5rem; max-width: 100%; }
+    }
+
+    /* ===== Títulos y subtítulos: mismas reglas que servicios-marketing-b2b.html ===== */
+    .theme-bs .bs-h1 { font-size: clamp(2.2rem, 4.2vw, 3.6rem) !important; font-weight: 700 !important; line-height: 1.12 !important; color: #fff; margin-bottom: 1.2rem !important; }
+    .theme-bs main .section-title { text-align: left; padding-bottom: 2rem; }
+    .theme-bs main h2.bs-title { font-size: clamp(1.7rem, 3vw, 2.5rem) !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: normal !important; color: #fff !important; margin: 0 0 .8rem !important; }
+    .theme-bs main h2.bs-title::before, .theme-bs main h2.bs-title::after { display: none !important; }
+    .theme-bs main h2.bs-title-sm { font-size: clamp(1.3rem, 2vw, 1.6rem) !important; font-weight: 700 !important; line-height: 1.25 !important; color: #fff !important; margin-bottom: .6rem !important; }
+    .theme-bs main p.bs-lead { font-size: 1.05rem !important; font-weight: 400 !important; line-height: 1.6 !important; color: var(--text-muted) !important; max-width: 760px; font-family: var(--font-family); }
+    .theme-bs main .section-title p.bs-lead { margin: 0 !important; }
+    .theme-bs main h3.bs-card-title { font-size: 1.2rem !important; font-weight: 700 !important; line-height: 1.3 !important; color: #fff; }
   </style>
-
-
-  <!-- =======================================================
-  * Template Name: Style
-  * Template URL: https://bootstrapmade.com/style-bootstrap-portfolio-template/
-  * Updated: Jul 02 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page theme-bs">
@@ -57,7 +71,7 @@
         <div>Lun - Vie 9:00am - 6:00pm</div>
     </div>
 
-      <!-- ================= NAVEGACIÓN PRINCIPAL (la misma de index.html) ================= -->
+  <!-- ================= NAVEGACIÓN PRINCIPAL ================= -->
   <header>
     <nav class="nav-container">
       <div class="atom-logo">
@@ -97,74 +111,37 @@
           <!-- Columna 1 de texto de presentación-->
           <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
             <div class="content-wrapper">
-              <h1 class="h2 hero-title ">Soluciones en <span class="typed"
+              <span class="bs-chip">Sobre mí</span>
+              <h1 class="bs-h1 hero-title">Soluciones en <span class="text-gradient typed"
                   data-typed-items="Marketing B2B, Diseño Gráfico, Diseño Web UX/UI,"></span></h1>
-              <p class="lead" style="font-size: 1.6rem;"> <strong>Soy tu apoyo en marketing para que tu empresa se posicione y venda.</strong></p>
+              <p class="bs-lead" style="margin-bottom:1.2rem;">Soy tu apoyo en marketing para que tu empresa se posicione y venda.</p>
               <p>
               Me enfoco en crear y administrar toda tu infraestructura de marketing y diseño.
               </p>
 
-
-              <!-- Contadores-->
-              <!--
-                <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
-                <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150"
-                    data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="5"
-                    data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="98"
-                    data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Happy Clients</span>
-                </div>
-              </div>
-                -->
-
-
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
                 <a href="#portfolio" class="bs-btn bs-btn-teal">Portafolio</a>
-                <!-- <a href="#contact" class="btn btn-outline">Get In Touch</a> -->
               </div>
 
               <div class="social-links" data-aos="fade-up" data-aos-delay="400">
                 <a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank"><i
                     class="bi bi-linkedin"></i></a>
-                <!--  
-                <a href="#"><i class="bi bi-twitter"></i></a>
-                <a href="#"><i class="bi bi-github"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a> 
-                -->
-
               </div>
             </div>
           </div>
 
           <!-- Columna 2 de imagen con etiquetas flotantes-->
           <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
-            <div class="image-container">
-              <div class="floating-elements">
-                <div class="floating-card card-1" data-aos="zoom-in" data-aos-delay="300">
-                  <i class="bi bi-palette"></i>
-                  <span>Diseño Gráfico</span>
-                </div>
-                <div class="floating-card card-2" data-aos="zoom-in" data-aos-delay="400">
-                  <i class="bi bi-code-slash"></i>
-                  <span>Diseño Web UX/UI</span>
-                </div>
-                <div class="floating-card card-3" data-aos="zoom-in" data-aos-delay="500">
-                  <i class="bi bi-lightning"></i>
-                  <span>Marketing B2B</span>
-                </div>
+            <div class="hero-image-wrapper">
+              <!-- Tarjeta flotante a la altura de la cintura -->
+              <div class="hero-floating-badge">
+                <h2 class="fw-bold" style="color: var(--accent-cyan); font-size: 0.9rem; letter-spacing: 0.5px; margin-bottom: 0.2rem;">CHRISTIAN CHACÓN PÁEZ</h2>
+                <p class="fw-semibold text-uppercase" style="color: var(--text-muted); font-size: 0.6rem; letter-spacing: 0.8px; line-height: 1.3;">Consultor en Marketing B2B &amp; Desarrollo Digital</p>
               </div>
-              <img src="img/profile/christian-chacon-paez-bg.webp" alt="Portafolio de Christian Chacón Páez"
-                class="img-fluid hero-main-image">
-              <div class="image-overlay"></div>
+              <!-- Fotografía principal -->
+              <div class="position-relative w-100" style="max-width: 400px; line-height: 0;">
+                <img src="img/christian-chacon-01.webp" alt="Christian Chacón Páez" class="d-block w-100 h-auto object-fit-cover">
+              </div>
             </div>
           </div>
 
@@ -178,8 +155,9 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Acerca de mí</h2>
-        <p class="mt-3">Enfoco mi experiencia combinando el diseño gráfico tradicional, el desarrollo web
+        <span class="bs-chip">Perfil profesional</span>
+        <h2 class="bs-title">Acerca de mí</h2>
+        <p class="bs-lead">Enfoco mi experiencia combinando el diseño gráfico tradicional, el desarrollo web
           senior y
           las metodologías
           avanzadas de experiencia de usuario (UX/UI) para que tu empresa se posicione y aumente su venta.
@@ -205,7 +183,7 @@
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <div class="intro">
-                <h2>Hola, soy Christian Chacón Páez</h2>
+                <h2 class="bs-title">Hola, soy Christian Chacón Páez</h2>
                 <p>Soy diseñador nato y publicista de profesión. Este mix perfecto me permite tener una visión en 24k de
                   lo que tu negocio necesita en marketing y además de cómo implementarlo a nivel visual.</p>
                 <p>
@@ -262,8 +240,6 @@
                 </div>
                 <div class="action-buttons">
                   <a href="#portfolio" class="btn btn-success">Ver mi Portafolio</a>
-                  <!-- <a href="#" class="btn btn-outline">Ver mi Currículum</a> -->
-
                 </div>
               </div>
 
@@ -275,7 +251,6 @@
       </div>
 
     </section>
-
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
@@ -292,7 +267,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-window-fullscreen"></i>
-                      <h3>Diseño UX/UI</h3>
+                      <h3 class="bs-card-title">Diseño UX/UI</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -328,7 +303,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-code-slash"></i>
-                      <h3>Desarrollo Web &amp; CMS</h3>
+                      <h3 class="bs-card-title">Desarrollo Web &amp; CMS</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -364,7 +339,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-palette"></i>
-                      <h3>Branding &amp; Diseño</h3>
+                      <h3 class="bs-card-title">Branding &amp; Diseño</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -400,7 +375,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-cpu"></i>
-                      <h3>Estrategia Digital e IA</h3>
+                      <h3 class="bs-card-title">Estrategia Digital e IA</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -438,7 +413,7 @@
           <!-- Columna Derecha: Resumen de Experiencia -->
           <div class="col-lg-4">
             <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
-              <h3>Mi Experiencia Profesional</h3>
+              <h3 class="bs-card-title">Mi Experiencia Profesional</h3>
               <p>Trayectoria en retail, transporte, ingeniería y tecnología, generando soluciones de marketing y diseño tanto tradicional como digital.</p>
               <p>
                 Actualmente me dedico a prestar servicios de consultoría en marketing y diseño web a empresas del
@@ -453,14 +428,14 @@
 
     </section><!-- /Skills Section -->
 
-
     <!-- Resume Section-->
     <section id="resume" class="resume section">
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Trayectoria</h2>
-        <p class="mt-3">Un recorrido de evolución en diseño gráfico, marketing B2B y metodologías UX/UI.</p>
+        <span class="bs-chip">Experiencia y formación</span>
+        <h2 class="bs-title">Trayectoria</h2>
+        <p class="bs-lead">Un recorrido de evolución en diseño gráfico, marketing B2B y metodologías UX/UI.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -471,8 +446,8 @@
           <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
             <div class="experience-section">
               <div class="section-header">
-                <h2><i class="bi bi-briefcase"></i> Experiencia Profesional</h2>
-                <p class="section-subtitle">Especializado en conectar las necesidades del negocio con interfaces
+                <h2 class="bs-title-sm"><i class="bi bi-briefcase"></i> Experiencia Profesional</h2>
+                <p class="bs-lead">Especializado en conectar las necesidades del negocio con interfaces
                   intuitivas y estrategias digitales de conversión. Diseño, desarrollo y optimización de sitios web
                   autoadministrables en WordPress</p>
               </div>
@@ -483,7 +458,7 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3>Consultor de Branding &amp; Product Designer (UX/UI)</h3>
+                      <h3 class="bs-card-title">Consultor de Branding &amp; Product Designer (UX/UI)</h3>
                       <h4>Profesional Independiente</h4>
                     </div>
                     <span class="duration">2024 - Presente</span>
@@ -504,7 +479,7 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3>Consultor de Marketing</h3>
+                      <h3 class="bs-card-title">Consultor de Marketing</h3>
                       <h4>Hidrosistemas Chile</h4>
                     </div>
                     <span class="duration">2019 - Presente</span>
@@ -524,7 +499,7 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3>Marketing Manager</h3>
+                      <h3 class="bs-card-title">Marketing Manager</h3>
                       <h4>Cikbus Chile</h4>
                     </div>
                     <span class="duration">2014 - 2024</span>
@@ -546,7 +521,7 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="600">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3>Trayectoria Senior en Diseño, Marketing y Producción</h3>
+                      <h3 class="bs-card-title">Trayectoria Senior en Diseño, Marketing y Producción</h3>
                       <h4>Johnson's, Casagráfica, Paramarketing</h4>
                     </div>
                     <span class="duration">1997 - 2013</span>
@@ -573,8 +548,8 @@
           <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
             <div class="education-section">
               <div class="section-header">
-                <h2><i class="bi bi-mortarboard"></i> Educación y Certificaciones</h2>
-                <p class="section-subtitle">Formación especializada orientada a la actualización constante en
+                <h2 class="bs-title-sm"><i class="bi bi-mortarboard"></i> Educación y Certificaciones</h2>
+                <p class="bs-lead">Formación especializada orientada a la actualización constante en
                   tecnologías de vanguardia y diseño digital.</p>
               </div>
 
@@ -586,7 +561,7 @@
                   <div class="timeline-marker"></div>
                   <div class="education-content">
                     <div class="degree-header">
-                      <h3>Investigación y Diseño UX/UI</h3>
+                      <h3 class="bs-card-title">Investigación y Diseño UX/UI</h3>
                       <span class="year">2026</span>
                     </div>
                     <h4 class="institution">Talento Digital para Chile</h4>
@@ -601,7 +576,7 @@
                   <div class="timeline-marker"></div>
                   <div class="education-content">
                     <div class="degree-header">
-                      <h3>Prompt Engineering - Aprende a hablar con una IA generativa.</h3>
+                      <h3 class="bs-card-title">Prompt Engineering - Aprende a hablar con una IA generativa.</h3>
                       <span class="year">2025</span>
                     </div>
                     <h4 class="institution">LinkedIn Learning</h4>
@@ -615,7 +590,7 @@
                   <div class="timeline-marker"></div>
                   <div class="education-content">
                     <div class="degree-header">
-                      <h3>Certificado de Redactor recomendado</h3>
+                      <h3 class="bs-card-title">Certificado de Redactor recomendado</h3>
                       <span class="year">2025</span>
                     </div>
                     <h4 class="institution">Redactium.com</h4>
@@ -638,8 +613,9 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Servicios</h2>
-        <p class="mt-3">Para posicionar tu empresa y aumentar sus ventas.</p>
+        <span class="bs-chip">Especialidades</span>
+        <h2 class="bs-title">Servicios</h2>
+        <p class="bs-lead">Para posicionar tu empresa y aumentar sus ventas.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -652,23 +628,12 @@
               <div class="icon">
                 <i class="bi bi-megaphone"></i>
               </div>
-              <h3>Marketing</h3>
+              <h3 class="bs-card-title">Marketing</h3>
               <ul>
                 <li>Estrategia de Marketing B2B</li>
                 <li>Posicionamiento SEO/GEO</li>
                 <li>Google Ads</li>
-
               </ul>
-
-              <!-- 
-                <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-              -->
-
             </div>
           </div><!-- End Service Item -->
 
@@ -676,26 +641,14 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item">
               <div class="icon">
-
                 <i class="bi bi-vector-pen"></i>
               </div>
-              <h3>Diseño Gráfico</h3>
+              <h3 class="bs-card-title">Diseño Gráfico</h3>
               <ul>
                 <li>Branding</li>
                 <li>Editorial</li>
                 <li>Social Media</li>
-
               </ul>
-
-              <!-- 
-                <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-              -->
-
             </div>
           </div><!-- End Service Item -->
 
@@ -705,82 +658,15 @@
               <div class="icon">
                 <i class="bi bi-code-slash"></i>
               </div>
-              <h3>Diseño Web UX/UI</h3>
+              <h3 class="bs-card-title">Diseño Web UX/UI</h3>
               <ul>
                 <li>Design Thinking</li>
                 <li>Atomic Design</li>
                 <li>WordPress</li>
                 <li>HTML</li>
-
               </ul>
-
-              <!-- 
-                <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-              -->
-
             </div>
           </div><!-- End Service Item -->
-
-          <!-- Card 4 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-cpu"></i>
-              </div>
-              <h3>AI Integration</h3>
-              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-                dolores eos qui ratione.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          -->
-
-          <!-- Card 5 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-cloud-arrow-up"></i>
-              </div>
-              <h3>Cloud Services</h3>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                deleniti atque corrupti quos.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          -->
-          <!-- Card 6 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-gear"></i>
-              </div>
-              <h3>Process Automation</h3>
-              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                placeat facere possimus.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          -->
 
         </div>
 
@@ -793,8 +679,9 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Portafolio</h2>
-        <p class="mt-3">Algunas muestras de mis trabajos más relevantes.</p>
+        <span class="bs-chip">Casos destacados</span>
+        <h2 class="bs-title">Portafolio</h2>
+        <p class="bs-lead">Algunas muestras de mis trabajos más relevantes.</p>
       </div><!-- End Section Title -->
 
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
@@ -808,7 +695,6 @@
             <li data-filter=".filter-ui">
               UI/UX
             </li>
-
             <li data-filter=".filter-marketing">
               Marketing
             </li>
@@ -893,28 +779,6 @@
               </article>
             </div>
 
-            <!-- Portfolio Item Cikbus -->
-            <!-- 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="img/portfolio/Fondo-carretera-Zeus-5-2023.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Marketing</div>
-                      <img src="img/portfolio/logo cikbus blanco.webp"  alt="logo cikbus">
-                      
-                      <h3 class="entry-title mt-2">Transporte interurbano de pasajeros</h3>
-                      
-                      <a href="#" class="btn btn-primary  border-button">+</a>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div>
-             -->
-
-
             <!-- Portfolio Item Clinica Tamaya -->
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
               <article class="portfolio-entry">
@@ -953,7 +817,6 @@
               </article>
             </div>
 
-
             <!-- Portfolio Item Avante IT -->
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
               <article class="portfolio-entry">
@@ -986,74 +849,17 @@
     <section id="testimonials" class="testimonials section">
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Testimonios y opiniones</h2>
-        <p class="mt-3">Qué opinan de mí y de mi trabajo.</p>
-        <p>Los testimonios en esta sección provienen de recomendaciones reales en mi perfil de LinkedIn</p>
+        <span class="bs-chip">Prueba social</span>
+        <h2 class="bs-title">Testimonios y opiniones</h2>
+        <p class="bs-lead">Qué opinan de mí y de mi trabajo.</p>
+        <p class="atom-text-body">Los testimonios en esta sección provienen de recomendaciones reales en mi perfil de LinkedIn</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-
         <!--Recomendaciones 1-->
         <div class="row">
           <div class="col-12">
-
-            <!-- <div class="critic-reviews" data-aos="fade-up" data-aos-delay="300">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed,
-                      convallis at tellus.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">The New York Times</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-half"></i>
-                    </div>
-                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero
-                      malesuada feugiat.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">Washington Post</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                      porttitor volutpat.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">The Guardian</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
 
             <!--Testimonios-->
             <div class="testimonials-container">
@@ -1092,7 +898,7 @@
                       <div class="testimonial-profile">
                         <img src="img/person/ana-hidalgo.jpeg" alt="Foto de Ana Isabel Hidalgo Vásquez" class="img-fluid rounded-circle">
                         <div>
-                          <h3>Ana Isabel Hidalgo Vásquez</h3>
+                          <h3 class="bs-card-title">Ana Isabel Hidalgo Vásquez</h3>
                           <h4>Directora ejecutiva de EspacioT</h4>
                         </div>
                       </div>
@@ -1108,7 +914,6 @@
                       <p>
                         Christian ha sido un profesional que logró poner los acentos adecuados y estratégicos en la
                         marca CIKBUS Elite donde colaboramos conjuntamente.
-
                       </p>
                       <p>Trabajar con él ha sido una experiencia que nos permitió crecer y desarrollar una línea de trabajo eficiente en el marketing corporativo de la compañía y en la imagen de marca de la
                         empresa.
@@ -1129,7 +934,7 @@
                         <img src="img/person/vinko-cikutovic.jpeg" alt="Foto de Vinko Cikutovic Madariaga"
                           class="img-fluid rounded-circle">
                         <div>
-                          <h3>Vinko Cikutovic Madariaga</h3>
+                          <h3 class="bs-card-title">Vinko Cikutovic Madariaga</h3>
                           <h4>Gerente General CIKBUS</h4>
                         </div>
                       </div>
@@ -1170,7 +975,7 @@
                       <div class="testimonial-profile">
                         <img src="img/person/eduardo-pena.jpeg" alt="Foto de Eduardo Peña M." class="img-fluid rounded-circle">
                         <div>
-                          <h3>Eduardo Peña M.</h3>
+                          <h3 class="bs-card-title">Eduardo Peña M.</h3>
                           <h4>Director Creativo Agencia Bireal</h4>
                         </div>
                       </div>
@@ -1204,7 +1009,7 @@
                         <img src="img/person/juan-carlos-espinoza.jpeg" alt="Foto de Juan Carlos Espinoza"
                           class="img-fluid rounded-circle">
                         <div>
-                          <h3>Juan Carlos Espinoza</h3>
+                          <h3 class="bs-card-title">Juan Carlos Espinoza</h3>
                           <h4>Gerente General HIDROSISTEMAS</h4>
                         </div>
                       </div>
@@ -1244,37 +1049,8 @@
             </div>
           </div>
         </div>
-
-
-
-
-        <!-- Calificación con estrellas-->
-        <!-- 
-        <div class="row">
-          <div class="col-12 text-center" data-aos="fade-up">
-            <div class="overall-rating">
-              <div class="rating-number">4.8</div>
-              <div class="rating-stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-              <p>Based on 230+ reviews</p>
-              <div class="rating-platforms">
-                <span>Goodreads</span>
-                <span>Amazon</span>
-                <span>Barnes &amp; Noble</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
       </div>
     </section><!-- /Testimonials Section -->
-
-
 
      <!-- ================= SECCIÓN: ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO? ================= -->
         <section id="contacto" class="revision-digital-section">
@@ -1282,7 +1058,7 @@
                 <div>
                     <div class="text-start mx-auto" style="max-width: 1200px;">
                         <span class="bs-chip">HABLEMOS DE TU PROYECTO</span>
-                        <h2 class="atom-title-section-left ">
+                        <h2 class="bs-title">
                             ¿Revisamos tu presencia digital sin costo?
                         </h2>
                     </div>
@@ -1295,7 +1071,7 @@
                         <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
                         <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
                         <div class="d-flex align-items-center gap-2" style="margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
-                            <span></span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong> en Chile.
+                            <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong> en Chile.
                         </div>
                     </div>
                 </div>
@@ -1305,7 +1081,7 @@
                     <div>
                         <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
                         
-                        <h3 class="fw-bold mb-2" style="font-size: 1.5rem; color: var(--text-main);">
+                        <h3 class="bs-card-title mb-2">
                             Solicita tu sesión de diagnóstico
                         </h3>
                         
@@ -1313,7 +1089,7 @@
                             Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
                         </p>
 
-                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) — sin cambios de IDs, names, action ni target -->
+                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) -->
                         <form id="agendarForm" action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec" method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
                             <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
                                 <div class="col-6">
@@ -1345,7 +1121,7 @@
                     </div>
 
                     <div>
-                        <!-- Botón de Agendar (el estilo inline se mantiene porque main.js lo modifica al validar) -->
+                        <!-- Botón de Agendar -->
                         <button type="button" id="btnAgendar" disabled class="atom-btn w-100" style="background-color: #334155; color: #94a3b8; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 9999px; font-weight: 600; border: none; cursor: not-allowed; text-align: center; display: block; transition: all 0.3s ease;">
                             Agendar Reunión →
                         </button>
@@ -1354,106 +1130,9 @@
             </div>
         </section>
 
-
-
-
-
-
-    <!-- Faq Section -->
-    <!--
-    <section id="faq" class="faq section">
-      
-
-     
-      <div class="container section-title">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
-                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in.
-                    Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
-                    Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi.
-                    Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-    -->
-
-
-
-
   </main>
 
-  <!-- ================= FOOTER (estilo BS) ================= -->
+  <!-- ================= FOOTER ================= -->
   <footer class="bs-footer">
         <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
         <div class="bs-footer-grid">
@@ -1468,7 +1147,7 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Librerías JS (CDN, versiones fijas) -->
+  <!-- Librerías JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -1477,24 +1156,21 @@
   <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
 
-  <!-- Inicialización de la plantilla (reemplaza assets/js/main.js) -->
+  <!-- Inicialización de la plantilla -->
   <script>
   (function () {
     window.addEventListener('load', function () {
       if (window.AOS) AOS.init({ duration: 600, easing: 'ease-in-out', once: true, mirror: false });
       if (window.GLightbox) GLightbox({ selector: '.glightbox' });
-      // Texto animado del hero
       var t = document.querySelector('.typed');
       if (t && window.Typed) {
         var items = (t.getAttribute('data-typed-items') || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
         new Typed('.typed', { strings: items, loop: true, typeSpeed: 100, backSpeed: 50, backDelay: 2000 });
       }
-      // Carrusel de testimonios
       document.querySelectorAll('.init-swiper').forEach(function (el) {
         var cfg = el.querySelector('.swiper-config');
         if (cfg && window.Swiper) new Swiper(el, JSON.parse(cfg.innerHTML.trim()));
       });
-      // Portafolio con filtros
       document.querySelectorAll('.isotope-layout').forEach(function (wrap) {
         var cont = wrap.querySelector('.isotope-container');
         if (!cont || !window.Isotope) return;
@@ -1513,7 +1189,6 @@
         });
       });
     });
-    // Botón "volver arriba"
     var st = document.getElementById('scroll-top');
     if (st) {
       st.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
@@ -1522,10 +1197,9 @@
   })();
   </script>
 
-  <!-- Script modular propio (menú hamburguesa y formulario) -->
   <script src="JS/main.js"></script>
 
-  <!-- ================= BOTÓN FLOTANTE DE WHATSAPP ================= -->
+  <!-- Botón WhatsApp -->
   <a href="https://wa.me/56947839131?text=Hola,%20me%20gustaría%20más%20información%20sobre%20sus%20servicios%20de%20consultoría."
     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
     <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1536,10 +1210,8 @@
     </svg>
   </a>
 
-  <!-- Iframe oculto para procesar el envío a Google Sheets y abrir Google Calendar (sin cambios) -->
   <iframe name="hidden_iframe" id="hidden_iframe" class="d-none"
     onload="if(window.submitted){window.open('https://calendar.app.google/jzTESP99Gii4eJC78', '_blank');}"></iframe>
-
 
 </body>
 
