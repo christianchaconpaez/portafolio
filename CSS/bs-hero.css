@@ -1,0 +1,32 @@
+/* ====================================================================
+   BS-HERO · Columna de imagen del hero (archivo independiente)
+   Se carga DESPUÉS de bs-theme.css. Requiere body.theme-bs.
+   1) .bs-hero-visual  → foto cuadrada con marco teal y 3 tarjetas flotantes (index)
+   2) .hero-image-wrapper + .hero-floating-badge → foto de cuerpo entero con badge (christian-chacon)
+   =================================================================== */
+/* ---------- 1) Foto cuadrada con tarjetas flotantes ---------- */
+.theme-bs .bs-hero-visual{position:relative;display:flex;align-items:center;justify-content:center;align-self:center;width:100%;padding:60px 30px}
+.theme-bs .bs-hero-visual .image-container{position:relative;max-width:500px;width:100%}
+.theme-bs .bs-hero-visual .hero-main-image{position:relative;z-index:2;display:block;width:100%;height:auto;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.theme-bs .bs-hero-visual .image-overlay{position:absolute;top:20px;left:20px;right:-20px;bottom:-20px;z-index:1;border-radius:20px;background:linear-gradient(45deg,var(--bs-teal),color-mix(in srgb,var(--bs-teal),transparent 30%))}
+.theme-bs .bs-hero-visual .floating-elements{position:absolute;top:0;left:0;right:0;bottom:0;z-index:3}
+.theme-bs .bs-hero-visual .floating-card{position:absolute;display:flex;align-items:center;gap:10px;padding:15px 20px;border-radius:15px;white-space:nowrap;background:rgba(11,15,25,.92);border:1px solid var(--bs-line);box-shadow:0 10px 30px rgba(0,0,0,.45);animation:bsFloat 6s ease-in-out infinite}
+.theme-bs .bs-hero-visual .floating-card i{font-size:1.5rem;color:var(--bs-teal)}
+.theme-bs .bs-hero-visual .floating-card span{font-weight:600;color:#fff}
+.theme-bs .bs-hero-visual .floating-card.card-1{top:10%;left:-10%;animation-delay:0s}
+.theme-bs .bs-hero-visual .floating-card.card-2{top:60%;right:-15%;animation-delay:2s}
+.theme-bs .bs-hero-visual .floating-card.card-3{bottom:15%;left:-5%;animation-delay:4s}
+@keyframes bsFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:991px){.theme-bs .bs-hero-visual{padding:40px 30px}}
+@media(max-width:768px){
+ .theme-bs .bs-hero-visual .floating-card{padding:10px 15px;font-size:.9rem}
+ .theme-bs .bs-hero-visual .floating-card i{font-size:1.2rem}
+ .theme-bs .bs-hero-visual .floating-card.card-1{top:5%;left:-5%}
+ .theme-bs .bs-hero-visual .floating-card.card-2{top:70%;right:-10%}
+ .theme-bs .bs-hero-visual .floating-card.card-3{bottom:10%;left:0}
+}
+/* ---------- 2) Foto de cuerpo entero con badge ---------- */
+.theme-bs .hero-image-wrapper{position:relative;display:flex;justify-content:center;align-self:flex-end;width:100%}
+.theme-bs .hero.section .hero-image-wrapper{align-self:center}
+.theme-bs .hero-floating-badge{position:absolute;right:-10%;top:60%;transform:translateY(-50%);z-index:10;max-width:260px;padding:.9rem 1.2rem;border-radius:1rem;background:rgba(11,15,25,.85);border:1px solid rgba(63,193,176,.35);backdrop-filter:blur(10px);box-shadow:0 15px 30px rgba(0,0,0,.5)}
+@media(max-width:900px){.theme-bs .hero-floating-badge{position:relative;left:0;top:0;transform:none;margin-bottom:1.5rem;max-width:100%}}
