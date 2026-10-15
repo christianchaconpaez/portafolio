@@ -20,7 +20,7 @@
 }
 .atom-title-section-left {
   font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-main);
 
   margin-bottom: 0.8rem;
