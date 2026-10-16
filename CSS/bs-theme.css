@@ -10,6 +10,13 @@
   /* COLOR CTA DEL SITIO: barra superior, botón "Contacto" y clases .bg-cta / .text-cta. Cámbialo aquí. */
   --bs-cta:var(--bs-coral); --bs-cta-text:#ffffff;
   --bs-grad:linear-gradient(90deg,#3fc1b0,#3b82f6);
+  /* TIPOGRAFÍA DEL SITIO (fuente única; valores tomados de servicios-marketing-b2b.html). Cambia aquí para cambiar todo el sitio. */
+  --fs-h1:clamp(2.2rem,4.2vw,3.1rem); --fw-h1:600; --lh-h1:1.12;
+  --fs-h2:clamp(1.7rem,3vw,2.5rem);   --fw-h2:600; --lh-h2:1.2;
+  --fs-h3:1.4rem; --fw-h3:700;        /* título de tarjeta de servicio */
+  --fs-lead:1.05rem; --lh-lead:1.6;   /* bajadas / subtítulos */
+  --fs-body:.95rem; --fs-small:.9rem; /* listas / texto de apoyo */
+  --fs-sub:.88rem; --fw-sub:600;      /* línea de apoyo bajo el título de tarjeta */
   --bs-line:rgba(120,160,255,.16); --bs-glow:0 0 0 1px rgba(63,193,176,.35),0 20px 50px rgba(59,130,246,.22);
 }
 body.theme-bs{background:var(--bs-bg);color:#e6ecff;
@@ -39,14 +46,14 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .bs-glass{background:linear-gradient(160deg,rgba(18,28,56,.7),rgba(8,13,30,.85));border:1px solid var(--bs-line);border-radius:1.25rem;padding:2rem;backdrop-filter:blur(8px);transition:.3s}
 .theme-bs .bs-glass:hover{border-color:rgba(63,193,176,.4)}
 .theme-bs .bs-section{max-width:1200px;margin:0 auto;padding:5.5rem 2rem}
-.theme-bs .bs-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:600;color:#fff;line-height:1.2;margin-bottom:.8rem}
-.theme-bs .bs-lead{color:var(--text-muted);font-size:1.05rem;line-height:1.6;max-width:760px}
+.theme-bs .bs-title{font-size:var(--fs-h2);font-weight:var(--fw-h2);color:#fff;line-height:var(--lh-h2);margin-bottom:.8rem}
+.theme-bs .bs-lead{color:var(--text-muted);font-size:var(--fs-lead);font-weight:400;line-height:var(--lh-lead);max-width:760px}
 .theme-bs .bs-check{list-style:none;padding:0;margin:0 0 1.5rem}
 .theme-bs .bs-check li{display:flex;gap:.6rem;margin-bottom:.7rem;color:#cdd8f5;font-size:.95rem}
 .theme-bs .bs-check li::before{content:"✔";color:var(--bs-teal);font-weight:700}
 /* ---------- Hero ---------- */
 .theme-bs .bs-hero{max-width:1200px;margin:0 auto;padding:4.5rem 2rem 3rem;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
-.theme-bs .bs-hero h1{font-size:clamp(2.2rem,4.2vw,3.1rem);font-weight:600;line-height:1.12;color:#fff;margin-bottom:1.2rem}
+.theme-bs .bs-hero h1,.theme-bs .bs-h1{font-size:var(--fs-h1);font-weight:var(--fw-h1);line-height:var(--lh-h1);letter-spacing:normal;color:#fff;margin-bottom:1.2rem}
 .theme-bs .bs-hero-img{border-radius:1.5rem;width:100%;box-shadow:var(--bs-glow)}
 /* ---------- Bento ---------- */
 .theme-bs .bs-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2rem;margin-top:2.5rem}
@@ -99,6 +106,14 @@ body.theme-bs{--accent-color:var(--bs-teal);--heading-color:#ffffff}
 .theme-bs .skill-card:hover,.theme-bs .experience-card:hover,.theme-bs .service-item:hover,.theme-bs .testimonial-item:hover,.theme-bs .faq-item:hover{border-color:rgba(63,193,176,.45)}
 /* Portafolio: título bajo el logo siempre en blanco (la plantilla lo pintaba con --contrast-color, que es oscuro) */
 .theme-bs .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title{color:#ffffff}
+/* ---------- Tipografía unificada: títulos de tarjeta, líneas de apoyo y textos (index y demás páginas) ---------- */
+.theme-bs .bs-card-title{font-size:var(--fs-h3);font-weight:var(--fw-h3);line-height:1.25;color:#fff;margin:0 0 .5rem}
+.theme-bs .bs-card-sub{font-size:var(--fs-sub);font-weight:var(--fw-sub);line-height:1.4;color:var(--bs-teal);margin:0 0 1rem}
+.theme-bs .bs-pain{font-size:1.02rem;line-height:1.5;color:#fff}
+.theme-bs .metodologia-list li{font-size:var(--fs-body);line-height:1.5;color:#cdd8f5}
+.theme-bs .metodologia-list li span.check{color:var(--bs-teal)}
+.theme-bs .paso-content h3{font-size:1.1rem;font-weight:700;color:#fff}
+.theme-bs .industrias-title{color:var(--text-muted);font-weight:400;letter-spacing:1.5px}
 /* ---------- Responsive ---------- */
 @media(max-width:991px){
  .theme-bs .bs-hero,.theme-bs .bs-plans,.theme-bs .bs-projects,.theme-bs .bs-faq{grid-template-columns:1fr}
