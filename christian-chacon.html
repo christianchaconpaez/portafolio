@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Christian Chacón Páez | Marketing, Diseño Gráfico & Web UX/UI</title>
-  <meta name="description" content="Christian Chacón Páez, publicista y diseñador UX/UI. Marketing B2B, SEO/GEO y sitios WordPress para empresas industriales y tecnológicas en Chile.">
+  <meta name="description"
+    content="Christian Chacón Páez, publicista y diseñador UX/UI. Marketing B2B, SEO/GEO y sitios WordPress para empresas industriales y tecnológicas en Chile.">
   <meta name="keywords"
     content="publicista, marketing, diseño web, diseñador web, diseño gráfico, diseñador gráfico, diseño de marcas, desarrollo de marcas, imagen corporativa, branding, diseño UX/UI.">
 
@@ -34,35 +35,151 @@
       --heading-font: var(--font-family);
       --nav-font: var(--font-family);
     }
+
     /* Comillas decorativas de los testimonios */
-    .testimonials .critic-reviews .critic-review .review-quote { font-family: var(--font-family); }
+    .testimonials .critic-reviews .critic-review .review-quote {
+      font-family: var(--font-family);
+    }
 
     /* ===== Hero: foto de cuerpo entero con badge + fondo y paddings compactos ===== */
-    .theme-bs .hero-image-wrapper { position: relative; display: flex; justify-content: center; align-self: flex-end; width: 100%; }
-    .theme-bs .hero-floating-badge { position: absolute; right: -10%; top: 60%; transform: translateY(-50%); z-index: 10; max-width: 260px; padding: .9rem 1.2rem; border-radius: 1rem; background: rgba(11,15,25,.85); border: 1px solid rgba(63,193,176,.35); backdrop-filter: blur(10px); box-shadow: 0 15px 30px rgba(0,0,0,.5); }
-    .theme-bs #hero.hero { padding: .8rem 0 0; min-height: 0; align-items: flex-end; background: url('img/abstract-bg-01.webp') center/cover no-repeat fixed; }
-    .theme-bs #hero.hero::before { background: rgba(7,10,19,.5); opacity: 1; z-index: 0; }
-    @media (min-width: 992px) {
-      .theme-bs #hero .row { align-items: flex-end !important; }
-      .theme-bs #hero .hero-content { padding-bottom: 3rem; }
-      .theme-bs #hero .hero-image { padding: 0; }
+    .theme-bs .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+      width: 100%;
     }
+
+    .theme-bs .hero-floating-badge {
+      position: absolute;
+      right: -10%;
+      top: 60%;
+      transform: translateY(-50%);
+      z-index: 10;
+      max-width: 260px;
+      padding: .9rem 1.2rem;
+      border-radius: 1rem;
+      background: rgba(11, 15, 25, .85);
+      border: 1px solid rgba(63, 193, 176, .35);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+    }
+
+    .theme-bs #hero.hero {
+      padding: .8rem 0 0;
+      min-height: 0;
+      align-items: flex-end;
+      background: url('img/abstract-bg-01.webp') center/cover no-repeat fixed;
+    }
+
+    .theme-bs #hero.hero::before {
+      background: rgba(7, 10, 19, .5);
+      opacity: 1;
+      z-index: 0;
+    }
+
+    @media (min-width: 992px) {
+      .theme-bs #hero .row {
+        align-items: flex-end !important;
+      }
+
+      .theme-bs #hero .hero-content {
+        padding-bottom: 3rem;
+      }
+
+      .theme-bs #hero .hero-image {
+        padding: 0;
+      }
+    }
+
     @media (max-width: 900px) {
-      .theme-bs .hero-floating-badge { position: relative; left: 0; top: 0; transform: none; margin-bottom: 1.5rem; max-width: 100%; }
+      .theme-bs .hero-floating-badge {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+      }
     }
 
     /* ===== Títulos y subtítulos: mismos tokens que servicios-marketing-b2b.html (ver :root en CSS/bs-theme.css) ===== */
-    .theme-bs .bs-h1 { font-size: var(--fs-h1) !important; font-weight: var(--fw-h1) !important; line-height: var(--lh-h1) !important; letter-spacing: normal !important; color: #fff; margin-bottom: 1.2rem !important; }
-    .theme-bs main .section-title { text-align: left; padding-bottom: 2rem; }
-    .theme-bs main h2.bs-title { font-size: var(--fs-h2) !important; font-weight: var(--fw-h2) !important; line-height: var(--lh-h2) !important; letter-spacing: normal !important; color: #fff !important; margin: 0 0 .8rem !important; }
-    .theme-bs main h2.bs-title::before, .theme-bs main h2.bs-title::after { display: none !important; }
-    .theme-bs main h2.bs-title-sm { font-size: clamp(1.3rem, 2vw, 1.6rem) !important; font-weight: var(--fw-h2) !important; line-height: 1.25 !important; color: #fff !important; margin-bottom: .6rem !important; }
-    .theme-bs main p.bs-lead { font-size: var(--fs-lead) !important; font-weight: 400 !important; line-height: var(--lh-lead) !important; color: var(--text-muted) !important; max-width: 760px; font-family: var(--font-family); }
-    .theme-bs main .section-title p.bs-lead { margin: 0 !important; }
-    .theme-bs main h3.bs-card-title { font-size: var(--fs-h3) !important; font-weight: var(--fw-h3) !important; line-height: 1.25 !important; color: #fff; }
-    .theme-bs main h3.bs-card-title-sm { font-size: var(--fs-h3-sm) !important; font-weight: var(--fw-h3) !important; line-height: 1.3 !important; color: #fff; }
-    .theme-bs main h3.bs-name { font-size: var(--fs-name) !important; font-weight: 700 !important; line-height: 1.3 !important; color: #fff; }
-    .theme-bs main h4.bs-card-sub { font-size: var(--fs-sub) !important; font-weight: var(--fw-sub) !important; line-height: 1.4 !important; color: var(--bs-teal) !important; }
+    .theme-bs .bs-h1 {
+      font-size: var(--fs-h1) !important;
+      font-weight: var(--fw-h1) !important;
+      line-height: var(--lh-h1) !important;
+      letter-spacing: normal !important;
+      color: #fff;
+      margin-bottom: 1.2rem !important;
+    }
+
+    .theme-bs main .section-title {
+      text-align: left;
+      padding-bottom: 2rem;
+    }
+
+    .theme-bs main h2.bs-title {
+      font-size: var(--fs-h2) !important;
+      font-weight: var(--fw-h2) !important;
+      line-height: var(--lh-h2) !important;
+      letter-spacing: normal !important;
+      color: #fff !important;
+      margin: 0 0 .8rem !important;
+    }
+
+    .theme-bs main h2.bs-title::before,
+    .theme-bs main h2.bs-title::after {
+      display: none !important;
+    }
+
+    .theme-bs main h2.bs-title-sm {
+      font-size: clamp(1.3rem, 2vw, 1.6rem) !important;
+      font-weight: var(--fw-h2) !important;
+      line-height: 1.25 !important;
+      color: #fff !important;
+      margin-bottom: .6rem !important;
+    }
+
+    .theme-bs main p.bs-lead {
+      font-size: var(--fs-lead) !important;
+      font-weight: 400 !important;
+      line-height: var(--lh-lead) !important;
+      color: var(--text-muted) !important;
+      max-width: 760px;
+      font-family: var(--font-family);
+    }
+
+    .theme-bs main .section-title p.bs-lead {
+      margin: 0 !important;
+    }
+
+    .theme-bs main h3.bs-card-title {
+      font-size: var(--fs-h3) !important;
+      font-weight: var(--fw-h3) !important;
+      line-height: 1.25 !important;
+      color: #fff;
+    }
+
+    .theme-bs main h3.bs-card-title-sm {
+      font-size: var(--fs-h3-sm) !important;
+      font-weight: var(--fw-h3) !important;
+      line-height: 1.3 !important;
+      color: #fff;
+    }
+
+    .theme-bs main h3.bs-name {
+      font-size: var(--fs-name) !important;
+      font-weight: 700 !important;
+      line-height: 1.3 !important;
+      color: #fff;
+    }
+
+    .theme-bs main h4.bs-card-sub {
+      font-size: var(--fs-sub) !important;
+      font-weight: var(--fw-sub) !important;
+      line-height: 1.4 !important;
+      color: var(--bs-teal) !important;
+    }
   </style>
 </head>
 
@@ -70,9 +187,9 @@
 
   <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
   <div class="top-bar">
-        <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
-        <div>Lun - Vie 9:00am - 6:00pm</div>
-    </div>
+    <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
+    <div>Lun - Vie 9:00am - 6:00pm</div>
+  </div>
 
   <!-- ================= NAVEGACIÓN PRINCIPAL ================= -->
   <header>
@@ -93,9 +210,10 @@
       <!-- Enlaces de navegación -->
       <ul class="nav-links">
         <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
-        <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
-        <li><a href="#portfolio">Proyectos</a></li>
-        <li><a href="christian-chacon.html" class="active">Sobre mí</a></li>
+        <li><a href="servicios-diseno-web.html">Diseño Web</a></li>
+        <li><a href="ley-21719-proteccion-datos.html">Ley 21.719</a></li>
+        <li><a href="christian-chacon.html#portfolio" class="active">Proyectos</a></li>
+        <li><a href="christian-chacon.html">Sobre mí</a></li>
         <li><a href="index.html#blog">Blog</a></li>
       </ul>
 
@@ -117,9 +235,10 @@
               <span class="bs-chip">Sobre mí</span>
               <h1 class="bs-h1 hero-title">Soluciones en <span class="text-gradient typed"
                   data-typed-items="Marketing B2B, Diseño Gráfico, Diseño Web UX/UI,"></span></h1>
-              <p class="bs-lead" style="margin-bottom:1.2rem;">Soy tu apoyo en marketing para que tu empresa se posicione y venda.</p>
+              <p class="bs-lead" style="margin-bottom:1.2rem;">Soy tu apoyo en marketing para que tu empresa se
+                posicione y venda.</p>
               <p>
-              Me enfoco en crear y administrar toda tu infraestructura de marketing y diseño.
+                Me enfoco en crear y administrar toda tu infraestructura de marketing y diseño.
               </p>
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
@@ -138,12 +257,17 @@
             <div class="hero-image-wrapper">
               <!-- Tarjeta flotante a la altura de la cintura -->
               <div class="hero-floating-badge">
-                <h2 class="fw-bold" style="color: var(--accent-cyan); font-size: 0.9rem; letter-spacing: 0.5px; margin-bottom: 0.2rem;">CHRISTIAN CHACÓN PÁEZ</h2>
-                <p class="fw-semibold text-uppercase" style="color: var(--text-muted); font-size: 0.6rem; letter-spacing: 0.8px; line-height: 1.3;">Consultor en Marketing B2B &amp; Desarrollo Digital</p>
+                <h2 class="fw-bold"
+                  style="color: var(--accent-cyan); font-size: 0.9rem; letter-spacing: 0.5px; margin-bottom: 0.2rem;">
+                  CHRISTIAN CHACÓN PÁEZ</h2>
+                <p class="fw-semibold text-uppercase"
+                  style="color: var(--text-muted); font-size: 0.6rem; letter-spacing: 0.8px; line-height: 1.3;">
+                  Consultor en Marketing B2B &amp; Desarrollo Digital</p>
               </div>
               <!-- Fotografía principal -->
               <div class="position-relative w-100" style="max-width: 400px; line-height: 0;">
-                <img src="img/christian-chacon-01.webp" alt="Christian Chacón Páez" class="d-block w-100 h-auto object-fit-cover">
+                <img src="img/christian-chacon-01.webp" alt="Christian Chacón Páez"
+                  class="d-block w-100 h-auto object-fit-cover">
               </div>
             </div>
           </div>
@@ -177,7 +301,8 @@
                 <img src="img/profile/christian-chacon-paez.webp" alt="Christian Chacón Páez" class="img-fluid">
               </div>
               <div class="signature-section">
-                <img src="img/portfolio/firma christian chacon paez.webp" alt="Firma de Christian Chacón Páez" class="signature">
+                <img src="img/portfolio/firma christian chacon paez.webp" alt="Firma de Christian Chacón Páez"
+                  class="signature">
                 <p class="quote">"Un diseño sin una estrategia que lo sustente, no es más que un bonito dibujo"</p>
               </div>
             </div>
@@ -417,7 +542,8 @@
           <div class="col-lg-4">
             <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
               <h3 class="bs-card-title-sm">Mi Experiencia Profesional</h3>
-              <p>Trayectoria en retail, transporte, ingeniería y tecnología, generando soluciones de marketing y diseño tanto tradicional como digital.</p>
+              <p>Trayectoria en retail, transporte, ingeniería y tecnología, generando soluciones de marketing y diseño
+                tanto tradicional como digital.</p>
               <p>
                 Actualmente me dedico a prestar servicios de consultoría en marketing y diseño web a empresas del
                 mercado industrial y tecnológico B2B.
@@ -713,8 +839,7 @@
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">UI/UX Design</div>
-                      <img src="img/portfolio/logo safesmart blanco.webp" width="60%"
-                        alt="logo safesmart access chile">
+                      <img src="img/portfolio/logo safesmart blanco.webp" width="60%" alt="logo safesmart access chile">
 
                       <h3 class="entry-title mt-2">Soluciones de seguridad industrial</h3>
 
@@ -828,8 +953,7 @@
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">UI/UX Design</div>
-                      <img class="logo-entry-meta" src="img/portfolio/logo-avante-it-blanco.webp"
-                        alt="logo avante it">
+                      <img class="logo-entry-meta" src="img/portfolio/logo-avante-it-blanco.webp" alt="logo avante it">
 
                       <h3 class="entry-title mt-2">Soluciones informáticas</h3>
 
@@ -855,7 +979,8 @@
         <span class="bs-chip">Prueba social</span>
         <h2 class="bs-title">Testimonios y opiniones</h2>
         <p class="bs-lead">Qué opinan de mí y de mi trabajo.</p>
-        <p class="atom-text-body">Los testimonios en esta sección provienen de recomendaciones reales en mi perfil de LinkedIn</p>
+        <p class="atom-text-body">Los testimonios en esta sección provienen de recomendaciones reales en mi perfil de
+          LinkedIn</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -899,7 +1024,8 @@
                     <div class="testimonial-item">
 
                       <div class="testimonial-profile">
-                        <img src="img/person/ana-hidalgo.jpeg" alt="Foto de Ana Isabel Hidalgo Vásquez" class="img-fluid rounded-circle">
+                        <img src="img/person/ana-hidalgo.jpeg" alt="Foto de Ana Isabel Hidalgo Vásquez"
+                          class="img-fluid rounded-circle">
                         <div>
                           <h3 class="bs-name">Ana Isabel Hidalgo Vásquez</h3>
                           <h4>Directora ejecutiva de EspacioT</h4>
@@ -918,7 +1044,8 @@
                         Christian ha sido un profesional que logró poner los acentos adecuados y estratégicos en la
                         marca CIKBUS Elite donde colaboramos conjuntamente.
                       </p>
-                      <p>Trabajar con él ha sido una experiencia que nos permitió crecer y desarrollar una línea de trabajo eficiente en el marketing corporativo de la compañía y en la imagen de marca de la
+                      <p>Trabajar con él ha sido una experiencia que nos permitió crecer y desarrollar una línea de
+                        trabajo eficiente en el marketing corporativo de la compañía y en la imagen de marca de la
                         empresa.
                       </p>
                       <p>
@@ -976,7 +1103,8 @@
                     <div class="testimonial-item">
 
                       <div class="testimonial-profile">
-                        <img src="img/person/eduardo-pena.jpeg" alt="Foto de Eduardo Peña M." class="img-fluid rounded-circle">
+                        <img src="img/person/eduardo-pena.jpeg" alt="Foto de Eduardo Peña M."
+                          class="img-fluid rounded-circle">
                         <div>
                           <h3 class="bs-name">Eduardo Peña M.</h3>
                           <h4>Director Creativo Agencia Bireal</h4>
@@ -1055,96 +1183,132 @@
       </div>
     </section><!-- /Testimonials Section -->
 
-     <!-- ================= SECCIÓN: ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO? ================= -->
-        <section id="contacto" class="revision-digital-section">
-            <div class="revision-digital-grid">
-                <div>
-                    <div class="text-start mx-auto" style="max-width: 1200px;">
-                        <span class="bs-chip">HABLEMOS DE TU PROYECTO</span>
-                        <h2 class="bs-title">
-                            ¿Revisamos tu presencia digital sin costo?
-                        </h2>
-                    </div>
+    <!-- ================= SECCIÓN: ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO? ================= -->
+    <section id="contacto" class="revision-digital-section">
+      <div class="revision-digital-grid">
+        <div>
+          <div class="text-start mx-auto" style="max-width: 1200px;">
+            <span class="bs-chip">HABLEMOS DE TU PROYECTO</span>
+            <h2 class="bs-title">
+              ¿Revisamos tu presencia digital sin costo?
+            </h2>
+          </div>
 
-                    <p class="mt-4 skills-summary" style="color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
-                        Agendemos una conversación de 20 minutos. Analizaremos tu situación actual, detectaremos qué está frenando tus consultas comerciales y definiremos los primeros pasos para resolverlo. Sin compromisos ni presiones.
-                    </p>
+          <p class="mt-4 skills-summary"
+            style="color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+            Agendemos una conversación de 20 minutos. Analizaremos tu situación actual, detectaremos qué está frenando
+            tus consultas comerciales y definiremos los primeros pasos para resolverlo. Sin compromisos ni presiones.
+          </p>
 
-                    <div class="d-flex flex-column" style="gap: 0.8rem; font-size: 0.9rem; color: var();">
-                        <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
-                        <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
-                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
-                            <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong> en Chile.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Columna Derecha: Tarjeta de Sesión de Diagnóstico con Formulario -->
-                <div class="sesion-card">
-                    <div>
-                        <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
-                        
-                        <h3 class="bs-card-title mb-2">
-                            Solicita tu sesión de diagnóstico
-                        </h3>
-                        
-                        <p class="fw-semibold mb-4" style="color: var(--accent-cyan); font-size: 0.9rem; line-height: 1.4;">
-                            Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
-                        </p>
-
-                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) -->
-                        <form id="agendarForm" action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec" method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
-                            <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
-                                <div class="col-6">
-                                    <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Nombre *</label>
-                                    <input type="text" name="nombre" id="campoNombre" placeholder="Ej. Juan" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
-                                </div>
-                                <div class="col-6">
-                                    <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Apellido *</label>
-                                    <input type="text" name="apellido" id="campoApellido" placeholder="Ej. Pérez" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Correo Electrónico *</label>
-                                <input type="email" name="correo" id="campoCorreo" placeholder="correo@ejemplo.com" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
-                            </div>
-                            <div>
-                                <label class="d-block" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Teléfono de Contacto *</label>
-                                <input type="tel" name="telefono" id="campoTelefono" placeholder="+56 9 1234 5678" class="w-100" style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;" required>
-                            </div>
-
-                            <!-- Casilla de consentimiento -->
-                            <div class="d-flex align-items-start" style="gap: 0.6rem; margin-top: 0.3rem;">
-                                <input type="checkbox" name="consentimiento" id="campoConsentimiento" value="Sí" style="margin-top: 0.2rem; cursor: pointer; accent-color: var(--accent-cyan);">
-                                <label for="campoConsentimiento" style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; cursor: pointer;">
-                                    Acepto recibir mensajes y correos con información adicional y material de promociones.
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div>
-                        <!-- Botón de Agendar -->
-                        <button type="button" id="btnAgendar" disabled class="atom-btn w-100" style="background-color: #334155; color: #94a3b8; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 9999px; font-weight: 600; border: none; cursor: not-allowed; text-align: center; display: block; transition: all 0.3s ease;">
-                            Agendar Reunión →
-                        </button>
-                    </div>
-                </div>
+          <div class="d-flex flex-column" style="gap: 0.8rem; font-size: 0.9rem; color: var();">
+            <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
+            <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
+            <div class="d-flex align-items-center gap-2"
+              style="margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
+              <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong> en Chile.
             </div>
-        </section>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Tarjeta de Sesión de Diagnóstico con Formulario -->
+        <div class="sesion-card">
+          <div>
+            <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
+
+            <h3 class="bs-card-title mb-2">
+              Solicita tu sesión de diagnóstico
+            </h3>
+
+            <p class="fw-semibold mb-4" style="color: var(--accent-cyan); font-size: 0.9rem; line-height: 1.4;">
+              Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
+            </p>
+
+            <!-- Formulario conectado mediante iframe oculto (Google Sheets) -->
+            <form id="agendarForm"
+              action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec"
+              method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
+              <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
+                <div class="col-6">
+                  <label class="d-block"
+                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Nombre *</label>
+                  <input type="text" name="nombre" id="campoNombre" placeholder="Ej. Juan" class="w-100"
+                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                    required>
+                </div>
+                <div class="col-6">
+                  <label class="d-block"
+                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Apellido *</label>
+                  <input type="text" name="apellido" id="campoApellido" placeholder="Ej. Pérez" class="w-100"
+                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                    required>
+                </div>
+              </div>
+              <div>
+                <label class="d-block"
+                  style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Correo Electrónico
+                  *</label>
+                <input type="email" name="correo" id="campoCorreo" placeholder="correo@ejemplo.com" class="w-100"
+                  style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                  required>
+              </div>
+              <div>
+                <label class="d-block"
+                  style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Teléfono de Contacto
+                  *</label>
+                <input type="tel" name="telefono" id="campoTelefono" placeholder="+56 9 1234 5678" class="w-100"
+                  style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                  required>
+              </div>
+
+              <!-- Casilla de consentimiento -->
+              <div class="d-flex align-items-start" style="gap: 0.6rem; margin-top: 0.3rem;">
+                <input type="checkbox" name="consentimiento" id="campoConsentimiento" value="Sí"
+                  style="margin-top: 0.2rem; cursor: pointer; accent-color: var(--accent-cyan);">
+                <label for="campoConsentimiento"
+                  style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; cursor: pointer;">
+                  Acepto recibir mensajes y correos con información adicional y material de promociones.
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <div>
+            <!-- Botón de Agendar -->
+            <button type="button" id="btnAgendar" disabled class="atom-btn w-100"
+              style="background-color: #334155; color: #94a3b8; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 9999px; font-weight: 600; border: none; cursor: not-allowed; text-align: center; display: block; transition: all 0.3s ease;">
+              Agendar Reunión →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="bs-footer">
-        <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
-        <div class="bs-footer-grid">
-            <div><h4>Empresa</h4><p>Transformando servicios excelentes en negocios visibles y creíbles.</p></div>
-            <div><h4>Servicios</h4><a href="servicios-marketing-b2b.html">Marketing B2B</a><a href="servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a href="christian-chacon.html#portfolio">Proyectos</a><a href="christian-chacon.html">Sobre mí</a></div>
-            <div><h4>Contacto</h4><small>WhatsApp</small><p>+56 9 4783 9131</p><small>Email</small><p>christian.chacon.paez@gmail.com</p></div>
-            <div><h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
-        </div>
-    </footer>
+    <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+    <div class="bs-footer-grid">
+      <div>
+        <h4>Empresa</h4>
+        <p>Transformando servicios excelentes en negocios visibles y creíbles.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4><a href="servicios-marketing-b2b.html">Marketing B2B</a><a
+          href="servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a
+          href="christian-chacon.html#portfolio">Proyectos</a><a href="christian-chacon.html">Sobre mí</a>
+      </div>
+      <div>
+        <h4>Contacto</h4><small>WhatsApp</small>
+        <p>+56 9 4783 9131</p><small>Email</small>
+        <p>christian.chacon.paez@gmail.com</p>
+      </div>
+      <div>
+        <h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank"
+          rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -1161,43 +1325,43 @@
 
   <!-- Inicialización de la plantilla -->
   <script>
-  (function () {
-    window.addEventListener('load', function () {
-      if (window.AOS) AOS.init({ duration: 600, easing: 'ease-in-out', once: true, mirror: false });
-      if (window.GLightbox) GLightbox({ selector: '.glightbox' });
-      var t = document.querySelector('.typed');
-      if (t && window.Typed) {
-        var items = (t.getAttribute('data-typed-items') || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
-        new Typed('.typed', { strings: items, loop: true, typeSpeed: 100, backSpeed: 50, backDelay: 2000 });
-      }
-      document.querySelectorAll('.init-swiper').forEach(function (el) {
-        var cfg = el.querySelector('.swiper-config');
-        if (cfg && window.Swiper) new Swiper(el, JSON.parse(cfg.innerHTML.trim()));
-      });
-      document.querySelectorAll('.isotope-layout').forEach(function (wrap) {
-        var cont = wrap.querySelector('.isotope-container');
-        if (!cont || !window.Isotope) return;
-        var iso;
-        imagesLoaded(cont, function () {
-          iso = new Isotope(cont, { itemSelector: '.isotope-item', layoutMode: wrap.getAttribute('data-layout') || 'masonry', filter: wrap.getAttribute('data-default-filter') || '*', sortBy: wrap.getAttribute('data-sort') || 'original-order' });
+    (function () {
+      window.addEventListener('load', function () {
+        if (window.AOS) AOS.init({duration: 600, easing: 'ease-in-out', once: true, mirror: false});
+        if (window.GLightbox) GLightbox({selector: '.glightbox'});
+        var t = document.querySelector('.typed');
+        if (t && window.Typed) {
+          var items = (t.getAttribute('data-typed-items') || '').split(',').map(function (x) {return x.trim();}).filter(Boolean);
+          new Typed('.typed', {strings: items, loop: true, typeSpeed: 100, backSpeed: 50, backDelay: 2000});
+        }
+        document.querySelectorAll('.init-swiper').forEach(function (el) {
+          var cfg = el.querySelector('.swiper-config');
+          if (cfg && window.Swiper) new Swiper(el, JSON.parse(cfg.innerHTML.trim()));
         });
-        wrap.querySelectorAll('.isotope-filters li').forEach(function (li) {
-          li.addEventListener('click', function () {
-            var act = wrap.querySelector('.isotope-filters .filter-active');
-            if (act) act.classList.remove('filter-active');
-            li.classList.add('filter-active');
-            if (iso) iso.arrange({ filter: li.getAttribute('data-filter') });
-            if (window.AOS) AOS.refresh();
+        document.querySelectorAll('.isotope-layout').forEach(function (wrap) {
+          var cont = wrap.querySelector('.isotope-container');
+          if (!cont || !window.Isotope) return;
+          var iso;
+          imagesLoaded(cont, function () {
+            iso = new Isotope(cont, {itemSelector: '.isotope-item', layoutMode: wrap.getAttribute('data-layout') || 'masonry', filter: wrap.getAttribute('data-default-filter') || '*', sortBy: wrap.getAttribute('data-sort') || 'original-order'});
+          });
+          wrap.querySelectorAll('.isotope-filters li').forEach(function (li) {
+            li.addEventListener('click', function () {
+              var act = wrap.querySelector('.isotope-filters .filter-active');
+              if (act) act.classList.remove('filter-active');
+              li.classList.add('filter-active');
+              if (iso) iso.arrange({filter: li.getAttribute('data-filter')});
+              if (window.AOS) AOS.refresh();
+            });
           });
         });
       });
-    });
-    var st = document.getElementById('scroll-top');
-    if (st) {
-      st.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-      window.addEventListener('scroll', function () { st.classList.toggle('active', window.scrollY > 100); });
-    }
-  })();
+      var st = document.getElementById('scroll-top');
+      if (st) {
+        st.addEventListener('click', function (e) {e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});});
+        window.addEventListener('scroll', function () {st.classList.toggle('active', window.scrollY > 100);});
+      }
+    })();
   </script>
 
   <script src="JS/main.js"></script>
