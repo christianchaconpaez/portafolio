@@ -51,15 +51,18 @@
       .theme-bs .hero-floating-badge { position: relative; left: 0; top: 0; transform: none; margin-bottom: 1.5rem; max-width: 100%; }
     }
 
-    /* ===== Títulos y subtítulos: mismas reglas que servicios-marketing-b2b.html ===== */
-    .theme-bs .bs-h1 { font-size: clamp(2.2rem, 4.2vw, 3.6rem) !important; font-weight: 700 !important; line-height: 1.12 !important; color: #fff; margin-bottom: 1.2rem !important; }
+    /* ===== Títulos y subtítulos: mismos tokens que servicios-marketing-b2b.html (ver :root en CSS/bs-theme.css) ===== */
+    .theme-bs .bs-h1 { font-size: var(--fs-h1) !important; font-weight: var(--fw-h1) !important; line-height: var(--lh-h1) !important; letter-spacing: normal !important; color: #fff; margin-bottom: 1.2rem !important; }
     .theme-bs main .section-title { text-align: left; padding-bottom: 2rem; }
-    .theme-bs main h2.bs-title { font-size: clamp(1.7rem, 3vw, 2.5rem) !important; font-weight: 700 !important; line-height: 1.2 !important; letter-spacing: normal !important; color: #fff !important; margin: 0 0 .8rem !important; }
+    .theme-bs main h2.bs-title { font-size: var(--fs-h2) !important; font-weight: var(--fw-h2) !important; line-height: var(--lh-h2) !important; letter-spacing: normal !important; color: #fff !important; margin: 0 0 .8rem !important; }
     .theme-bs main h2.bs-title::before, .theme-bs main h2.bs-title::after { display: none !important; }
-    .theme-bs main h2.bs-title-sm { font-size: clamp(1.3rem, 2vw, 1.6rem) !important; font-weight: 700 !important; line-height: 1.25 !important; color: #fff !important; margin-bottom: .6rem !important; }
-    .theme-bs main p.bs-lead { font-size: 1.05rem !important; font-weight: 400 !important; line-height: 1.6 !important; color: var(--text-muted) !important; max-width: 760px; font-family: var(--font-family); }
+    .theme-bs main h2.bs-title-sm { font-size: clamp(1.3rem, 2vw, 1.6rem) !important; font-weight: var(--fw-h2) !important; line-height: 1.25 !important; color: #fff !important; margin-bottom: .6rem !important; }
+    .theme-bs main p.bs-lead { font-size: var(--fs-lead) !important; font-weight: 400 !important; line-height: var(--lh-lead) !important; color: var(--text-muted) !important; max-width: 760px; font-family: var(--font-family); }
     .theme-bs main .section-title p.bs-lead { margin: 0 !important; }
-    .theme-bs main h3.bs-card-title { font-size: 1.2rem !important; font-weight: 700 !important; line-height: 1.3 !important; color: #fff; }
+    .theme-bs main h3.bs-card-title { font-size: var(--fs-h3) !important; font-weight: var(--fw-h3) !important; line-height: 1.25 !important; color: #fff; }
+    .theme-bs main h3.bs-card-title-sm { font-size: var(--fs-h3-sm) !important; font-weight: var(--fw-h3) !important; line-height: 1.3 !important; color: #fff; }
+    .theme-bs main h3.bs-name { font-size: var(--fs-name) !important; font-weight: 700 !important; line-height: 1.3 !important; color: #fff; }
+    .theme-bs main h4.bs-card-sub { font-size: var(--fs-sub) !important; font-weight: var(--fw-sub) !important; line-height: 1.4 !important; color: var(--bs-teal) !important; }
   </style>
 </head>
 
@@ -267,7 +270,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-window-fullscreen"></i>
-                      <h3 class="bs-card-title">Diseño UX/UI</h3>
+                      <h3 class="bs-card-title-sm">Diseño UX/UI</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -303,7 +306,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-code-slash"></i>
-                      <h3 class="bs-card-title">Desarrollo Web &amp; CMS</h3>
+                      <h3 class="bs-card-title-sm">Desarrollo Web &amp; CMS</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -339,7 +342,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-palette"></i>
-                      <h3 class="bs-card-title">Branding &amp; Diseño</h3>
+                      <h3 class="bs-card-title-sm">Branding &amp; Diseño</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -375,7 +378,7 @@
                   <div class="skill-card">
                     <div class="skill-header mb-4">
                       <i class="bi bi-cpu"></i>
-                      <h3 class="bs-card-title">Estrategia Digital e IA</h3>
+                      <h3 class="bs-card-title-sm">Estrategia Digital e IA</h3>
                     </div>
                     <div class="row g-3">
                       <div class="col-6">
@@ -413,7 +416,7 @@
           <!-- Columna Derecha: Resumen de Experiencia -->
           <div class="col-lg-4">
             <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
-              <h3 class="bs-card-title">Mi Experiencia Profesional</h3>
+              <h3 class="bs-card-title-sm">Mi Experiencia Profesional</h3>
               <p>Trayectoria en retail, transporte, ingeniería y tecnología, generando soluciones de marketing y diseño tanto tradicional como digital.</p>
               <p>
                 Actualmente me dedico a prestar servicios de consultoría en marketing y diseño web a empresas del
@@ -458,8 +461,8 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3 class="bs-card-title">Consultor de Branding &amp; Product Designer (UX/UI)</h3>
-                      <h4>Profesional Independiente</h4>
+                      <h3 class="bs-card-title-sm">Consultor de Branding &amp; Product Designer (UX/UI)</h3>
+                      <h4 class="bs-card-sub">Profesional Independiente</h4>
                     </div>
                     <span class="duration">2024 - Presente</span>
                   </div>
@@ -479,8 +482,8 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3 class="bs-card-title">Consultor de Marketing</h3>
-                      <h4>Hidrosistemas Chile</h4>
+                      <h3 class="bs-card-title-sm">Consultor de Marketing</h3>
+                      <h4 class="bs-card-sub">Hidrosistemas Chile</h4>
                     </div>
                     <span class="duration">2019 - Presente</span>
                   </div>
@@ -499,8 +502,8 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3 class="bs-card-title">Marketing Manager</h3>
-                      <h4>Cikbus Chile</h4>
+                      <h3 class="bs-card-title-sm">Marketing Manager</h3>
+                      <h4 class="bs-card-sub">Cikbus Chile</h4>
                     </div>
                     <span class="duration">2014 - 2024</span>
                   </div>
@@ -521,8 +524,8 @@
                 <div class="experience-card" data-aos="zoom-in" data-aos-delay="600">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3 class="bs-card-title">Trayectoria Senior en Diseño, Marketing y Producción</h3>
-                      <h4>Johnson's, Casagráfica, Paramarketing</h4>
+                      <h3 class="bs-card-title-sm">Trayectoria Senior en Diseño, Marketing y Producción</h3>
+                      <h4 class="bs-card-sub">Johnson's, Casagráfica, Paramarketing</h4>
                     </div>
                     <span class="duration">1997 - 2013</span>
                   </div>
@@ -561,10 +564,10 @@
                   <div class="timeline-marker"></div>
                   <div class="education-content">
                     <div class="degree-header">
-                      <h3 class="bs-card-title">Investigación y Diseño UX/UI</h3>
+                      <h3 class="bs-card-title-sm">Investigación y Diseño UX/UI</h3>
                       <span class="year">2026</span>
                     </div>
-                    <h4 class="institution">Talento Digital para Chile</h4>
+                    <h4 class="institution bs-card-sub">Talento Digital para Chile</h4>
                     <p>Bootcamp intensivo basado en metodologías de Design Thinking, investigación de usuarios (User
                       Research), arquitectura de información, pruebas de usabilidad y prototipado interactivo con Figma.
                     </p>
@@ -576,10 +579,10 @@
                   <div class="timeline-marker"></div>
                   <div class="education-content">
                     <div class="degree-header">
-                      <h3 class="bs-card-title">Prompt Engineering - Aprende a hablar con una IA generativa.</h3>
+                      <h3 class="bs-card-title-sm">Prompt Engineering - Aprende a hablar con una IA generativa.</h3>
                       <span class="year">2025</span>
                     </div>
-                    <h4 class="institution">LinkedIn Learning</h4>
+                    <h4 class="institution bs-card-sub">LinkedIn Learning</h4>
                     <p>Optimización del flujo de trabajo creativo mediante Inteligencia Artificial (Prompt Engineering),
                       estrategias de SEO Técnico, analítica web y maquetación responsiva avanzada.</p>
                   </div>
@@ -590,10 +593,10 @@
                   <div class="timeline-marker"></div>
                   <div class="education-content">
                     <div class="degree-header">
-                      <h3 class="bs-card-title">Certificado de Redactor recomendado</h3>
+                      <h3 class="bs-card-title-sm">Certificado de Redactor recomendado</h3>
                       <span class="year">2025</span>
                     </div>
-                    <h4 class="institution">Redactium.com</h4>
+                    <h4 class="institution bs-card-sub">Redactium.com</h4>
                     <p>Sólida base conceptual y práctica en diseño tradicional, identidad corporativa, diagramación
                       editorial, teoría del color y gestión de proyectos publicitarios impresos y digitales.</p>
                   </div>
@@ -898,7 +901,7 @@
                       <div class="testimonial-profile">
                         <img src="img/person/ana-hidalgo.jpeg" alt="Foto de Ana Isabel Hidalgo Vásquez" class="img-fluid rounded-circle">
                         <div>
-                          <h3 class="bs-card-title">Ana Isabel Hidalgo Vásquez</h3>
+                          <h3 class="bs-name">Ana Isabel Hidalgo Vásquez</h3>
                           <h4>Directora ejecutiva de EspacioT</h4>
                         </div>
                       </div>
@@ -934,7 +937,7 @@
                         <img src="img/person/vinko-cikutovic.jpeg" alt="Foto de Vinko Cikutovic Madariaga"
                           class="img-fluid rounded-circle">
                         <div>
-                          <h3 class="bs-card-title">Vinko Cikutovic Madariaga</h3>
+                          <h3 class="bs-name">Vinko Cikutovic Madariaga</h3>
                           <h4>Gerente General CIKBUS</h4>
                         </div>
                       </div>
@@ -975,7 +978,7 @@
                       <div class="testimonial-profile">
                         <img src="img/person/eduardo-pena.jpeg" alt="Foto de Eduardo Peña M." class="img-fluid rounded-circle">
                         <div>
-                          <h3 class="bs-card-title">Eduardo Peña M.</h3>
+                          <h3 class="bs-name">Eduardo Peña M.</h3>
                           <h4>Director Creativo Agencia Bireal</h4>
                         </div>
                       </div>
@@ -1009,7 +1012,7 @@
                         <img src="img/person/juan-carlos-espinoza.jpeg" alt="Foto de Juan Carlos Espinoza"
                           class="img-fluid rounded-circle">
                         <div>
-                          <h3 class="bs-card-title">Juan Carlos Espinoza</h3>
+                          <h3 class="bs-name">Juan Carlos Espinoza</h3>
                           <h4>Gerente General HIDROSISTEMAS</h4>
                         </div>
                       </div>
