@@ -27,6 +27,28 @@
 
     <style>
         .ley-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        .ley-hero-media { position: relative; width: 100%; max-width: 520px; justify-self: center; }
+        .ley-hero-media .bs-hero-img { display: block; width: 100%; height: auto; max-width: 100%; }
+        .ley-chip { position: absolute; display: inline-flex; align-items: center; gap: .45rem; padding: .5rem .95rem; border-radius: 9999px; font-size: .85rem; font-weight: 600; color: #fff; white-space: nowrap;
+            background: rgba(10, 16, 32, .82); border: 1px solid rgba(45, 212, 191, .5); box-shadow: 0 0 22px rgba(45, 212, 191, .25); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            animation: ley-float 5s ease-in-out infinite; }
+        .ley-chip svg { color: #2dd4bf; flex: none; }
+        .ley-chip--1 { top: 7%; left: -3%; }
+        .ley-chip--2 { top: 24%; right: -3%; border-color: rgba(167, 139, 250, .55); box-shadow: 0 0 22px rgba(167, 139, 250, .28); animation-delay: -1.6s; }
+        .ley-chip--2 svg { color: #a78bfa; }
+        .ley-chip--3 { bottom: 6%; right: -3%; animation-delay: -3.2s; }
+        @keyframes ley-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        @media (prefers-reduced-motion: reduce) { .ley-chip { animation: none; } }
+        @media (max-width: 768px) { .ley-chip { font-size: .75rem; padding: .4rem .75rem; } .ley-chip--1, .ley-chip--2, .ley-chip--3 { left: auto; right: auto; } .ley-chip--1 { left: 2%; } .ley-chip--2, .ley-chip--3 { right: 2%; } }
+        .ley-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem 2.2rem; max-width: 1100px; margin: 0 auto; padding: .9rem 1.4rem; border: 1px solid rgba(148, 163, 184, .18); border-radius: 14px; background: rgba(255, 255, 255, .03); }
+        .ley-stats > div { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .15rem; }
+        .ley-stats strong { font-size: 1.05rem; color: var(--bs-teal, #2dd4bf); }
+        .ley-stats span { font-size: .78rem; color: var(--text-muted, #94a3b8); }
+        .sesion-card p.fw-semibold { color: #fb923c !important; }
+        .sesion-card::before, .sesion-card::after { background: #fb923c !important; background-image: none !important; border-color: #fb923c !important; }
+        #btnAgendar:not(:disabled) { background: #fb923c !important; background-color: #fb923c !important; color: #1a0f05 !important; border: 1px solid #fdba74 !important; box-shadow: 0 0 16px #fb923c99, 0 0 36px #fb923c55 !important; cursor: pointer !important; }
+        #btnAgendar:not(:disabled):hover { background: #fdba74 !important; background-color: #fdba74 !important; box-shadow: 0 0 22px #fb923ccc, 0 0 46px #fb923c77 !important; }
+        .sesion-card { border: 1px solid #fb923c !important; border-top: 4px solid #fb923c !important; box-shadow: 0 0 28px #fb923c33 !important; }
         @media (max-width: 768px) { .ley-grid-2 { grid-template-columns: 1fr !important; } }
     </style>
 
@@ -138,7 +160,6 @@
             <ul class="nav-links">
                 <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
                 <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
-                <li><a href="servicios-ley-21719-proteccion-datos.html" class="active">Ley 21.719</a></li>
                 <li><a href="christian-chacon.html#portfolio">Proyectos</a></li>
                 <li><a href="christian-chacon.html">Sobre mí</a></li>
                 <li><a href="index.html#blog">Blog</a></li>
@@ -158,17 +179,29 @@
                 <h1>¿Tu sitio web cumple con la <span class="text-gradient">Ley N° 21.719</span> de Protección de Datos Personales en Chile?</h1>
                 <p class="bs-lead" style="margin-bottom:1.6rem;">Evita sanciones de hasta <strong style="color:#fff;">20.000 UTM</strong> o el <strong style="color:#fff;">4% de tus ingresos anuales</strong>. Implementamos las soluciones técnicas, legales y de UX que la ley exige, y convertimos el cumplimiento en confianza digital para tu empresa.</p>
                 <ul class="bs-check">
-                    <li><strong>Consentimiento y cookies:</strong> banner y formularios conformes a la ley.</li>
+                    <li><strong>Consentimiento de usuario:</strong> Páginas, banner y formularios conformes a la ley.</li>
                     <li><strong>Derechos ARCOP+:</strong> canal web para gestionar solicitudes de tus usuarios.</li>
+
+                    <!-- 
                     <li><strong>Seguridad:</strong> HTTPS, cifrado y prevención de brechas.</li>
+                     -->
                 </ul>
                 <div class="d-flex flex-wrap gap-3"><a href="#contacto" class="bs-btn bs-btn-teal">Solicitar diagnóstico web gratuito</a><a href="#servicios-ley" class="bs-btn bs-btn-ghost">Ver servicios</a></div>
-                <p class="bs-lead" style="margin-top:1.8rem;font-size:.9rem;"><strong style="color:#fff;">En una frase:</strong> Asesoría e implementacón en sitios web de empresas chilenas los requisitos de la Ley N° 21.719: consentimiento, cookies, derechos ARCOP+, políticas de privacidad y seguridad.</p>
+                <p class="bs-lead" style="margin-top:1.8rem;font-size:.9rem;"><strong style="color:#fff;">En una frase:</strong> Asesoría e implementación en sitios web de empresas chilenas los requisitos de la Ley N° 21.719: consentimiento, cookies, derechos ARCOP+, políticas de privacidad y seguridad.</p>
             </div>
-            <div class="bs-glass" style="display:flex;flex-direction:column;gap:1.2rem;">
-                <div><div class="bs-step-n">20.000 UTM</div><p class="atom-text-body" style="margin:.3rem 0 0;">Multa máxima por infracciones gravísimas.</p></div>
-                <div><div class="bs-step-n">30 días</div><p class="atom-text-body" style="margin:.3rem 0 0;">Suspensión de operaciones que podría ordenar la Agencia.</p></div>
-                <div><div class="bs-step-n">Dic. 2026</div><p class="atom-text-body" style="margin:.3rem 0 0;">Vigencia plena de la ley.</p></div>
+            <div class="ley-hero-media">
+                <img class="bs-hero-img" src="img/compliance-01.webp" alt="Panel de cumplimiento de la Ley 21.719 con escudo de protección de datos en un sitio web corporativo" width="500" height="500">
+                <span class="ley-chip ley-chip--1"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Consentimiento</span>
+                <span class="ley-chip ley-chip--2"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>ARCOP+</span>
+                <span class="ley-chip ley-chip--3"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Seguridad</span>
+            </div>
+        </section>
+
+        <section class="bs-section" style="padding:1.5rem 2rem 0;">
+            <div class="ley-stats">
+                <div><strong>Dic. 2026</strong><span>Vigencia plena de la ley</span></div>
+                <div><strong>Hasta 20.000 UTM</strong><span>Multa máxima por infracciones gravísimas</span></div>
+                <div><strong>30 días</strong><span>Plazo para responder solicitudes ARCOP+</span></div>
             </div>
         </section>
 
@@ -226,7 +259,7 @@
                 <article class="bs-glass bs-plan">
                     <div>
                         <div class="bs-ico">⚖️</div>
-                        <h3>Módulo 1: Asesoría estratégica</h3>
+                        <h3>Módulo 1: Asesoría legal y estratégica</h3>
                         <ul class="bs-check">
                             <li><div><strong style="display:block;color:#fff;margin-bottom:.2rem;">Auditoría de tratamiento de datos</strong><span style="display:block;">Analizamos cómo tu empresa recolecta, almacena y procesa información personal.</span></div></li>
                             <li><div><strong style="display:block;color:#fff;margin-bottom:.2rem;">Bases de licitud</strong><span style="display:block;">Definimos los fundamentos legales (consentimiento, ejecución contractual o interés legítimo) para cada formulario.</span></div></li>
@@ -380,7 +413,7 @@
 
                         <p class="fw-semibold mb-4"
                             style="color: var(--accent-cyan); font-size: 0.9rem; line-height: 1.4;">
-                            Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
+                            Completa tus datos para habilitar la agenda.
                         </p>
 
                         <!-- Formulario conectado mediante iframe oculto (Google Sheets) — sin cambios de IDs, names, action ni target -->
