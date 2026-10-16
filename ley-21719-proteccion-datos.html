@@ -25,6 +25,11 @@
     <link href="CSS/main-assets.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/bs-theme.css">
 
+    <style>
+        .ley-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        @media (max-width: 768px) { .ley-grid-2 { grid-template-columns: 1fr !important; } }
+    </style>
+
     <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -132,8 +137,7 @@
             <!-- Enlaces de navegación -->
             <ul class="nav-links">
                 <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
-                <li><a href="servicios-diseno-web.html">Diseño Web</a></li>
-                <li><a href="ley-21719-proteccion-datos.html" class="active">Ley 21.719</a></li>
+                <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
                 <li><a href="christian-chacon.html#portfolio">Proyectos</a></li>
                 <li><a href="christian-chacon.html">Sobre mí</a></li>
                 <li><a href="index.html#blog">Blog</a></li>
@@ -217,7 +221,7 @@
         <section id="servicios-ley" class="bs-section" style="padding-top:1rem;"><span class="bs-chip">Servicio integral</span>
             <h2 class="bs-title">Tu sitio web conforme a la ley, de lo legal a lo técnico</h2>
             <p class="bs-lead">Asesoría e implementación en un solo equipo: estrategia legal, desarrollo web y diseño UX.</p>
-            <div class="bs-projects">
+            <div class="bs-projects ley-grid-2">
                 <article class="bs-glass bs-plan">
                     <div>
                         <div class="bs-ico">⚖️</div>
@@ -250,26 +254,26 @@
             <h2 class="bs-title">Categorías de infracciones bajo la Ley N° 21.719</h2>
             <p class="bs-lead">Qué se considera infracción y qué sanciones puede aplicar la Agencia.</p>
             <div class="bs-projects">
-                <article class="bs-glass bs-plan">
+                <article class="bs-glass bs-plan" style="border:1px solid #facc15;border-top:4px solid #facc15;box-shadow:0 0 28px #facc1533;">
                     <div>
-                        <span style="font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bs-teal);font-weight:700;">Infracción</span>
-                        <h3>Leve</h3>
+                        <span style="font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#facc15;font-weight:700;">Infracción leve</span>
+                        <h3 style="color:#facc15;">Leve</h3>
                         <p class="atom-text-body"><strong style="color:#fff;">Motivos frecuentes:</strong> Omitir datos de contacto o responder fuera de plazo solicitudes de usuarios.</p>
                         <p class="atom-text-body"><strong style="color:#fff;">Sanción potencial:</strong> Amonestación escrita o hasta 5.000 UTM.</p>
                     </div>
                 </article>
-                <article class="bs-glass bs-plan">
+                <article class="bs-glass bs-plan" style="border:1px solid #fb923c;border-top:4px solid #fb923c;box-shadow:0 0 28px #fb923c33;">
                     <div>
-                        <span style="font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bs-teal);font-weight:700;">Infracción</span>
-                        <h3>Grave</h3>
+                        <span style="font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#fb923c;font-weight:700;">Infracción grave</span>
+                        <h3 style="color:#fb923c;">Grave</h3>
                         <p class="atom-text-body"><strong style="color:#fff;">Motivos frecuentes:</strong> Capturar datos sin consentimiento, obstaculizar derechos ARCOP+ o vulnerar la seguridad.</p>
                         <p class="atom-text-body"><strong style="color:#fff;">Sanción potencial:</strong> Multa de hasta 10.000 UTM.</p>
                     </div>
                 </article>
-                <article class="bs-glass bs-plan">
+                <article class="bs-glass bs-plan" style="border:1px solid #ef4444;border-top:4px solid #ef4444;box-shadow:0 0 28px #ef444433;">
                     <div>
-                        <span style="font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bs-teal);font-weight:700;">Infracción</span>
-                        <h3>Gravísima</h3>
+                        <span style="font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#ef4444;font-weight:700;">Infracción gravísima</span>
+                        <h3 style="color:#ef4444;">Gravísima</h3>
                         <p class="atom-text-body"><strong style="color:#fff;">Motivos frecuentes:</strong> Uso fraudulento de datos, ocultar filtraciones de seguridad o reincidir en faltas graves.</p>
                         <p class="atom-text-body"><strong style="color:#fff;">Sanción potencial:</strong> Multa de hasta 20.000 UTM (o 2%-4% de ventas) y suspensión de operaciones web.</p>
                     </div>
@@ -282,101 +286,24 @@
             <p class="bs-lead">Un proceso transparente, con entregables y plazos definidos desde el inicio.</p>
             <div class="bs-steps">
                 <div class="bs-glass">
-                    <div class="bs-step-n">01</div>
+                    <div class="bs-step-n" style="color:#2dd4bf;-webkit-text-fill-color:#2dd4bf;background:none;">01</div>
                     <h3 style="font-size:1.1rem;color:#fff;margin:.8rem 0 .4rem;">Auditamos</h3>
                     <p class="atom-text-body" style="margin:0;">Revisamos formularios, cookies, scripts y textos legales de tu sitio y cómo circulan los datos.</p>
                 </div>
                 <div class="bs-glass">
-                    <div class="bs-step-n">02</div>
+                    <div class="bs-step-n" style="color:#a78bfa;-webkit-text-fill-color:#a78bfa;background:none;">02</div>
                     <h3 style="font-size:1.1rem;color:#fff;margin:.8rem 0 .4rem;">Proponemos</h3>
                     <p class="atom-text-body" style="margin:0;">Plan a tu medida con entregables legales y técnicos, plazos y precio transparente.</p>
                 </div>
                 <div class="bs-glass">
-                    <div class="bs-step-n">03</div>
+                    <div class="bs-step-n" style="color:#fb923c;-webkit-text-fill-color:#fb923c;background:none;">03</div>
                     <h3 style="font-size:1.1rem;color:#fff;margin:.8rem 0 .4rem;">Implementamos</h3>
                     <p class="atom-text-body" style="margin:0;">Consentimiento, formularios, centro ARCOP+, políticas y seguridad, con rigor técnico.</p>
                 </div>
                 <div class="bs-glass">
-                    <div class="bs-step-n">04</div>
+                    <div class="bs-step-n" style="color:#4ade80;-webkit-text-fill-color:#4ade80;background:none;">04</div>
                     <h3 style="font-size:1.1rem;color:#fff;margin:.8rem 0 .4rem;">Acompañamos</h3>
                     <p class="atom-text-body" style="margin:0;">Soporte y ajustes mientras la normativa y tus operaciones evolucionan.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SECCIÓN: PRUEBA SOCIAL Y OPINIONES ================= -->
-        <section class="testimonios-section">
-            <div class="text-start mx-auto" style="max-width: 1200px;">
-                <span class="d-block fw-bold text-uppercase"
-                    style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
-                    PRUEBA SOCIAL Y OPINIONES
-                </span>
-                <h2 class="atom-title-section-left">
-                    La confianza de quienes han trabajado conmigo
-                </h2>
-                <p class="atom-subtitle mt-2">
-                    Validaciones reales de colegas y directivos sobre el compromiso y rigor en cada trabajo.
-                </p>
-            </div>
-
-            <div class="testimonios-grid-3">
-                <!-- Testimonio 1 -->
-                <div class="testimonio-card">
-                    <div>
-                        <div class="testimonio-profile">
-                            <img src="img/testimonio-01.jpg" alt="Vinko Cikutovic Madariaga" class="testimonio-avatar">
-                            <div class="testimonio-info">
-                                <h4>Vinko Cikutovic Madariaga</h4>
-                                <p>Gerente General Cikbus Elité<br><span style="color: var(--accent-cyan);">✓ Perfil
-                                        verificado en LinkedIn</span></p>
-                            </div>
-                        </div>
-                        <div class="testimonio-stars">★★★★★</div>
-                        <p class="testimonio-text">
-                            &laquo;El trabajo de marketing que Christian Chacón realizó con nosotros fue siempre
-                            notable. Su dedicación a la creación, desarrollo y crecimiento de nuestra marca CIKBUS desde
-                            un principio se tradujo en resultados de alta calidad...&raquo;
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Testimonio 2 -->
-                <div class="testimonio-card">
-                    <div>
-                        <div class="testimonio-profile">
-                            <img src="img/testimonio-02.jpg" alt="Eduardo Peña M." class="testimonio-avatar">
-                            <div class="testimonio-info">
-                                <h4>Eduardo Peña M.</h4>
-                                <p>Director Creativo Agencia Bireal<br><span style="color: var(--accent-cyan);">✓ Perfil
-                                        verificado en LinkedIn</span></p>
-                            </div>
-                        </div>
-                        <div class="testimonio-stars">★★★★★</div>
-                        <p class="testimonio-text">
-                            &laquo;Excelente profesional muy detallista y creativo. Su gran activo es la calidad de sus
-                            trabajos y el compromiso y pasión que coloca en todo. 100% recomendado...&raquo;
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Testimonio 3 -->
-                <div class="testimonio-card">
-                    <div>
-                        <div class="testimonio-profile">
-                            <img src="img/testimonio-03.jpg" alt="Juan Carlos Espinoza" class="testimonio-avatar">
-                            <div class="testimonio-info">
-                                <h4>Juan Carlos Espinoza</h4>
-                                <p>Gerente General Hidrosistemas Chile<br><span style="color: var(--accent-cyan);">✓
-                                        Perfil verificado en LinkedIn</span></p>
-                            </div>
-                        </div>
-                        <div class="testimonio-stars">★★★★★</div>
-                        <p class="testimonio-text">
-                            &laquo;Recomiendo ampliamente a Christian como un publicista excepcional. Sus estrategias
-                            han sido clave para fortalecer nuestra marca y alcanzar nuestros objetivos
-                            comerciales...&raquo;
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
