@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- METADATOS SEO Y GEO (Optimizado para Chile) -->
+    <title>Blog | Marketing B2B, SEO y GEO, Diseño Web y Ley 21.719 en Chile</title>
+    <meta name="description" content="Artículos y guías prácticas sobre marketing B2B, SEO y GEO, diseño web y cumplimiento de la Ley 21.719 de Protección de Datos para empresas en Chile.">
+    <meta name="keywords" content="blog marketing B2B Chile, SEO y GEO, diseño web WordPress, Ley 21.719, protección de datos Chile, Google Ads B2B">
+    <link rel="canonical" href="https://chaconmarketing.cl/blog.html">
+    <meta name="geo.region" content="CL-RM">
+    <meta name="geo.placename" content="Santiago">
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon-chacon-marketing-blanco.svg">
+    <link rel="alternate icon" href="img/favicon-chacon-marketing-blanco.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css">
+
+    <link rel="stylesheet" href="CSS/variables.css">
+    <link rel="stylesheet" href="CSS/atomic.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link href="CSS/main-assets.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bs-theme.css">
+
+    <style>
+        .blog-hero { grid-template-columns: 1fr !important; }
+        .blog-hero > div { max-width: 760px; }
+        .blog-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.2rem; margin-bottom: 2rem; }
+        .blog-filters { display: flex; flex-wrap: wrap; gap: .6rem; }
+        .blog-filter { cursor: pointer; padding: .45rem 1rem; border-radius: 9999px; font-size: .82rem; font-weight: 600; color: #cbd5e1; background: rgba(255,255,255,.04); border: 1px solid rgba(148,163,184,.25); transition: all .2s ease; }
+        .blog-filter:hover { color: #fff; border-color: var(--bs-teal, #2dd4bf); }
+        .blog-filter.is-active { color: #052e2b; background: var(--bs-teal, #2dd4bf); border-color: var(--bs-teal, #2dd4bf); }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem 1.8rem; }
+        .blog-card[hidden] { display: none; }
+        .blog-card-link { display: block; text-decoration: none; color: inherit; }
+        .blog-card-img { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4 / 3; background: #0b1224; border: 1px solid rgba(148,163,184,.15); }
+        .blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+        .blog-card-link:hover .blog-card-img img { transform: scale(1.05); }
+        .blog-card-cat { position: absolute; left: .9rem; top: .9rem; padding: .3rem .75rem; border-radius: 9999px; font-size: .7rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #fff; background: rgba(10,16,32,.82); border: 1px solid rgba(45,212,191,.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+        .blog-card time { display: block; margin: 1rem 0 .7rem; padding-bottom: .7rem; font-size: .8rem; color: var(--text-muted, #94a3b8); border-bottom: 1px solid rgba(148,163,184,.2); }
+        .blog-card h3 { font-size: 1.2rem; line-height: 1.35; color: #fff; margin: 0 0 .6rem; transition: color .2s ease; }
+        .blog-card-link:hover h3 { color: var(--bs-teal, #2dd4bf); }
+        .blog-card p { font-size: .9rem; line-height: 1.55; color: var(--text-muted, #94a3b8); margin: 0; }
+        .blog-pager { display: flex; align-items: center; justify-content: center; gap: .8rem; margin-top: 3rem; }
+        .blog-pager[hidden] { display: none; }
+        .blog-pager button { cursor: pointer; padding: .6rem 1.3rem; border-radius: 9999px; font-size: .88rem; font-weight: 600; color: #fff; background: rgba(255,255,255,.04); border: 1px solid rgba(148,163,184,.3); transition: all .2s ease; }
+        .blog-pager button:hover:not(:disabled) { border-color: var(--bs-teal, #2dd4bf); box-shadow: 0 0 16px rgba(45,212,191,.3); }
+        .blog-pager button:disabled { opacity: .4; cursor: not-allowed; }
+        .blog-pager-info { font-size: .85rem; color: var(--text-muted, #94a3b8); }
+        .blog-empty { text-align: center; color: var(--text-muted, #94a3b8); padding: 2rem 0; }
+        @media (max-width: 992px) { .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+    </style>
+
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Blog",
+   "@id": "https://chaconmarketing.cl/blog.html#blog",
+   "url": "https://chaconmarketing.cl/blog.html",
+   "name": "Blog de Chacón Marketing",
+   "inLanguage": "es-CL",
+   "description": "Artículos sobre marketing B2B, SEO y GEO, diseño web y cumplimiento de la Ley 21.719 para empresas en Chile.",
+   "publisher": {
+    "@id": "https://chaconmarketing.cl/#org"
+   },
+   "blogPost": [
+    {
+     "@type": "BlogPosting",
+     "headline": "Ley 21.719 en tu sitio web: 5 cambios que debes hacer antes de diciembre de 2026",
+     "datePublished": "2026-10-14",
+     "url": "https://chaconmarketing.cl/blog/ley-21719-sitio-web-cambios-urgentes.html",
+     "author": {
+      "@type": "Person",
+      "name": "Christian Chacón Páez"
+     }
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "SEO y GEO: cómo aparecer en las respuestas de ChatGPT y Google",
+     "datePublished": "2026-10-08",
+     "url": "https://chaconmarketing.cl/blog/seo-geo-aparecer-en-respuestas-de-ia.html",
+     "author": {
+      "@type": "Person",
+      "name": "Christian Chacón Páez"
+     }
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Marketing B2B: por qué tu empresa técnica no se entiende en cinco segundos",
+     "datePublished": "2026-10-01",
+     "url": "https://chaconmarketing.cl/blog/marketing-b2b-propuesta-de-valor-clara.html",
+     "author": {
+      "@type": "Person",
+      "name": "Christian Chacón Páez"
+     }
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Sitio web B2B que genera consultas: la estructura que sí funciona",
+     "datePublished": "2026-09-24",
+     "url": "https://chaconmarketing.cl/blog/sitio-web-b2b-que-genera-consultas.html",
+     "author": {
+      "@type": "Person",
+      "name": "Christian Chacón Páez"
+     }
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Banner de cookies conforme a la ley: qué debe permitir hacer al usuario",
+     "datePublished": "2026-09-17",
+     "url": "https://chaconmarketing.cl/blog/banner-de-cookies-conforme-a-la-ley.html",
+     "author": {
+      "@type": "Person",
+      "name": "Christian Chacón Páez"
+     }
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Google Ads B2B: cómo medir consultas y costo por oportunidad",
+     "datePublished": "2026-09-10",
+     "url": "https://chaconmarketing.cl/blog/google-ads-b2b-costo-por-oportunidad.html",
+     "author": {
+      "@type": "Person",
+      "name": "Christian Chacón Páez"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://chaconmarketing.cl/#org",
+   "name": "Chacón Marketing",
+   "url": "https://chaconmarketing.cl/"
+  }
+ ]
+}
+    </script>
+</head>
+
+<body class="theme-bs">
+
+<!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
+    <div class="top-bar">
+        <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
+        <div>Lun - Vie 9:00am - 6:00pm</div>
+    </div>
+
+    <!-- ================= NAVEGACIÓN PRINCIPAL ================= -->
+    <header>
+        <nav class="nav-container">
+            <div class="atom-logo">
+                <a href="index.html">
+                    <img src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" class="site-logo">
+                </a>
+            </div>
+
+            <!-- Botón Hamburguesa para Móviles y Tablets -->
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <ul class="nav-links">
+                <li><a href="servicios-marketing-b2b.html">Marketing</a></li>
+                <li><a href="servicios-diseno-web-wordpress.html">Diseño Web</a></li>
+                <li><a href="christian-chacon.html#portfolio">Proyectos</a></li>
+                <li><a href="christian-chacon.html">Sobre mí</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+
+            <a href="index.html#contacto" class="atom-btn atom-btn-danger nav-cta">Agenda</a>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="bs-hero blog-hero">
+            <div><span class="bs-chip">Blog corporativo</span>
+                <h1><span class="text-gradient">Blog</span> Chacón Marketing</h1>
+                <p class="bs-lead" style="margin-bottom:1.6rem;">Ideas y guías prácticas sobre marketing B2B, SEO y GEO, diseño web y cumplimiento de la Ley 21.719 para empresas en Chile.</p>
+                <div class="d-flex flex-wrap gap-3"><a href="#articulos" class="bs-btn bs-btn-teal">Últimos artículos</a><a href="#contacto" class="bs-btn bs-btn-ghost">Pedir diagnóstico gratuito</a></div>
+            </div>
+        </section>
+
+        <!-- ================= LISTADO DE ARTÍCULOS ================= -->
+        <section id="articulos" class="bs-section"><span class="bs-chip">Artículos</span>
+            <div class="blog-head">
+                <div>
+                    <h2 class="bs-title" style="margin-bottom:.4rem;">Últimas novedades</h2>
+                    <p class="bs-lead" style="margin:0;">Marketing, visibilidad en Google y en IAs, diseño web y cumplimiento normativo.</p>
+                </div>
+                <div class="blog-filters" role="group" aria-label="Filtrar por categoría">
+                <button type="button" class="blog-filter is-active" data-cat="all">Todos</button>
+                <button type="button" class="blog-filter" data-cat="Diseño Web">Diseño Web</button>
+                <button type="button" class="blog-filter" data-cat="Ley 21.719">Ley 21.719</button>
+                <button type="button" class="blog-filter" data-cat="Marketing B2B">Marketing B2B</button>
+                <button type="button" class="blog-filter" data-cat="SEO y GEO">SEO y GEO</button>
+                </div>
+            </div>
+
+            <!-- ============================================================
+                 PARA PUBLICAR UN ARTÍCULO NUEVO: copia un bloque <article>,
+                 pégalo ARRIBA de los demás (el más reciente va primero) y
+                 cambia categoría, fecha, imagen, título, resumen y enlace.
+                 Si usas una categoría nueva, agrega su botón en .blog-filters.
+                 La paginación (6 por página) aparece sola al pasar de 6.
+                 Los 6 artículos actuales son EJEMPLOS: reemplázalos.
+                 ============================================================ -->
+            <div class="blog-grid">
+                <article class="blog-card" data-cat="Ley 21.719">
+                    <a href="blog/ley-21719-sitio-web-cambios-urgentes.html" class="blog-card-link" aria-label="Ley 21.719 en tu sitio web: 5 cambios que debes hacer antes de diciembre de 2026">
+                        <div class="blog-card-img"><img src="img/compliance-01.webp" alt="Panel de cumplimiento de la Ley 21.719 en un sitio web" loading="lazy" width="600" height="450"><span class="blog-card-cat">Ley 21.719</span></div>
+                        <time datetime="2026-10-14">14/10/2026</time>
+                        <h3>Ley 21.719 en tu sitio web: 5 cambios que debes hacer antes de diciembre de 2026</h3>
+                        <p>Formularios, cookies, política de privacidad y canal ARCOP+: qué revisar hoy para llegar a la vigencia plena sin sorpresas.</p>
+                    </a>
+                </article>
+                <article class="blog-card" data-cat="SEO y GEO">
+                    <a href="blog/seo-geo-aparecer-en-respuestas-de-ia.html" class="blog-card-link" aria-label="SEO y GEO: cómo aparecer en las respuestas de ChatGPT y Google">
+                        <div class="blog-card-img"><img src="img/hero-index-02.webp" alt="Sitio web corporativo optimizado para SEO y GEO" loading="lazy" width="600" height="450"><span class="blog-card-cat">SEO y GEO</span></div>
+                        <time datetime="2026-10-08">08/10/2026</time>
+                        <h3>SEO y GEO: cómo aparecer en las respuestas de ChatGPT y Google</h3>
+                        <p>Qué cambia cuando tus clientes preguntan a una IA y cómo preparar tu contenido para que te citen.</p>
+                    </a>
+                </article>
+                <article class="blog-card" data-cat="Marketing B2B">
+                    <a href="blog/marketing-b2b-propuesta-de-valor-clara.html" class="blog-card-link" aria-label="Marketing B2B: por qué tu empresa técnica no se entiende en cinco segundos">
+                        <div class="blog-card-img"><img src="img/hero-marketing-02.webp" alt="Panel de marketing B2B con métricas de consultas" loading="lazy" width="600" height="450"><span class="blog-card-cat">Marketing B2B</span></div>
+                        <time datetime="2026-10-01">01/10/2026</time>
+                        <h3>Marketing B2B: por qué tu empresa técnica no se entiende en cinco segundos</h3>
+                        <p>Cómo convertir capacidades técnicas en servicios claros que tu cliente ideal entienda y quiera cotizar.</p>
+                    </a>
+                </article>
+                <article class="blog-card" data-cat="Diseño Web">
+                    <a href="blog/sitio-web-b2b-que-genera-consultas.html" class="blog-card-link" aria-label="Sitio web B2B que genera consultas: la estructura que sí funciona">
+                        <div class="blog-card-img"><img src="img/hero-web-design-02.webp" alt="Diseño web B2B en WordPress" loading="lazy" width="600" height="450"><span class="blog-card-cat">Diseño Web</span></div>
+                        <time datetime="2026-09-24">24/09/2026</time>
+                        <h3>Sitio web B2B que genera consultas: la estructura que sí funciona</h3>
+                        <p>Los bloques que no pueden faltar en un sitio corporativo para pasar de visitas a oportunidades comerciales.</p>
+                    </a>
+                </article>
+                <article class="blog-card" data-cat="Ley 21.719">
+                    <a href="blog/banner-de-cookies-conforme-a-la-ley.html" class="blog-card-link" aria-label="Banner de cookies conforme a la ley: qué debe permitir hacer al usuario">
+                        <div class="blog-card-img"><img src="img/computadores-01.webp" alt="Sitio web con gestor de consentimiento de cookies" loading="lazy" width="600" height="450"><span class="blog-card-cat">Ley 21.719</span></div>
+                        <time datetime="2026-09-17">17/09/2026</time>
+                        <h3>Banner de cookies conforme a la ley: qué debe permitir hacer al usuario</h3>
+                        <p>Aceptar, rechazar o configurar antes de activar el rastreo: los requisitos que debe cumplir tu gestor de consentimiento.</p>
+                    </a>
+                </article>
+                <article class="blog-card" data-cat="Marketing B2B">
+                    <a href="blog/google-ads-b2b-costo-por-oportunidad.html" class="blog-card-link" aria-label="Google Ads B2B: cómo medir consultas y costo por oportunidad">
+                        <div class="blog-card-img"><img src="img/hero-marketing-02.webp" alt="Campañas de Google Ads B2B" loading="lazy" width="600" height="450"><span class="blog-card-cat">Marketing B2B</span></div>
+                        <time datetime="2026-09-10">10/09/2026</time>
+                        <h3>Google Ads B2B: cómo medir consultas y costo por oportunidad</h3>
+                        <p>Deja de mirar clics y empieza a medir lo que importa: consultas calificadas y retorno por campaña.</p>
+                    </a>
+                </article>
+            </div>
+            <p id="blogEmpty" class="blog-empty" hidden>Aún no hay artículos en esta categoría.</p>
+
+            <div id="blogPager" class="blog-pager" hidden>
+                <button type="button" id="blogPrev">← Anterior</button>
+                <span id="blogInfo" class="blog-pager-info"></span>
+                <button type="button" id="blogNext">Siguiente →</button>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO? ================= -->
+        <section id="contacto" class="revision-digital-section">
+            <div class="revision-digital-grid">
+                <div>
+                    <div class="text-start mx-auto" style="max-width: 1200px;">
+                        <span class="d-block fw-bold text-uppercase"
+                            style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                            HABLEMOS DE TU PROYECTO
+                        </span>
+                        <h2 class="atom-title-section-left">
+                            ¿Revisamos tu presencia digital sin costo?
+                        </h2>
+                    </div>
+
+                    <p class="mt-4"
+                        style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+                        Agendemos una conversación de 20 minutos. Analizaremos tu situación actual, detectaremos qué
+                        está frenando tus consultas comerciales y definiremos los primeros pasos para resolverlo. Sin
+                        compromisos ni presiones.
+                    </p>
+
+                    <div class="d-flex flex-column" style="gap: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
+                        <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
+                        <div class="d-flex align-items-center gap-2"
+                            style="margin-top: 0.8rem; font-size: 0.8rem; color: var(--text-muted);">
+                            <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong>
+                            en Chile.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta de Sesión de Diagnóstico con Formulario -->
+                <div class="sesion-card">
+                    <div>
+                        <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
+
+                        <h3 class="fw-bold mb-2" style="font-size: 1.5rem; color: var(--text-main);">
+                            Solicita tu sesión de diagnóstico
+                        </h3>
+
+                        <p class="fw-semibold mb-4"
+                            style="color: var(--accent-cyan); font-size: 0.9rem; line-height: 1.4;">
+                            Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
+                        </p>
+
+                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) — sin cambios de IDs, names, action ni target -->
+                        <form id="agendarForm"
+                            action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec"
+                            method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
+                            <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
+                                <div class="col-6">
+                                    <label class="d-block"
+                                        style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Nombre
+                                        *</label>
+                                    <input type="text" name="nombre" id="campoNombre" placeholder="Ej. Juan"
+                                        class="w-100"
+                                        style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                        required>
+                                </div>
+                                <div class="col-6">
+                                    <label class="d-block"
+                                        style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Apellido
+                                        *</label>
+                                    <input type="text" name="apellido" id="campoApellido" placeholder="Ej. Pérez"
+                                        class="w-100"
+                                        style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                        required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="d-block"
+                                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Correo
+                                    Electrónico *</label>
+                                <input type="email" name="correo" id="campoCorreo" placeholder="correo@ejemplo.com"
+                                    class="w-100"
+                                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="d-block"
+                                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Teléfono
+                                    de Contacto *</label>
+                                <input type="tel" name="telefono" id="campoTelefono" placeholder="+56 9 1234 5678"
+                                    class="w-100"
+                                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                    required>
+                            </div>
+
+                            <!-- Casilla de consentimiento -->
+                            <div class="d-flex align-items-start" style="gap: 0.6rem; margin-top: 0.3rem;">
+                                <input type="checkbox" name="consentimiento" id="campoConsentimiento" value="Sí"
+                                    style="margin-top: 0.2rem; cursor: pointer; accent-color: var(--accent-cyan);">
+                                <label for="campoConsentimiento"
+                                    style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; cursor: pointer;">
+                                    Acepto recibir mensajes y correos con información adicional y material de
+                                    promociones.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <!-- Botón de Agendar (el estilo inline se mantiene porque main.js lo modifica al validar) -->
+                        <button type="button" id="btnAgendar" disabled class="atom-btn w-100"
+                            style="background-color: #334155; color: #94a3b8; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 9999px; font-weight: 600; border: none; cursor: not-allowed; text-align: center; display: block; transition: all 0.3s ease;">
+                            Agendar Reunión →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER (estilo BS) ================= -->
+    <footer class="bs-footer">
+        <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+        <div class="bs-footer-grid">
+            <div>
+                <h4>Empresa</h4>
+                <p>Transformando servicios excelentes en negocios visibles y creíbles.</p>
+            </div>
+            <div>
+                <h4>Servicios</h4><a href="servicios-marketing-b2b.html">Marketing B2B</a><a
+                    href="servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a
+                    href="christian-chacon.html#portfolio">Proyectos</a><a href="christian-chacon.html">Sobre mí</a>
+            </div>
+            <div>
+                <h4>Contacto</h4><small>WhatsApp</small>
+                <p>+56 9 4783 9131</p><small>Email</small>
+                <p>christian.chacon.paez@gmail.com</p>
+            </div>
+            <div>
+                <h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace al Script Modular (sin cambios) -->
+    <script src="JS/main.js"></script>
+
+    <!-- ================= BOTÓN FLOTANTE DE WHATSAPP ================= -->
+    <a href="https://wa.me/56947839131?text=Hola,%20me%20gustaría%20más%20información%20sobre%20sus%20servicios%20de%20consultoría."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Iframe oculto para procesar el envío a Google Sheets y abrir Google Calendar (sin cambios) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" class="d-none"
+        onload="if(window.submitted){window.open('https://calendar.app.google/jzTESP99Gii4eJC78', '_blank');}"></iframe>
+
+
+    <script>
+    (function () {
+        var PER_PAGE = 6;
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.blog-card'));
+        var filters = document.querySelectorAll('.blog-filter');
+        var pager = document.getElementById('blogPager');
+        var prev = document.getElementById('blogPrev');
+        var next = document.getElementById('blogNext');
+        var info = document.getElementById('blogInfo');
+        var empty = document.getElementById('blogEmpty');
+        var cat = 'all', page = 1;
+        function render() {
+            var list = cards.filter(function (c) { return cat === 'all' || c.getAttribute('data-cat') === cat; });
+            var pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+            if (page > pages) page = pages;
+            cards.forEach(function (c) { c.hidden = true; });
+            list.slice((page - 1) * PER_PAGE, page * PER_PAGE).forEach(function (c) { c.hidden = false; });
+            empty.hidden = list.length > 0;
+            pager.hidden = pages <= 1;
+            prev.disabled = page <= 1;
+            next.disabled = page >= pages;
+            info.textContent = 'Página ' + page + ' de ' + pages;
+        }
+        filters.forEach(function (b) {
+            b.addEventListener('click', function () {
+                filters.forEach(function (x) { x.classList.remove('is-active'); });
+                b.classList.add('is-active');
+                cat = b.getAttribute('data-cat'); page = 1; render();
+            });
+        });
+        prev.addEventListener('click', function () { page--; render(); document.getElementById('articulos').scrollIntoView({ behavior: 'smooth' }); });
+        next.addEventListener('click', function () { page++; render(); document.getElementById('articulos').scrollIntoView({ behavior: 'smooth' }); });
+        render();
+    })();
+    </script>
+
+</body>
+
+</html>
