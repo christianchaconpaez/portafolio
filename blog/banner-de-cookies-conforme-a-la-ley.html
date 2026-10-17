@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- METADATOS SEO Y GEO (Optimizado para Chile) -->
+    <title>Banner de cookies conforme a la ley: qué debe permitir hacer al usuario</title>
+    <meta name="description" content="Aceptar, rechazar o configurar antes de activar el rastreo: los requisitos que debe cumplir el banner de cookies de tu sitio web según la Ley 21.719 en Chile.">
+    <meta name="keywords" content="banner de cookies Chile, Ley 21.719 cookies, consentimiento cookies, protección de datos personales, cumplimiento sitio web">
+    <link rel="canonical" href="https://chaconmarketing.cl/blog/banner-de-cookies-conforme-a-la-ley.html">
+    <meta name="geo.region" content="CL-RM">
+    <meta name="geo.placename" content="Santiago">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Banner de cookies conforme a la ley: qué debe permitir hacer al usuario">
+    <meta property="og:description" content="Aceptar, rechazar o configurar antes de activar el rastreo: los requisitos que debe cumplir el banner de cookies de tu sitio web según la Ley 21.719 en Chile.">
+    <meta property="og:image" content="https://chaconmarketing.cl/img/computadores-01.webp">
+    <meta property="og:url" content="https://chaconmarketing.cl/blog/banner-de-cookies-conforme-a-la-ley.html">
+
+    <link rel="icon" type="image/svg+xml" href="../img/favicon-chacon-marketing-blanco.svg">
+    <link rel="alternate icon" href="../img/favicon-chacon-marketing-blanco.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css">
+
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/atomic.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link href="../CSS/main-assets.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/bs-theme.css">
+
+    <style>
+        .post-wrap { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem 0; }
+        .post-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 0 0 1.2rem; font-size: .85rem; color: var(--text-muted, #94a3b8); }
+        .post-breadcrumb a { color: var(--text-muted, #94a3b8); text-decoration: none; }
+        .post-breadcrumb a:hover { color: var(--bs-teal, #2dd4bf); }
+        .post-topline { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-bottom: 1rem; }
+        .post-date { font-size: .85rem; color: var(--text-muted, #94a3b8); }
+        .post-h1 { font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.15; color: #fff; margin: 0 0 1.2rem; max-width: 880px; }
+        .post-lead { max-width: 820px; margin: 0 0 .8rem; padding-left: 1.1rem; border-left: 4px solid var(--bs-teal, #2dd4bf); font-size: 1.1rem; line-height: 1.6; color: #cbd5e1; }
+        .post-byline { margin: 0 0 2rem; font-size: .85rem; color: var(--text-muted, #94a3b8); }
+        .post-byline strong { color: #fff; font-weight: 600; }
+        .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 2.4rem; align-items: start; padding-bottom: 3rem; }
+        .post-cover { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 20px; border: 1px solid rgba(148,163,184,.18); box-shadow: 0 0 40px rgba(45,212,191,.12); margin-bottom: 1.8rem; }
+        .post-toc { margin: 0 0 1.6rem; }
+        .post-toc h2 { font-size: 1.1rem; margin: 0 0 1rem; color: #fff; }
+        .post-toc ol { margin: 0; padding: 0; list-style: none; counter-reset: toc; display: grid; gap: .55rem; }
+        .post-toc li { counter-increment: toc; font-size: .95rem; }
+        .post-toc li::before { content: counter(toc, decimal-leading-zero) "  "; font-weight: 700; color: #fff; }
+        .post-toc a { color: #cbd5e1; text-decoration: none; }
+        .post-toc a:hover { color: var(--bs-teal, #2dd4bf); }
+        .post-key { margin: 0 0 2.4rem; padding: 1.4rem 1.5rem; border: 1px solid rgba(96,165,250,.35); border-left: 4px solid #60a5fa; border-radius: 16px; background: linear-gradient(135deg, rgba(37,99,235,.14), rgba(37,99,235,.04)); }
+        .post-key h2 { font-size: 1.1rem; margin: 0 0 .9rem; color: #fff; }
+        .post-key ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .6rem; }
+        .post-key li { font-size: .98rem; line-height: 1.6; color: #cbd5e1; }
+        .post-key strong { color: #fff; }
+        .post-sec { margin: 0 0 2.4rem; scroll-margin-top: 90px; }
+        .post-sec h2 { font-size: 1.55rem; line-height: 1.3; color: #fff; margin: 0 0 1rem; padding-left: 1rem; border-left: 4px solid var(--bs-teal, #2dd4bf); }
+        .post-sec p, .post-sec li { font-size: 1.02rem; line-height: 1.75; color: #cbd5e1; }
+        .post-sec p { margin: 0 0 1.1rem; }
+        .post-sec ul, .post-sec ol { margin: 0 0 1.1rem; padding-left: 1.3rem; }
+        .post-sec strong { color: #fff; }
+        .post-sec a { color: var(--bs-teal, #2dd4bf); }
+        .post-tip { margin: 1.2rem 0 0; padding: 1rem 1.2rem; border-left: 4px solid var(--bs-teal, #2dd4bf); border-radius: 0 12px 12px 0; background: rgba(45,212,191,.07); }
+        .post-tip p { margin: 0 !important; }
+        .post-note { margin: 1.2rem 0; padding: 1rem 1.2rem; border: 1px solid rgba(250,204,21,.4); border-left: 4px solid #facc15; border-radius: 12px; background: rgba(250,204,21,.06); }
+        .post-note p { margin: 0 !important; }
+        .post-levels { display: grid; gap: .8rem; margin: 1rem 0 1.4rem !important; padding: 0 !important; list-style: none; }
+        .post-levels li { padding: .8rem 1rem; border-radius: 12px; border: 1px solid; }
+        .post-levels .l1 { border-color: #facc15; background: rgba(250,204,21,.06); }
+        .post-levels .l2 { border-color: #fb923c; background: rgba(251,146,60,.06); }
+        .post-levels .l3 { border-color: #ef4444; background: rgba(239,68,68,.06); }
+        .post-faq { display: grid; gap: .8rem; }
+        .post-faq details { border: 1px solid rgba(148,163,184,.22); border-radius: 14px; background: rgba(255,255,255,.03); transition: border-color .2s ease; }
+        .post-faq details[open] { border-color: var(--bs-teal, #2dd4bf); }
+        .post-faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.2rem; font-weight: 600; font-size: 1rem; color: #fff; }
+        .post-faq summary::-webkit-details-marker { display: none; }
+        .post-faq summary::after { content: "+"; flex: none; font-size: 1.4rem; line-height: 1; color: var(--bs-teal, #2dd4bf); transition: transform .2s ease; }
+        .post-faq details[open] summary::after { transform: rotate(45deg); }
+        .post-faq details p { margin: 0 !important; padding: 0 1.2rem 1.1rem; font-size: .98rem !important; }
+        .post-cta { margin: 0 0 2rem; padding: 1.6rem; border: 1px solid var(--bs-teal, #2dd4bf); border-left-width: 4px; border-radius: 18px; background: rgba(45,212,191,.06); box-shadow: 0 0 28px rgba(45,212,191,.18); }
+        .post-cta h2 { margin: 0 0 .6rem; font-size: 1.3rem; color: #fff; }
+        .post-cta p { margin: 0 0 1.1rem; color: #cbd5e1; line-height: 1.6; }
+        .post-disclaimer { font-size: .85rem; font-style: italic; color: var(--text-muted, #94a3b8); margin: 0 0 1.4rem; }
+        .post-sources { margin: 0 0 1.6rem; padding-top: 1rem; border-top: 1px solid rgba(148,163,184,.2); }
+        .post-sources h2 { font-size: .8rem; margin: 0 0 .6rem; text-transform: uppercase; letter-spacing: .5px; color: var(--text-muted, #94a3b8); }
+        .post-sources ul { margin: 0; padding-left: 1.1rem; }
+        .post-sources li { font-size: .85rem; line-height: 1.5; }
+        .post-sources a { color: var(--bs-teal, #2dd4bf); }
+        .post-share { display: flex; align-items: center; gap: .8rem; padding-top: 1rem; border-top: 1px solid rgba(148,163,184,.2); font-size: .85rem; color: var(--text-muted, #94a3b8); }
+        .post-share a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; color: #fff; border: 1px solid rgba(148,163,184,.3); background: rgba(255,255,255,.04); transition: all .2s ease; }
+        .post-share a:hover { border-color: var(--bs-teal, #2dd4bf); box-shadow: 0 0 14px rgba(45,212,191,.35); }
+        .post-aside { position: sticky; top: 96px; display: grid; gap: 1.4rem; }
+        .post-aside h2 { font-size: 1.05rem; margin: 0 0 1rem; color: #fff; }
+        .post-aside p { font-size: .9rem; line-height: 1.55; color: #cbd5e1; margin: 0 0 1rem; }
+        .rel-item { display: grid; grid-template-columns: 76px 1fr; gap: .8rem; align-items: center; text-decoration: none; margin-bottom: 1rem; }
+        .rel-item:last-of-type { margin-bottom: .6rem; }
+        .rel-item img { width: 76px; height: 76px; object-fit: cover; border-radius: 12px; border: 1px solid rgba(148,163,184,.2); }
+        .rel-cat { display: block; font-size: .68rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--bs-teal, #2dd4bf); }
+        .rel-title { display: block; font-size: .92rem; line-height: 1.35; font-weight: 600; color: #fff; margin: .15rem 0; }
+        .rel-date { font-size: .75rem; color: var(--text-muted, #94a3b8); }
+        .rel-item:hover .rel-title { color: var(--bs-teal, #2dd4bf); }
+        .rel-all { font-size: .88rem; font-weight: 600; color: var(--bs-teal, #2dd4bf); text-decoration: none; }
+        @media (max-width: 992px) { .post-layout { grid-template-columns: 1fr; } .post-aside { position: static; } }
+        @media (max-width: 600px) { .post-wrap { padding: 1rem 1.2rem 0; } .post-sec h2 { font-size: 1.3rem; } }
+    </style>
+
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://chaconmarketing.cl/blog/banner-de-cookies-conforme-a-la-ley.html#post",
+   "mainEntityOfPage": "https://chaconmarketing.cl/blog/banner-de-cookies-conforme-a-la-ley.html",
+   "headline": "Banner de cookies conforme a la ley: qué debe permitir hacer al usuario",
+   "description": "Aceptar, rechazar o configurar antes de activar el rastreo: los requisitos que debe cumplir el banner de cookies de tu sitio web según la Ley 21.719 en Chile.",
+   "inLanguage": "es-CL",
+   "datePublished": "2026-10-16",
+   "dateModified": "2026-10-16",
+   "image": "https://chaconmarketing.cl/img/computadores-01.webp",
+   "articleSection": "Ley 21.719",
+   "author": {
+    "@type": "Person",
+    "name": "Christian Chacón Páez",
+    "sameAs": "https://www.linkedin.com/in/christian-chacon-paez/"
+   },
+   "publisher": {
+    "@id": "https://chaconmarketing.cl/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://chaconmarketing.cl/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://chaconmarketing.cl/blog.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Banner de cookies conforme a la ley: qué debe permitir hacer al usuario",
+     "item": "https://chaconmarketing.cl/blog/banner-de-cookies-conforme-a-la-ley.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Necesito un banner si solo uso Google Analytics?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí, conviene. Las herramientas de analítica suelen tratar identificadores y otros datos que permiten reconocer a una persona, por lo que la práctica recomendada es pedir consentimiento antes de activarlas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Las cookies esenciales también necesitan consentimiento?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, las que son estrictamente necesarias para que el sitio funcione no requieren consentimiento, pero sí debes informarlas con claridad en tu política de cookies."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo impedir el acceso al sitio si la persona rechaza las cookies?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No es lo recomendable. El consentimiento debe ser libre, por lo que la persona debería poder rechazar las cookies no esenciales y seguir usando el sitio."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cada cuánto debo revisar mi banner?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cada vez que agregues o cambies una herramienta (analítica, píxeles, videos incrustados, formularios de terceros) y, como mínimo, una vez al año."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://chaconmarketing.cl/#org",
+   "name": "Chacón Marketing",
+   "url": "https://chaconmarketing.cl/"
+  }
+ ]
+}
+    </script>
+</head>
+
+<body class="theme-bs">
+
+<!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
+    <div class="top-bar">
+        <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
+        <div>Lun - Vie 9:00am - 6:00pm</div>
+    </div>
+
+    <!-- ================= NAVEGACIÓN PRINCIPAL ================= -->
+    <header>
+        <nav class="nav-container">
+            <div class="atom-logo">
+                <a href="../index.html">
+                    <img src="../img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" class="site-logo">
+                </a>
+            </div>
+
+            <!-- Botón Hamburguesa para Móviles y Tablets -->
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <ul class="nav-links">
+                <li><a href="../servicios-marketing-b2b.html">Marketing</a></li>
+                <li><a href="../servicios-diseno-web-wordpress.html">Diseño Web</a></li>
+                <li><a href="../christian-chacon.html#portfolio">Proyectos</a></li>
+                <li><a href="../christian-chacon.html">Sobre mí</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+            </ul>
+
+            <a href="../index.html#contacto" class="atom-btn atom-btn-danger nav-cta">Agenda</a>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <div class="post-wrap">
+            <!-- ================= CABECERA ================= -->
+            <nav class="post-breadcrumb" aria-label="Ruta de navegación"><a href="../blog.html">← Blog</a><span>/</span><span>Ley 21.719</span></nav>
+            <div class="post-topline"><span class="bs-chip" style="margin:0;">Ley 21.719</span><time class="post-date" datetime="2026-10-16">16/10/2026</time></div>
+            <h1 class="post-h1">Banner de cookies conforme a la ley: qué debe permitir hacer al usuario</h1>
+            <p class="post-lead">Aceptar, rechazar o configurar antes de activar el rastreo: los requisitos que debe cumplir el banner de cookies de tu sitio web según la Ley 21.719 en Chile.</p>
+            <p class="post-byline">Por <strong>Christian Chacón Páez</strong> · 16 de octubre de 2026 · Lectura: 4 min</p>
+
+            <div class="post-layout">
+                <!-- ================= COLUMNA PRINCIPAL ================= -->
+                <article>
+                    <img class="post-cover" src="../img/computadores-01.webp" alt="Sitio web corporativo con gestor de consentimiento de cookies conforme a la Ley 21.719" width="820" height="461">
+
+                    <nav class="bs-glass post-toc" aria-label="Tabla de contenidos">
+                        <h2>Tabla de contenidos</h2>
+                        <ol>
+                        <li><a href="#contexto">Qué dice la ley sobre las cookies</a></li>
+                        <li><a href="#que-cookies">¿Qué cookies necesitan consentimiento?</a></li>
+                        <li><a href="#consentimiento">Las cuatro condiciones del consentimiento</a></li>
+                        <li><a href="#que-debe-permitir">Qué debe permitir hacer tu banner</a></li>
+                        <li><a href="#errores">Errores frecuentes</a></li>
+                        <li><a href="#revisar">Cómo revisar tu sitio en 5 minutos</a></li>
+                        <li><a href="#pasos">Pasos para adecuar tu banner</a></li>
+                        <li><a href="#riesgo">¿Qué pasa si el banner no cumple?</a></li>
+                        <li><a href="#preguntas">Preguntas frecuentes</a></li>
+                        </ol>
+                    </nav>
+
+                    <aside class="post-key" aria-label="Datos clave">
+                        <h2>Datos clave</h2>
+                        <ul>
+                        <li><strong>La ley no nombra las cookies.</strong> Exige una base de licitud para tratar datos personales, y la analítica y la publicidad suelen caer ahí.</li>
+                        <li><strong>Consentimiento previo (opt-in).</strong> Las cookies no esenciales y los scripts de seguimiento esperan la decisión de la persona.</li>
+                        <li><strong>Cuatro condiciones.</strong> El consentimiento debe ser libre, informado, específico e inequívoco.</li>
+                        <li><strong>Aceptar y rechazar con la misma facilidad.</strong> Con igual visibilidad, configuración por categoría y opción de revocar en cualquier momento.</li>
+                        <li><strong>Dejar evidencia.</strong> Como buena práctica, guarda la fecha y la elección de cada visitante.</li>
+                        </ul>
+                    </aside>
+
+                <section class="post-sec" id="contexto">
+                    <h2>Qué dice la ley sobre las cookies</h2>
+                    <p>El banner de cookies es la parte más visible del cumplimiento de la Ley 21.719 en un sitio web: es lo primero que ve tu visitante y lo primero que revisaría un fiscalizador. La ley se publicó el 13 de diciembre de 2024 y su vigencia está fijada para el 1 de diciembre de 2026, aunque hay un proyecto en el Senado (boletín 18.623-07) que propone postergarla a 2027. Mientras no se apruebe, esa es la fecha que rige.</p>
+<div class="post-note"><p><strong>Una precisión:</strong> la ley no regula las cookies con ese nombre. Lo que exige es una base de licitud para tratar datos personales, y las cookies de analítica y publicidad suelen recoger datos que identifican o perfilan a una persona. Por eso la práctica que recomiendan los especialistas es pedir consentimiento previo, y es la que te propongo seguir.</p></div>
+                </section>
+                <section class="post-sec" id="que-cookies">
+                    <h2>¿Qué cookies necesitan consentimiento?</h2>
+                    <p>No todas las cookies requieren permiso. La diferencia está en para qué se usan:</p>
+<ul><li><strong>Esenciales:</strong> hacen funcionar el sitio (sesión, carrito de compras, seguridad). No necesitan consentimiento, pero sí deben informarse.</li><li><strong>No esenciales:</strong> analítica (como Google Analytics), publicidad, perfilamiento y píxeles de redes sociales. Se deben activar solo después de que la persona acepte.</li></ul>
+                </section>
+                <section class="post-sec" id="consentimiento">
+                    <h2>Las cuatro condiciones del consentimiento</h2>
+                    <p>Para ser válido, el consentimiento debe ser <strong>libre</strong> (sin presión ni condicionantes), <strong>informado</strong> (la persona sabe qué datos se recogen, para qué y si se comparten con terceros), <strong>específico</strong> (para una finalidad concreta) e <strong>inequívoco</strong> (expresado con una acción afirmativa clara).</p>
+                </section>
+                <section class="post-sec" id="que-debe-permitir">
+                    <h2>Qué debe permitir hacer tu banner</h2>
+                    <ul><li><strong>Aceptar y rechazar con la misma facilidad:</strong> los dos botones, con la misma visibilidad.</li><li><strong>Configurar por categoría:</strong> la persona puede aceptar analítica y rechazar publicidad, por ejemplo.</li><li><strong>No activar nada antes de elegir:</strong> las cookies no esenciales y los scripts de seguimiento esperan la decisión.</li><li><strong>Informar con claridad:</strong> qué se recoge, para qué y quién lo recibe, antes de decidir.</li><li><strong>Revocar fácilmente:</strong> cambiar de opinión debe ser tan simple como haber aceptado, por ejemplo con un enlace permanente en el pie de página.</li><li><strong>Sin casillas premarcadas:</strong> el silencio o seguir navegando no es consentimiento.</li><li><strong>Dejar evidencia:</strong> como buena práctica, guardar fecha y elección de cada visitante para poder demostrarlo.</li></ul>
+                </section>
+                <section class="post-sec" id="errores">
+                    <h2>Errores frecuentes</h2>
+                    <ul><li>Un banner con un solo botón "Aceptar", o con el rechazo escondido en un enlace pequeño.</li><li>Mostrar el aviso, pero dejar que Google Analytics o el píxel de Meta se carguen igual desde el primer segundo.</li><li>Entender "seguir navegando" como aceptación.</li><li>Olvidar los elementos de terceros: videos de YouTube, mapas o formularios incrustados que también dejan cookies.</li><li>Copiar un texto genérico que no describe las herramientas que realmente usa tu sitio.</li></ul>
+                </section>
+                <section class="post-sec" id="revisar">
+                    <h2>Cómo revisar tu sitio en 5 minutos</h2>
+                    <p>Abre tu sitio en una ventana de incógnito, sin aceptar nada, y abre las herramientas de desarrollo del navegador (tecla F12). En la pestaña de almacenamiento o aplicación (<em>Application</em>), revisa las cookies. Si ya aparecen cookies de analítica o publicidad antes de que hayas decidido, tu banner no está bloqueando lo que debería.</p><div class="post-tip"><p><strong>Qué hacer:</strong> anota qué herramientas se activan solas. Esa lista es el punto de partida para configurar el bloqueo previo.</p></div>
+                </section>
+                <section class="post-sec" id="pasos">
+                    <h2>Pasos para adecuar tu banner</h2>
+                    <ol><li>Haz un inventario de cookies y scripts de tu sitio, incluyendo los de terceros.</li><li>Clasifícalos en esenciales y no esenciales, y por finalidad.</li><li>Instala un gestor de consentimiento que bloquee los no esenciales hasta que la persona decida.</li><li>Redacta una política de cookies a la medida, con las herramientas que realmente usas.</li><li>Agrega un enlace permanente para cambiar o retirar el consentimiento.</li><li>Prueba el resultado en incógnito y vuelve a revisarlo cada vez que sumes una herramienta nueva.</li></ol>
+                </section>
+                <section class="post-sec" id="riesgo">
+                    <h2>¿Qué pasa si el banner no cumple?</h2>
+                    <p>Un banner sin opción real de rechazo, que active cookies antes de pedir permiso o que use casillas premarcadas puede considerarse tratamiento de datos sin una base legal válida, y eso puede constituir una infracción. Los niveles de sanción están explicados en <a href="ley-21719-sitio-web-cambios-urgentes.html">Ley 21.719 en tu sitio web: 5 cambios que debes hacer antes de diciembre de 2026</a>.</p>
+                </section>
+
+                    <section class="post-sec" id="preguntas">
+                        <h2>Lo que más preguntan</h2>
+                        <div class="post-faq">
+                        <details><summary>¿Necesito un banner si solo uso Google Analytics?</summary><p>Sí, conviene. Las herramientas de analítica suelen tratar identificadores y otros datos que permiten reconocer a una persona, por lo que la práctica recomendada es pedir consentimiento antes de activarlas.</p></details>
+                        <details><summary>¿Las cookies esenciales también necesitan consentimiento?</summary><p>No, las que son estrictamente necesarias para que el sitio funcione no requieren consentimiento, pero sí debes informarlas con claridad en tu política de cookies.</p></details>
+                        <details><summary>¿Puedo impedir el acceso al sitio si la persona rechaza las cookies?</summary><p>No es lo recomendable. El consentimiento debe ser libre, por lo que la persona debería poder rechazar las cookies no esenciales y seguir usando el sitio.</p></details>
+                        <details><summary>¿Cada cuánto debo revisar mi banner?</summary><p>Cada vez que agregues o cambies una herramienta (analítica, píxeles, videos incrustados, formularios de terceros) y, como mínimo, una vez al año.</p></details>
+                        </div>
+                    </section>
+
+
+
+                    <div class="post-cta">
+                        <h2>Revisemos tu banner de cookies, sin costo</h2>
+                        <p>En una conversación de 20 minutos revisamos qué se activa en tu sitio y te entregamos los primeros pasos concretos.</p>
+                        <a href="#contacto" class="bs-btn bs-btn-teal">Solicitar diagnóstico gratuito</a>
+                    </div>
+
+                    <p class="post-disclaimer">Este artículo es informativo y no constituye asesoría legal. Para decisiones sobre tu caso particular, consulta con un abogado especialista.</p>
+
+                    <div class="post-sources">
+                        <h2>Fuentes consultadas (octubre de 2026)</h2>
+                        <ul>
+                        <li><a href="https://lawwwing.com/guia-banner-cookies-chile/" target="_blank" rel="noopener noreferrer">¿Cómo debe ser el banner de cookies en Chile? Guía para cumplir con la Ley 21.719</a></li>
+                        <li><a href="https://www.asentic.cl/blog/ley-21719-postergacion-2027/" target="_blank" rel="noopener noreferrer">Ley 21.719: ¿se posterga a 2027? Esto dice el proyecto</a></li>
+                        <li><a href="https://www.camara.cl/verDoc.aspx?prmID=18854&amp;prmTIPO=INICIATIVA" target="_blank" rel="noopener noreferrer">Boletín N° 18.623-07, proyecto de ley (Cámara de Diputadas y Diputados)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="post-share"><span>Compartir artículo:</span>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fchaconmarketing.cl%2Fblog%2Fbanner-de-cookies-conforme-a-la-ley.html&amp;text=Banner%20de%20cookies%20conforme%20a%20la%20ley%3A%20qu%C3%A9%20debe%20permitir%20hacer%20al%20usuario" target="_blank" rel="noopener noreferrer" aria-label="Compartir en X"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.2 22H2l7.7-8.8L1.5 2h6.7l4.7 6.2L18.9 2zm-1.2 18h1.8L6.9 3.9H5L17.7 20z"/></svg></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fchaconmarketing.cl%2Fblog%2Fbanner-de-cookies-conforme-a-la-ley.html" target="_blank" rel="noopener noreferrer" aria-label="Compartir en LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4V9.5z"/></svg></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchaconmarketing.cl%2Fblog%2Fbanner-de-cookies-conforme-a-la-ley.html" target="_blank" rel="noopener noreferrer" aria-label="Compartir en Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a>
+                    </div>
+                </article>
+
+                <!-- ================= COLUMNA LATERAL ================= -->
+                <aside class="post-aside" aria-label="Contenido relacionado">
+                    <div class="bs-glass">
+                        <h2>Artículos relacionados</h2>
+                    <a class="rel-item" href="ley-21719-sitio-web-cambios-urgentes.html"><img src="../img/compliance-01.webp" alt="Panel de cumplimiento de la Ley 21.719 con escudo de protección de datos en un sitio web corporativo" loading="lazy" width="76" height="76"><span><span class="rel-cat">Ley 21.719</span><span class="rel-title">Ley 21.719 en tu sitio web: 5 cambios que debes hacer antes de diciembre de 2026</span><span class="rel-date">16/10/2026</span></span></a>
+                        <a class="rel-all" href="../blog.html">Ver todos los artículos →</a>
+                    </div>
+                    <div class="bs-glass">
+                        <h2>¿Revisamos tu sitio web?</h2>
+                        <p>Conversamos 20 minutos, detectamos qué te frena y definimos los primeros pasos, sin compromiso.</p>
+                        <a href="#contacto" class="bs-btn bs-btn-teal" style="display:block;text-align:center;">Pedir diagnóstico gratuito</a>
+                    </div>
+                    <div class="bs-glass">
+                        <h2>Cumplimiento Ley 21.719</h2>
+                        <p>Asesoría e implementación en tu sitio web: consentimiento, cookies, derechos ARCOP+ y seguridad.</p>
+                        <a class="rel-all" href="../servicios-ley-21719-proteccion-datos.html">Ver el servicio →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- ================= SECCIÓN: ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO? ================= -->
+        <section id="contacto" class="revision-digital-section">
+            <div class="revision-digital-grid">
+                <div>
+                    <div class="text-start mx-auto" style="max-width: 1200px;">
+                        <span class="d-block fw-bold text-uppercase"
+                            style="color: var(--accent-cyan); font-size: 0.8rem; letter-spacing: 1.5px; margin-bottom: 0.8rem;">
+                            HABLEMOS DE TU PROYECTO
+                        </span>
+                        <h2 class="atom-title-section-left">
+                            ¿Revisamos tu presencia digital sin costo?
+                        </h2>
+                    </div>
+
+                    <p class="mt-4"
+                        style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+                        Agendemos una conversación de 20 minutos. Analizaremos tu situación actual, detectaremos qué
+                        está frenando tus consultas comerciales y definiremos los primeros pasos para resolverlo. Sin
+                        compromisos ni presiones.
+                    </p>
+
+                    <div class="d-flex flex-column" style="gap: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
+                        <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
+                        <div class="d-flex align-items-center gap-2"
+                            style="margin-top: 0.8rem; font-size: 0.8rem; color: var(--text-muted);">
+                            <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong>
+                            en Chile.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta de Sesión de Diagnóstico con Formulario -->
+                <div class="sesion-card">
+                    <div>
+                        <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
+
+                        <h3 class="fw-bold mb-2" style="font-size: 1.5rem; color: var(--text-main);">
+                            Solicita tu sesión de diagnóstico
+                        </h3>
+
+                        <p class="fw-semibold mb-4"
+                            style="color: var(--accent-cyan); font-size: 0.9rem; line-height: 1.4;">
+                            Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
+                        </p>
+
+                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) — sin cambios de IDs, names, action ni target -->
+                        <form id="agendarForm"
+                            action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec"
+                            method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
+                            <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
+                                <div class="col-6">
+                                    <label class="d-block"
+                                        style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Nombre
+                                        *</label>
+                                    <input type="text" name="nombre" id="campoNombre" placeholder="Ej. Juan"
+                                        class="w-100"
+                                        style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                        required>
+                                </div>
+                                <div class="col-6">
+                                    <label class="d-block"
+                                        style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Apellido
+                                        *</label>
+                                    <input type="text" name="apellido" id="campoApellido" placeholder="Ej. Pérez"
+                                        class="w-100"
+                                        style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                        required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="d-block"
+                                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Correo
+                                    Electrónico *</label>
+                                <input type="email" name="correo" id="campoCorreo" placeholder="correo@ejemplo.com"
+                                    class="w-100"
+                                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="d-block"
+                                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Teléfono
+                                    de Contacto *</label>
+                                <input type="tel" name="telefono" id="campoTelefono" placeholder="+56 9 1234 5678"
+                                    class="w-100"
+                                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                    required>
+                            </div>
+
+                            <!-- Casilla de consentimiento -->
+                            <div class="d-flex align-items-start" style="gap: 0.6rem; margin-top: 0.3rem;">
+                                <input type="checkbox" name="consentimiento" id="campoConsentimiento" value="Sí"
+                                    style="margin-top: 0.2rem; cursor: pointer; accent-color: var(--accent-cyan);">
+                                <label for="campoConsentimiento"
+                                    style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; cursor: pointer;">
+                                    Acepto recibir mensajes y correos con información adicional y material de
+                                    promociones.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <!-- Botón de Agendar (el estilo inline se mantiene porque main.js lo modifica al validar) -->
+                        <button type="button" id="btnAgendar" disabled class="atom-btn w-100"
+                            style="background-color: #334155; color: #94a3b8; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 9999px; font-weight: 600; border: none; cursor: not-allowed; text-align: center; display: block; transition: all 0.3s ease;">
+                            Agendar Reunión →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER (estilo BS) ================= -->
+    <footer class="bs-footer">
+        <img class="bs-footer-logo" src="../img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+        <div class="bs-footer-grid">
+            <div>
+                <h4>Empresa</h4>
+                <p>Transformando servicios excelentes en negocios visibles y creíbles.</p>
+            </div>
+            <div>
+                <h4>Servicios</h4><a href="../servicios-marketing-b2b.html">Marketing B2B</a><a
+                    href="../servicios-diseno-web-wordpress.html">Diseño Web WordPress</a><a href="../servicios-ley-21719-proteccion-datos.html">Ley 21.719</a><a href="../christian-chacon.html#portfolio">Proyectos</a><a href="../blog.html">Blog</a><a href="../christian-chacon.html">Sobre mí</a>
+            </div>
+            <div>
+                <h4>Contacto</h4><small>WhatsApp</small>
+                <p>+56 9 4783 9131</p><small>Email</small>
+                <p>christian.chacon.paez@gmail.com</p>
+            </div>
+            <div>
+                <h4>Redes</h4><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace al Script Modular (sin cambios) -->
+    <script src="../JS/main.js"></script>
+
+    <!-- ================= BOTÓN FLOTANTE DE WHATSAPP ================= -->
+    <a href="https://wa.me/56947839131?text=Hola,%20me%20gustaría%20más%20información%20sobre%20sus%20servicios%20de%20consultoría."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Iframe oculto para procesar el envío a Google Sheets y abrir Google Calendar (sin cambios) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" class="d-none"
+        onload="if(window.submitted){window.open('https://calendar.app.google/jzTESP99Gii4eJC78', '_blank');}"></iframe>
+
+</body>
+
+</html>
