@@ -123,3 +123,164 @@ body.theme-bs{--accent-color:var(--bs-teal);--heading-color:#ffffff}
  .theme-bs .top-bar>div:last-child{display:none}
 }
 @media(max-width:560px){.theme-bs .bs-steps,.theme-bs .bs-footer-grid{grid-template-columns:1fr}.theme-bs .bs-section{padding:3.5rem 1.2rem}}
+
+
+
+
+
+/* ====================================================================
+   ESTILOS ESPECÍFICOS: SERVICIOS DE DISEÑO WEB (ChaconMarketing)
+   ==================================================================== */
+
+:root {
+  --c-teal: #2dd4bf;
+  --c-violet: #a78bfa;
+  --c-orange: #fb923c;
+  --c-green: #4ade80;
+  --c-yellow: #facc15;
+  --c-pink: #f472b6;
+}
+
+/* Fondo con luces de color para romper lo plano */
+main {
+  background:
+    radial-gradient(820px 460px at 88% 4%, rgba(167, 139, 250, .16), transparent 62%),
+    radial-gradient(700px 420px at 6% 30%, rgba(45, 212, 191, .11), transparent 62%),
+    radial-gradient(760px 460px at 92% 52%, rgba(251, 146, 60, .10), transparent 62%),
+    radial-gradient(720px 440px at 8% 78%, rgba(74, 222, 128, .09), transparent 62%),
+    radial-gradient(760px 440px at 90% 94%, rgba(167, 139, 250, .12), transparent 62%);
+}
+
+/* Hero */
+.bs-hero-img {
+  border: 1px solid rgba(167, 139, 250, .4);
+  border-radius: 24px;
+  box-shadow: 0 0 46px rgba(167, 139, 250, .30), 0 0 90px rgba(45, 212, 191, .16);
+}
+
+/* Acentos por sección */
+.acc-teal { --acc: var(--c-teal); }
+.acc-violet { --acc: var(--c-violet); }
+.acc-orange { --acc: var(--c-orange); }
+.acc-green { --acc: var(--c-green); }
+
+.bs-section[class*="acc-"] .bs-chip {
+  color: var(--acc) !important;
+  border-color: color-mix(in srgb, var(--acc) 55%, transparent) !important;
+  background: color-mix(in srgb, var(--acc) 12%, transparent) !important;
+}
+
+.bs-section[class*="acc-"] .bs-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: .8rem;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--acc), transparent);
+}
+
+.bs-section[class*="acc-"][style*="text-align:center"] .bs-title::after {
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(90deg, transparent, var(--acc), transparent);
+}
+
+/* Interacción general de tarjetas */
+.bs-plan,
+.bs-steps>.bs-glass,
+.bs-project,
+.bs-faq>.bs-glass {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.bs-plan:hover,
+.bs-steps>.bs-glass:hover,
+.bs-project:hover,
+.bs-faq>.bs-glass:hover {
+  transform: translateY(-4px);
+}
+
+/* Puntos de partida: tarjetas con borde de color */
+.bs-faq>.bs-glass:nth-child(6n+1) { --c: var(--c-orange); }
+.bs-faq>.bs-glass:nth-child(6n+2) { --c: var(--c-yellow); }
+.bs-faq>.bs-glass:nth-child(6n+3) { --c: var(--c-pink); }
+.bs-faq>.bs-glass:nth-child(6n+4) { --c: var(--c-violet); }
+.bs-faq>.bs-glass:nth-child(6n+5) { --c: var(--c-teal); }
+.bs-faq>.bs-glass:nth-child(6n+6) { --c: var(--c-green); }
+
+.bs-faq>.bs-glass {
+  border-left: 4px solid var(--c, var(--c-teal)) !important;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--c, var(--c-teal)) 18%, transparent);
+}
+
+/* Base sólida (bento) */
+.bs-bento>.bs-bento-card:nth-child(1) { --c: var(--c-teal); }
+.bs-bento>.bs-bento-card:nth-child(2) { --c: var(--c-yellow); }
+.bs-bento>.bs-bento-card:nth-child(3) { --c: var(--c-violet); }
+.bs-bento>.bs-bento-card:nth-child(4) { --c: var(--c-orange); }
+
+.bs-bento-card {
+  border: 1px solid color-mix(in srgb, var(--c, var(--c-teal)) 65%, transparent) !important;
+  box-shadow: 0 0 30px color-mix(in srgb, var(--c, var(--c-teal)) 26%, transparent);
+  background-size: cover;
+  background-position: center;
+}
+
+.bs-bento-card h3 { color: var(--c, var(--c-teal)) !important; }
+
+/* Planes */
+#landing-conversion { --c: var(--c-violet); }
+#sitio-corporativo { --c: var(--c-teal); }
+#catalogo { --c: var(--c-orange); }
+
+.bs-plan {
+  border: 1px solid color-mix(in srgb, var(--c) 55%, transparent) !important;
+  border-top: 4px solid var(--c) !important;
+  box-shadow: 0 0 26px color-mix(in srgb, var(--c) 22%, transparent);
+}
+
+.bs-plan .kicker { color: var(--c) !important; }
+.bs-plan h3 { color: #fff; }
+
+.bs-plan .bs-ico {
+  background: color-mix(in srgb, var(--c) 18%, transparent) !important;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--c) 35%, transparent);
+}
+
+#landing-conversion .bs-btn-ghost { border-color: var(--c-violet) !important; color: #ddd6fe !important; }
+#catalogo .bs-btn-ghost { border-color: var(--c-orange) !important; color: #fed7aa !important; }
+
+/* Metodología */
+.bs-steps>.bs-glass:nth-child(1) { --c: var(--c-yellow); }
+.bs-steps>.bs-glass:nth-child(2) { --c: var(--c-green); }
+.bs-steps>.bs-glass:nth-child(3) { --c: var(--c-orange); }
+.bs-steps>.bs-glass:nth-child(4) { --c: var(--c-violet); }
+
+.bs-steps>.bs-glass {
+  border: 1px solid color-mix(in srgb, var(--c) 60%, transparent) !important;
+  border-top: 4px solid var(--c) !important;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--c) 26%, transparent);
+}
+
+.bs-steps .bs-step-n {
+  color: var(--c) !important;
+  -webkit-text-fill-color: var(--c) !important;
+  background: none !important;
+  text-shadow: 0 0 20px color-mix(in srgb, var(--c) 55%, transparent);
+}
+
+/* Proyectos */
+.bs-projects>.bs-project:nth-child(1) { --c: var(--c-teal); }
+.bs-projects>.bs-project:nth-child(2) { --c: var(--c-violet); }
+.bs-projects>.bs-project:nth-child(3) { --c: var(--c-orange); }
+.bs-projects>.bs-project:nth-child(4) { --c: var(--c-green); }
+.bs-projects>.bs-project:nth-child(5) { --c: var(--c-yellow); }
+.bs-projects>.bs-project:nth-child(6) { --c: var(--c-pink); }
+
+.bs-project {
+  border: 1px solid color-mix(in srgb, var(--c, var(--c-teal)) 45%, transparent) !important;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--c, var(--c-teal)) 18%, transparent);
+}
+
+.bs-project .kicker { color: var(--c, var(--c-teal)) !important; }

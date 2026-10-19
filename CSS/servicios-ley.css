@@ -1,0 +1,135 @@
+/* ====================================================================
+   ESTILOS ESPECÍFICOS: SERVICIOS LEY 21.719 (ChaconMarketing)
+   ==================================================================== */
+
+.ley-grid-2 { 
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important; 
+}
+
+.ley-hero-media { 
+  position: relative; 
+  width: 100%; 
+  max-width: 520px; 
+  justify-self: center; 
+}
+
+.ley-hero-media .bs-hero-img { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+  max-width: 100%; 
+}
+
+.ley-chip { 
+  position: absolute; 
+  display: inline-flex; 
+  align-items: center; 
+  gap: .45rem; 
+  padding: .5rem .95rem; 
+  border-radius: 9999px; 
+  font-size: .85rem; 
+  font-weight: 600; 
+  color: #fff; 
+  white-space: nowrap;  
+  background: rgba(10, 16, 32, .82); 
+  border: 1px solid rgba(45, 212, 191, .5); 
+  box-shadow: 0 0 22px rgba(45, 212, 191, .25); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);  
+  animation: ley-float 5s ease-in-out infinite; 
+}
+
+.ley-chip svg { 
+  color: #2dd4bf; 
+  flex: none; 
+}
+
+.ley-chip--1 { top: 7%; left: -3%; }
+.ley-chip--2 { 
+  top: 24%; 
+  right: -3%; 
+  border-color: rgba(167, 139, 250, .55); 
+  box-shadow: 0 0 22px rgba(167, 139, 250, .28); 
+  animation-delay: -1.6s; 
+}
+.ley-chip--2 svg { color: #a78bfa; }
+.ley-chip--3 { bottom: 6%; right: -3%; animation-delay: -3.2s; }
+
+@keyframes ley-float { 
+  0%, 100% { transform: translateY(0); } 
+  50% { transform: translateY(-6px); } 
+}
+
+@media (prefers-reduced-motion: reduce) { 
+  .ley-chip { animation: none; } 
+}
+
+@media (max-width: 768px) { 
+  .ley-chip { font-size: .75rem; padding: .4rem .75rem; } 
+  .ley-chip--1, .ley-chip--2, .ley-chip--3 { left: auto; right: auto; } 
+  .ley-chip--1 { left: 2%; } 
+  .ley-chip--2, .ley-chip--3 { right: 2%; } 
+}
+
+.ley-stats { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: .8rem 2.2rem; 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: .9rem 1.4rem; 
+  border: 1px solid rgba(148, 163, 184, .18); 
+  border-radius: 14px; 
+  background: rgba(255, 255, 255, .03); 
+}
+
+.ley-stats > div { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  gap: .15rem; 
+}
+
+.ley-stats strong { 
+  font-size: 1.05rem; 
+  color: var(--bs-teal, #2dd4bf); 
+}
+
+.ley-stats span { 
+  font-size: .78rem; 
+  color: var(--text-muted, #94a3b8); 
+}
+
+.sesion-card p.fw-semibold { color: #fb923c !important; }
+.sesion-card::before, .sesion-card::after { 
+  background: #fb923c !important; 
+  background-image: none !important; 
+  border-color: #fb923c !important; 
+}
+
+#btnAgendar:not(:disabled) { 
+  background: #fb923c !important; 
+  background-color: #fb923c !important; 
+  color: #1a0f05 !important; 
+  border: 1px solid #fdba74 !important; 
+  box-shadow: 0 0 16px #fb923c99, 0 0 36px #fb923c55 !important; 
+  cursor: pointer !important; 
+}
+
+#btnAgendar:not(:disabled):hover { 
+  background: #fdba74 !important; 
+  background-color: #fdba74 !important; 
+  box-shadow: 0 0 22px #fb923ccc, 0 0 46px #fb923c77 !important; 
+}
+
+.sesion-card { 
+  border: 1px solid #fb923c !important; 
+  border-top: 4px solid #fb923c !important; 
+  box-shadow: 0 0 28px #fb923c33 !important; 
+}
+
+@media (max-width: 768px) { 
+  .ley-grid-2 { grid-template-columns: 1fr !important; } 
+}
