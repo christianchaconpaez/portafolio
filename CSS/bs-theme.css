@@ -109,7 +109,7 @@ body.theme-bs{--accent-color:var(--bs-teal);--heading-color:#ffffff}
 /* ---------- Tipografía unificada: títulos de tarjeta, líneas de apoyo y textos (index y demás páginas) ---------- */
 .theme-bs .bs-card-title{font-size:var(--fs-h3);font-weight:var(--fw-h3);line-height:1.25;color:#fff;margin:0 0 .5rem}
 .theme-bs .bs-card-sub{font-size:var(--fs-sub);font-weight:var(--fw-sub);line-height:1.4;color:var(--bs-teal);margin:0 0 1rem}
-.theme-bs .bs-pain{font-size:1.02rem;line-height:1.5;color:#fff}
+.theme-bs .bs-pain{font-size:1.3rem;line-height:1.5;color:#fff}
 .theme-bs .metodologia-list li{font-size:var(--fs-body);line-height:1.5;color:#cdd8f5}
 .theme-bs .metodologia-list li span.check{color:var(--bs-teal)}
 .theme-bs .paso-content h3{font-size:1.1rem;font-weight:700;color:#fff}
