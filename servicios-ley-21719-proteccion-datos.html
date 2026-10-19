@@ -22,35 +22,9 @@
     <link rel="stylesheet" href="CSS/variables.css">
     <link rel="stylesheet" href="CSS/atomic.css">
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/servicios-ley.css">
     <link href="CSS/main-assets.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/bs-theme.css">
-
-    <style>
-        .ley-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-        .ley-hero-media { position: relative; width: 100%; max-width: 520px; justify-self: center; }
-        .ley-hero-media .bs-hero-img { display: block; width: 100%; height: auto; max-width: 100%; }
-        .ley-chip { position: absolute; display: inline-flex; align-items: center; gap: .45rem; padding: .5rem .95rem; border-radius: 9999px; font-size: .85rem; font-weight: 600; color: #fff; white-space: nowrap;
-            background: rgba(10, 16, 32, .82); border: 1px solid rgba(45, 212, 191, .5); box-shadow: 0 0 22px rgba(45, 212, 191, .25); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-            animation: ley-float 5s ease-in-out infinite; }
-        .ley-chip svg { color: #2dd4bf; flex: none; }
-        .ley-chip--1 { top: 7%; left: -3%; }
-        .ley-chip--2 { top: 24%; right: -3%; border-color: rgba(167, 139, 250, .55); box-shadow: 0 0 22px rgba(167, 139, 250, .28); animation-delay: -1.6s; }
-        .ley-chip--2 svg { color: #a78bfa; }
-        .ley-chip--3 { bottom: 6%; right: -3%; animation-delay: -3.2s; }
-        @keyframes ley-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-        @media (prefers-reduced-motion: reduce) { .ley-chip { animation: none; } }
-        @media (max-width: 768px) { .ley-chip { font-size: .75rem; padding: .4rem .75rem; } .ley-chip--1, .ley-chip--2, .ley-chip--3 { left: auto; right: auto; } .ley-chip--1 { left: 2%; } .ley-chip--2, .ley-chip--3 { right: 2%; } }
-        .ley-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem 2.2rem; max-width: 1100px; margin: 0 auto; padding: .9rem 1.4rem; border: 1px solid rgba(148, 163, 184, .18); border-radius: 14px; background: rgba(255, 255, 255, .03); }
-        .ley-stats > div { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .15rem; }
-        .ley-stats strong { font-size: 1.05rem; color: var(--bs-teal, #2dd4bf); }
-        .ley-stats span { font-size: .78rem; color: var(--text-muted, #94a3b8); }
-        .sesion-card p.fw-semibold { color: #fb923c !important; }
-        .sesion-card::before, .sesion-card::after { background: #fb923c !important; background-image: none !important; border-color: #fb923c !important; }
-        #btnAgendar:not(:disabled) { background: #fb923c !important; background-color: #fb923c !important; color: #1a0f05 !important; border: 1px solid #fdba74 !important; box-shadow: 0 0 16px #fb923c99, 0 0 36px #fb923c55 !important; cursor: pointer !important; }
-        #btnAgendar:not(:disabled):hover { background: #fdba74 !important; background-color: #fdba74 !important; box-shadow: 0 0 22px #fb923ccc, 0 0 46px #fb923c77 !important; }
-        .sesion-card { border: 1px solid #fb923c !important; border-top: 4px solid #fb923c !important; box-shadow: 0 0 28px #fb923c33 !important; }
-        @media (max-width: 768px) { .ley-grid-2 { grid-template-columns: 1fr !important; } }
-    </style>
 
     <script type="application/ld+json">
 {
@@ -98,7 +72,7 @@
      "name": "¿Cuándo entra en vigencia la Ley N° 21.719 de Protección de Datos?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "La ley fue publicada el 13 de diciembre de 2024 y, según su texto actual, entra en vigencia el 1 de diciembre de 2026 (24 meses tras su publicación). Existe un proyecto de ley en el Senado (boletín 18.623-07) que propone postergarla al 1 de diciembre de 2027, pero mientras no se apruebe y se publique, la fecha que rige es la de 2026. Preparar tu sitio ahora evita apuros en cualquier escenario."
+      "text": "La ley fue publicada el 13 de diciembre de 2024 y, según su texto actual, entra en vigencia el 1 de diciembre de 2026 (24 meses tras su publicación). Existe un proyecto de ley en el Senado (boletín 18.623-07) que proposes postergarla al 1 de diciembre de 2027, pero mientras no se apruebe y se publique, la fecha que rige es la de 2026. Preparar tu sitio ahora evita apuros en cualquier escenario."
      }
     },
     {
@@ -134,7 +108,7 @@
 
 <body class="theme-bs">
 
-<!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
+    <!-- ================= BARRA SUPERIOR DE CONTACTO ================= -->
     <div class="top-bar">
         <div>📞 +569 4783 9131 &nbsp;&nbsp;✉️ christian.chacon.paez@gmail.com</div>
         <div>Lun - Vie 9:00am - 6:00pm</div>
@@ -170,24 +144,18 @@
         </nav>
     </header>
 
-
-
-
     <main>
         <!-- ================= HERO ================= -->
         <section class="bs-hero">
             <div><span class="bs-chip">Ley N° 21.719 · Protección de datos</span>
-                <h1>¿Tu sitio web cumple con la <span class="text-gradient">Ley N° 21.719</span> de Protección de Datos Personales en Chile?</h1>
-                <p class="bs-lead" style="margin-bottom:1.6rem;">Evita sanciones de hasta <strong style="color:#fff;">20.000 UTM</strong> o el <strong style="color:#fff;">4% de tus ingresos anuales</strong>. Implementamos las soluciones técnicas, legales y de UX que la ley exige, y convertimos el cumplimiento en confianza digital para tu empresa.</p>
+                <h1>¿Tu sitio web cumple con la <span class="text-gradient">Ley N° 21.719</span> de Protección de Datos Personales en Chile?[cite: 1]</h1>
+                <p class="bs-lead" style="margin-bottom:1.6rem;">Evita sanciones de hasta <strong style="color:#fff;">20.000 UTM</strong> o el <strong style="color:#fff;">4% de tus ingresos anuales</strong>. Implementamos las soluciones técnicas, legales y de UX que la ley exige, y convertimos el cumplimiento en confianza digital para tu empresa.[cite: 1]</p>
                 <ul class="bs-check">
-                    <li><strong>Consentimiento y cookies:</strong> banner y formularios conformes a la ley.</li>
-                    <li><strong>Derechos ARCOP+:</strong> canal web para gestionar solicitudes de tus usuarios.</li>
-                    <!--  
-                    <li><strong>Seguridad:</strong> HTTPS, cifrado y prevención de brechas.</li>
-                    -->
+                    <li><strong>Consentimiento y cookies:</strong> banner y formularios conformes a la ley.[cite: 1]</li>
+                    <li><strong>Derechos ARCOP+:</strong> canal web para gestionar solicitudes de tus usuarios.[cite: 1]</li>
                 </ul>
                 <div class="d-flex flex-wrap gap-3"><a href="#contacto" class="bs-btn bs-btn-teal">Solicitar diagnóstico web gratuito</a><a href="#servicios-ley" class="bs-btn bs-btn-ghost">Ver servicios</a></div>
-                <p class="bs-lead" style="margin-top:1.8rem;font-size:.9rem;"><strong style="color:#fff;">En una frase:</strong> Asesoría e implementación en sitios web de empresas chilenas los requisitos de la Ley N° 21.719: consentimiento, cookies, derechos ARCOP+, políticas de privacidad y seguridad.</p>
+                <p class="bs-lead" style="margin-top:1.8rem;font-size:.9rem;"><strong style="color:#fff;">En una frase:</strong> Asesoría e implementación en sitios web de empresas chilenas los requisitos de la Ley N° 21.719: consentimiento, cookies, derechos ARCOP+, políticas de privacidad y seguridad.[cite: 1]</p>
             </div>
             <div class="ley-hero-media">
                 <img class="bs-hero-img" src="img/compliance-01.webp" alt="Panel de cumplimiento de la Ley 21.719 con escudo de protección de datos en un sitio web corporativo" width="500" height="500">
@@ -276,9 +244,6 @@
                             <li><div><strong style="display:block;color:#fff;margin-bottom:.2rem;">Rediseño de formularios (opt-in explícito)</strong><span style="display:block;">Casillas desmarcadas por defecto y cláusulas de privacidad transparentes en contacto, cotización y checkout.</span></div></li>
                             <li><div><strong style="display:block;color:#fff;margin-bottom:.2rem;">Centro de derechos ARCOP+</strong><span style="display:block;">Canal web para ejercer Acceso, Rectificación, Cancelación/Supresión, Oposición, Portabilidad y Bloqueo.</span></div></li>
                             <li><div><strong style="display:block;color:#fff;margin-bottom:.2rem;">Política de privacidad y cookies a medida</strong><span style="display:block;">Textos legales adaptados a la realidad operacional de tu empresa.</span></div></li>
-
-                            <!-- <li><div><strong style="display:block;color:#fff;margin-bottom:.2rem;">Seguridad web y cifrado</strong><span style="display:block;">HTTPS/SSL, cifrado de bases de datos y medidas para prevenir y gestionar brechas.</span></div></li> -->
-                            
                         </ul>
                     </div>
                 </article>
