@@ -1014,3 +1014,74 @@ footer {
   line-height: 1;
   font-weight: bold;
 }
+
+
+/* ====================================================================
+   ESTILOS PERSONALIZADOS: SECCIÓN HABLEMOS DE TU PROYECTO (Naranja / Neón)
+   ==================================================================== */
+
+/* Título con degradado de amarillo a naranja */
+.text-gradient-yellow-orange {
+  background: linear-gradient(90deg, #facc15, #fb923c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Tarjeta de sesión de diagnóstico con bordes y efecto neón naranja */
+.sesion-card-orange {
+  border: 1px solid #fb923c !important;
+  border-top: 4px solid #fb923c !important;
+  box-shadow: 0 0 28px rgba(251, 146, 60, 0.33) !important;
+}
+
+/* Texto descriptivo en color naranja dentro de la tarjeta */
+.text-orange-custom {
+  color: #fb923c !important;
+}
+
+
+
+/* ====================================================================
+   BOTÓN DE AGENDA EN TONOS NARANJOS (Estado Deshabilitado / Activo)
+   ==================================================================== */
+
+.form-submit-btn-orange {
+  background-color: #432818; /* Tono oscuro cálido acorde al naranja */
+  color: #fdba74;            /* Texto en tono naranja claro / ámbar */
+  font-size: 0.95rem;
+  padding: 0.9rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid rgba(251, 146, 60, 0.3);
+  cursor: not-allowed;
+  text-align: center;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Opcional: si el script habilita el botón, mantendrá su brillo naranja característico */
+.form-submit-btn-orange:not(:disabled) {
+  background: #fb923c !important;
+  color: #1a0f05 !important;
+  border: 1px solid #fdba74 !important;
+  box-shadow: 0 0 16px rgba(251, 146, 60, 0.6), 0 0 36px rgba(251, 146, 60, 0.3) !important;
+  cursor: pointer !important;
+}
+
+.form-submit-btn-orange:not(:disabled):hover {
+  background: #fdba74 !important;
+  box-shadow: 0 0 22px rgba(251, 146, 60, 0.8), 0 0 46px rgba(251, 146, 60, 0.5) !important;
+}
+
+
+/* Forzar que cualquier pseudoelemento o borde interno superior de la tarjeta de sesión sea naranja */
+.sesion-card-orange::before,
+.sesion-card-orange::after,
+.sesion-card.sesion-card-orange::before,
+.sesion-card.sesion-card-orange::after {
+  background: #fb923c !important;
+  background-image: none !important;
+  border-color: #fb923c !important;
+}
