@@ -22,38 +22,9 @@
     <link rel="stylesheet" href="CSS/variables.css">
     <link rel="stylesheet" href="CSS/atomic.css">
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/blog.css">
     <link href="CSS/main-assets.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/bs-theme.css">
-
-    <style>
-        .blog-hero { grid-template-columns: 1fr !important; }
-        .blog-hero > div { max-width: 760px; }
-        .blog-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.2rem; margin-bottom: 2rem; }
-        .blog-filters { display: flex; flex-wrap: wrap; gap: .6rem; }
-        .blog-filter { cursor: pointer; padding: .45rem 1rem; border-radius: 9999px; font-size: .82rem; font-weight: 600; color: #cbd5e1; background: rgba(255,255,255,.04); border: 1px solid rgba(148,163,184,.25); transition: all .2s ease; }
-        .blog-filter:hover { color: #fff; border-color: var(--bs-teal, #2dd4bf); }
-        .blog-filter.is-active { color: #052e2b; background: var(--bs-teal, #2dd4bf); border-color: var(--bs-teal, #2dd4bf); }
-        .blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem 1.8rem; }
-        .blog-card[hidden] { display: none; }
-        .blog-card-link { display: block; text-decoration: none; color: inherit; }
-        .blog-card-img { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4 / 3; background: #0b1224; border: 1px solid rgba(148,163,184,.15); }
-        .blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
-        .blog-card-link:hover .blog-card-img img { transform: scale(1.05); }
-        .blog-card-cat { position: absolute; left: .9rem; top: .9rem; padding: .3rem .75rem; border-radius: 9999px; font-size: .7rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #fff; background: rgba(10,16,32,.82); border: 1px solid rgba(45,212,191,.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
-        .blog-card time { display: block; margin: 1rem 0 .7rem; padding-bottom: .7rem; font-size: .8rem; color: var(--text-muted, #94a3b8); border-bottom: 1px solid rgba(148,163,184,.2); }
-        .blog-card h3 { font-size: 1.2rem; line-height: 1.35; color: #fff; margin: 0 0 .6rem; transition: color .2s ease; }
-        .blog-card-link:hover h3 { color: var(--bs-teal, #2dd4bf); }
-        .blog-card p { font-size: .9rem; line-height: 1.55; color: var(--text-muted, #94a3b8); margin: 0; }
-        .blog-pager { display: flex; align-items: center; justify-content: center; gap: .8rem; margin-top: 3rem; }
-        .blog-pager[hidden] { display: none; }
-        .blog-pager button { cursor: pointer; padding: .6rem 1.3rem; border-radius: 9999px; font-size: .88rem; font-weight: 600; color: #fff; background: rgba(255,255,255,.04); border: 1px solid rgba(148,163,184,.3); transition: all .2s ease; }
-        .blog-pager button:hover:not(:disabled) { border-color: var(--bs-teal, #2dd4bf); box-shadow: 0 0 16px rgba(45,212,191,.3); }
-        .blog-pager button:disabled { opacity: .4; cursor: not-allowed; }
-        .blog-pager-info { font-size: .85rem; color: var(--text-muted, #94a3b8); }
-        .blog-empty { text-align: center; color: var(--text-muted, #94a3b8); padding: 2rem 0; }
-        @media (max-width: 992px) { .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-        @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
-    </style>
 
     <script type="application/ld+json">
 {
@@ -102,7 +73,7 @@
     },
     {
      "@type": "BlogPosting",
-     "headline": "Sitio web B2B que genera consultas: la estructura que sí funciona",
+     "headline": "Sitio web B2B que generates consultas: la estructura que sí funciona",
      "datePublished": "2026-10-17",
      "url": "https://chaconmarketing.cl/blog/sitio-web-b2b-que-genera-consultas.html",
      "author": {
@@ -191,9 +162,6 @@
         </nav>
     </header>
 
-
-
-
     <main>
         <!-- ================= HERO ================= -->
         <section class="bs-hero blog-hero">
@@ -220,14 +188,6 @@
                 </div>
             </div>
 
-            <!-- ============================================================
-                 PARA PUBLICAR UN ARTÍCULO NUEVO: copia un bloque <article>,
-                 pégalo ARRIBA de los demás (el más reciente va primero) y
-                 cambia categoría, fecha, imagen, título, resumen y enlace.
-                 Si usas una categoría nueva, agrega su botón en .blog-filters.
-                 La paginación (6 por página) aparece sola al pasar de 6.
-                 Los 6 artículos actuales son EJEMPLOS: reemplázalos.
-                 ============================================================ -->
             <div class="blog-grid">
                 <article class="blog-card" data-cat="Ley 21.719">
                     <a href="blog/derechos-arcop-ley-21719-guia-empresas.html" class="blog-card-link" aria-label="Derechos ARCOP en la Ley 21.719: qué son y cómo gestionarlos en tu empresa">
@@ -341,7 +301,7 @@
                             Completa tus datos para habilitar la agenda y responderé en menos de 24 horas.
                         </p>
 
-                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) — sin cambios de IDs, names, action ni target -->
+                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) -->
                         <form id="agendarForm"
                             action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec"
                             method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
@@ -398,7 +358,6 @@
                     </div>
 
                     <div>
-                        <!-- Botón de Agendar (el estilo inline se mantiene porque main.js lo modifica al validar) -->
                         <button type="button" id="btnAgendar" disabled class="atom-btn w-100"
                             style="background-color: #334155; color: #94a3b8; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 9999px; font-weight: 600; border: none; cursor: not-allowed; text-align: center; display: block; transition: all 0.3s ease;">
                             Agendar Reunión →
@@ -410,7 +369,7 @@
 
     </main>
 
-    <!-- ================= FOOTER (estilo BS) ================= -->
+    <!-- ================= FOOTER ================= -->
     <footer class="bs-footer">
         <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
         <div class="bs-footer-grid">
@@ -434,8 +393,9 @@
         </div>
     </footer>
 
-    <!-- Enlace al Script Modular (sin cambios) -->
+    <!-- Scripts Modulares -->
     <script src="JS/main.js"></script>
+    <script src="JS/blog.js"></script>
 
     <!-- ================= BOTÓN FLOTANTE DE WHATSAPP ================= -->
     <a href="https://wa.me/56947839131?text=Hola,%20me%20gustaría%20más%20información%20sobre%20sus%20servicios%20de%20consultoría."
@@ -448,46 +408,9 @@
         </svg>
     </a>
 
-    <!-- Iframe oculto para procesar el envío a Google Sheets y abrir Google Calendar (sin cambios) -->
+    <!-- Iframe oculto -->
     <iframe name="hidden_iframe" id="hidden_iframe" class="d-none"
         onload="if(window.submitted){window.open('https://calendar.app.google/jzTESP99Gii4eJC78', '_blank');}"></iframe>
-
-
-    <script>
-    (function () {
-        var PER_PAGE = 6;
-        var cards = Array.prototype.slice.call(document.querySelectorAll('.blog-card'));
-        var filters = document.querySelectorAll('.blog-filter');
-        var pager = document.getElementById('blogPager');
-        var prev = document.getElementById('blogPrev');
-        var next = document.getElementById('blogNext');
-        var info = document.getElementById('blogInfo');
-        var empty = document.getElementById('blogEmpty');
-        var cat = 'all', page = 1;
-        function render() {
-            var list = cards.filter(function (c) { return cat === 'all' || c.getAttribute('data-cat') === cat; });
-            var pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
-            if (page > pages) page = pages;
-            cards.forEach(function (c) { c.hidden = true; });
-            list.slice((page - 1) * PER_PAGE, page * PER_PAGE).forEach(function (c) { c.hidden = false; });
-            empty.hidden = list.length > 0;
-            pager.hidden = pages <= 1;
-            prev.disabled = page <= 1;
-            next.disabled = page >= pages;
-            info.textContent = 'Página ' + page + ' de ' + pages;
-        }
-        filters.forEach(function (b) {
-            b.addEventListener('click', function () {
-                filters.forEach(function (x) { x.classList.remove('is-active'); });
-                b.classList.add('is-active');
-                cat = b.getAttribute('data-cat'); page = 1; render();
-            });
-        });
-        prev.addEventListener('click', function () { page--; render(); document.getElementById('articulos').scrollIntoView({ behavior: 'smooth' }); });
-        next.addEventListener('click', function () { page++; render(); document.getElementById('articulos').scrollIntoView({ behavior: 'smooth' }); });
-        render();
-    })();
-    </script>
 
 </body>
 
