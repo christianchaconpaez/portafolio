@@ -452,7 +452,12 @@ body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-tit
 
 /* Pastillas claras (bg-light) dentro de tarjetas oscuras: texto oscuro, no #f2f2f2 */
 .theme-bs .skill-card .bg-light{background:#ffffff!important;border-color:rgba(11,23,48,.14)!important}
-.theme-bs .skill-card .bg-light span{color:var(--ink)!important}
+/* Color fijo (no var(--ink)): dentro de la tarjeta oscura --ink vale #f2f2f2 y el texto se perdía sobre el blanco */
+.theme-bs .skill-card .bg-light span,
+.theme-bs .skill-card .bg-light .small{color:#0b2a6b!important}
+.theme-bs .skill-card .bg-light i,
+.theme-bs .skill-card .bg-light .bi,
+.theme-bs .skill-card .bg-light .text-primary{color:#0b2a6b!important}
 
 /* ---------- 2b) Textos sobre fondo oscuro: #f2f2f2 sólido ---------- */
 .theme-bs .about .about-content .journey-timeline .timeline-item .description,
@@ -540,39 +545,3 @@ body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-tit
 .resume .education-timeline .education-item:nth-child(3n+3){--c:var(--c-pink)}
 .theme-bs .resume .education-timeline .education-item .timeline-marker{background:var(--c);border-color:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 28%,transparent)}
 .theme-bs .resume .education-timeline .education-item .education-content{border-left:4px solid var(--c)}
-
-
-
-/* ---------- Footer (oscuro: fondo azul profundo, textos y logo en blanco) ---------- */
-.theme-bs .bs-footer{
-  margin-top:4rem;
-  border-top:1px solid rgba(160,190,255,.22);
-  background:linear-gradient(135deg,#0a1230 0%,#0f1c42 45%,#1e3a8a 100%);
-  color:#f2f2f2;
-}
-.theme-bs .bs-footer-logo{
-  display:block;margin:0 auto;
-  padding:2rem 2rem 1rem;              /* antes 4rem 2rem 2rem */
-  max-width:380px;width:70%;
-  filter:none;                          /* el SVG ya es blanco: sin oscurecer */
-}
-.theme-bs .bs-footer-grid{
-  max-width:1200px;margin:0 auto;
-  padding:1rem 2rem 1.5rem;            /* antes 2rem 2rem 3rem */
-  display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:2.5rem;
-}
-.theme-bs .bs-footer h4{
-  font-size:1rem;color:#f2f2f2;
-  padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);
-  display:inline-block;margin-bottom:1rem;
-}
-.theme-bs .bs-footer a{
-  display:block;color:#f2f2f2;text-decoration:none;
-  font-size:.88rem;margin-bottom:.6rem;transition:color .2s;
-}
-.theme-bs .bs-footer a:hover{color:var(--bs-teal)}
-.theme-bs .bs-footer small{
-  display:block;font-size:.7rem;letter-spacing:1.2px;
-  text-transform:uppercase;color:#f2f2f2;margin-top:.8rem;
-}
-.theme-bs .bs-footer p{font-size:.88rem;color:#f2f2f2;margin:0}
