@@ -90,7 +90,7 @@
 
 .atom-btn-danger {
   background-color: var(--accent-red);
-  color: var(--text-main);
+  color: #ffffff;   /* texto fijo en blanco: --text-main ahora es oscuro */
 }
 
 .atom-btn-danger:hover {
@@ -105,7 +105,7 @@
 
 .atom-btn-outline:hover {
   border-color: var(--accent-cyan);
-  background-color: rgba(34, 211, 238, 0.05);
+  background-color: rgba(9, 116, 129, 0.08);
 }
 
 
@@ -122,3 +122,4 @@
 .atom-card:hover {
   border-color: var(--border-hover);
 }
+/* .atom-card usa --bg-card (oscuro): es una tarjeta oscura; sus textos se re-declaran en bs-theme.css */

@@ -2,25 +2,27 @@
    VARIABLES Y TOKENS GLOBALES
    =================================================================== */
 :root {
-  --bg-primary: #070a13;
-  --bg-card: #0b0f19;
-  --bg-card-hover: #131827;
+  /* VERSIÓN CLARA: tokens de la PÁGINA. Las tarjetas oscuras re-declaran
+     estos tokens en bs-theme.css (bloque "SUPERFICIES OSCURAS"). */
+  --bg-primary: #f4f7fc;
+  --bg-card: #0f1c42;          /* superficie oscura de las tarjetas */
+  --bg-card-hover: #16275a;
   
-  --text-main: #ffffff;
-  --text-muted: #94a3b8;
+  --text-main: #0b1730;
+  --text-muted: #53648a;
   
-  --accent-cyan: #22d3ee;
-  --accent-mint: #34d399;
-  --accent-red: #f43f5e;
+  --accent-cyan: #097481;
+  --accent-mint: #0f9d76;
+  --accent-red: #e11d48;
   
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(34, 211, 238, 0.3);
+  --border-color: rgba(11, 23, 48, 0.12);
+  --border-hover: rgba(9, 116, 129, 0.4);
 
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Aliases para compatibilidad */
   --background-color: var(--bg-primary);
-  --default-color: var(--#f2f2f2);
+  --default-color: #2a3a5f;
   --heading-color: var(--text-main);
   --accent-color: var(--accent-cyan);
   --surface-color: var(--bg-card);
@@ -62,14 +64,14 @@
 
 /* Tarjeta derecha de agendamiento */
 .sesion-card {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(7, 10, 19, 0.95) 100%);
+  background: linear-gradient(160deg, #1a2c61 0%, #0f1c42 52%, #0a1230 100%);
   border: 1px solid rgba(34, 211, 238, 0.25);
   border-radius: 1.5rem;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 22px 44px -12px rgba(11, 23, 48, 0.45);
   position: relative;
   overflow: hidden;
 }
@@ -98,7 +100,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(7, 10, 19, 0.9);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
 }
@@ -126,7 +128,7 @@ header {
 }
 
 .nav-links a:hover, .nav-links a.active {
-  color: var(--accent-cyan);
+  color: var(--text-main);
 }
 
 /* ====================================================================
@@ -193,13 +195,13 @@ header {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--bg-card, #0b0f19);
+        background-color: #ffffff;
         flex-direction: column;
         align-items: center;
         padding: 1.5rem 0;
         gap: 1rem;
         border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 14px 30px rgba(11, 23, 48, 0.14);
         
         /* Ocultar menú por defecto en dispositivos móviles */
         max-height: 0;

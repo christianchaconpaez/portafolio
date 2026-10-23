@@ -1,5 +1,5 @@
 /* ====================================================================
-   ESTILOS ESPECÍFICOS: BLOG (ChaconMarketing)
+   ESTILOS ESPECÍFICOS: BLOG (ChaconMarketing) · VERSIÓN CLARA
    ==================================================================== */
 
 .blog-hero { 
@@ -31,15 +31,16 @@
   border-radius: 9999px; 
   font-size: .82rem; 
   font-weight: 600; 
-  color: #cbd5e1; 
-  background: rgba(255,255,255,.04); 
-  border: 1px solid rgba(148,163,184,.25); 
+  color: var(--ink-2, #2a3a5f); 
+  background: #ffffff; 
+  border: 1px solid rgba(11,23,48,.16); 
   transition: all .2s ease; 
 }
 
 .blog-filter:hover { 
-  color: #fff; 
-  border-color: var(--bs-teal, #2dd4bf); 
+  color: var(--ink, #0b1730); 
+  border-color: var(--bs-teal-ink, #0a7a6e); 
+  box-shadow: 0 6px 16px -6px rgba(11,23,48,.25); 
 }
 
 .blog-filter.is-active { 
@@ -69,8 +70,9 @@
   overflow: hidden; 
   border-radius: 20px; 
   aspect-ratio: 4 / 3; 
-  background: #0b1224; 
-  border: 1px solid rgba(148,163,184,.15); 
+  background: #0f1c42; 
+  border: 1px solid rgba(11,23,48,.12); 
+  box-shadow: 0 16px 34px -14px rgba(11,23,48,.40); 
 }
 
 .blog-card-img img { 
@@ -96,8 +98,8 @@
   letter-spacing: .5px; 
   text-transform: uppercase; 
   color: #fff; 
-  background: rgba(10,16,32,.82); 
-  border: 1px solid rgba(45,212,191,.5); 
+  background: rgba(10,18,48,.85); 
+  border: 1px solid rgba(63,193,176,.6); 
   backdrop-filter: blur(6px); 
   -webkit-backdrop-filter: blur(6px); 
 }
@@ -107,26 +109,26 @@
   margin: 1rem 0 .7rem; 
   padding-bottom: .7rem; 
   font-size: .8rem; 
-  color: var(--text-muted, #94a3b8); 
-  border-bottom: 1px solid rgba(148,163,184,.2); 
+  color: var(--ink-3, #53648a); 
+  border-bottom: 1px solid rgba(11,23,48,.14); 
 }
 
 .blog-card h3 { 
   font-size: 1.2rem; 
   line-height: 1.35; 
-  color: #fff; 
+  color: var(--ink, #0b1730); 
   margin: 0 0 .6rem; 
   transition: color .2s ease; 
 }
 
 .blog-card-link:hover h3 { 
-  color: var(--bs-teal, #2dd4bf); 
+  color: var(--bs-teal-ink, #0a7a6e); 
 }
 
 .blog-card p { 
   font-size: .9rem; 
   line-height: 1.55; 
-  color: var(--text-muted, #94a3b8); 
+  color: var(--ink-3, #53648a); 
   margin: 0; 
 }
 
@@ -149,14 +151,14 @@
   font-size: .88rem; 
   font-weight: 600; 
   color: #fff; 
-  background: rgba(255,255,255,.04); 
-  border: 1px solid rgba(148,163,184,.3); 
+  background: #12224f; 
+  border: 1px solid rgba(160,190,255,.30); 
   transition: all .2s ease; 
 }
 
 .blog-pager button:hover:not(:disabled) { 
-  border-color: var(--bs-teal, #2dd4bf); 
-  box-shadow: 0 0 16px rgba(45,212,191,.3); 
+  border-color: var(--bs-teal, #3fc1b0); 
+  box-shadow: 0 8px 20px -6px rgba(63,193,176,.55); 
 }
 
 .blog-pager button:disabled { 
@@ -166,12 +168,12 @@
 
 .blog-pager-info { 
   font-size: .85rem; 
-  color: var(--text-muted, #94a3b8); 
+  color: var(--ink-3, #53648a); 
 }
 
 .blog-empty { 
   text-align: center; 
-  color: var(--text-muted, #94a3b8); 
+  color: var(--ink-3, #53648a); 
   padding: 2rem 0; 
 }
 

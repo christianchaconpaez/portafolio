@@ -79,9 +79,10 @@
   max-width: 1100px; 
   margin: 0 auto; 
   padding: .9rem 1.4rem; 
-  border: 1px solid rgba(148, 163, 184, .18); 
+  border: 1px solid rgba(11, 23, 48, .12); 
   border-radius: 14px; 
-  background: rgba(255, 255, 255, .03); 
+  background: rgba(255, 255, 255, .85); 
+  box-shadow: 0 6px 20px -8px rgba(11, 23, 48, .18); 
 }
 
 .ley-stats > div { 
@@ -94,7 +95,7 @@
 
 .ley-stats strong { 
   font-size: 1.05rem; 
-  color: var(--bs-teal, #2dd4bf); 
+  color: var(--bs-teal-ink, #0a7a6e); 
 }
 
 .ley-stats span { 

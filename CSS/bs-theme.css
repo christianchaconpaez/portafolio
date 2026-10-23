@@ -1,68 +1,227 @@
 /* ====================================================================
-   BS-THEME · Estilo "aurora oscura" (activar con <body class="theme-bs">)
+   BS-THEME · Estilo "aurora clara"  (activar con <body class="theme-bs">)
+   VERSIÓN LIGHT: fondo muy claro + tarjetas oscuras con color.
    Cargar DESPUÉS de variables.css, atomic.css, main.css y main-assets.css.
    No modifica nada fuera de body.theme-bs.
-   Colores estimados desde capturas: ajusta aquí si tienes los hex exactos.
+
+   CÓMO FUNCIONA (importante para mantenerlo):
+   1) Los tokens de :root son los de la PÁGINA (fondo claro, texto oscuro).
+   2) Las TARJETAS oscuras se listan en el bloque "SUPERFICIES OSCURAS" más
+      abajo. Ese bloque vuelve a declarar los tokens (texto claro, bordes
+      claros, acento brillante) solo dentro de cada tarjeta, así todo lo que
+      va dentro se lee bien sin tocar el HTML.
+   3) Para convertir un componente nuevo en tarjeta oscura, agrega su clase
+      a las listas de ese bloque.
    =================================================================== */
 :root{
-  --bs-bg:#050814; --bs-surface:#0a1124; --bs-surface-2:#0e1730;
-  --bs-teal:#3fc1b0; --bs-blue:#3b82f6; --bs-coral:#f43f5e;
+  /* ---- Paleta de la página (modo claro) ---- */
+  --bs-bg:#f4f7fc; --bs-surface:#ffffff; --bs-surface-2:#eaf0fa;
+  --bs-teal:#3fc1b0; --bs-teal-ink:#0a7a6e; --bs-blue:#3b82f6; --bs-coral:#f43f5e;
   /* COLOR CTA DEL SITIO: barra superior, botón "Contacto" y clases .bg-cta / .text-cta. Cámbialo aquí. */
   --bs-cta:var(--bs-coral); --bs-cta-text:#ffffff;
-  --bs-grad:linear-gradient(90deg,#3fc1b0,#3b82f6);
-  /* TIPOGRAFÍA DEL SITIO (fuente única; valores tomados de servicios-marketing-b2b.html). Cambia aquí para cambiar todo el sitio. */
+  --bs-grad:linear-gradient(90deg,#0e9f8e,#2563eb 60%,#7c3aed);
+  /* Textos de la página: títulos / cuerpo / apoyo */
+  --ink:#0b1730; --ink-2:#2a3a5f; --ink-3:#53648a;
+  --check-color:#0b8a7a;
+  /* Logo: el archivo es blanco; este filtro lo vuelve oscuro. Si subes un logo oscuro, pon: none */
+  --logo-filter:brightness(0);
+  /* TIPOGRAFÍA DEL SITIO (fuente única). Cambia aquí para cambiar todo el sitio. */
   --fs-h1:clamp(2.2rem,4.2vw,3.1rem); --fw-h1:600; --lh-h1:1.12;
   --fs-h2:clamp(1.7rem,3vw,2.5rem);   --fw-h2:600; --lh-h2:1.2;
   --fs-h3:1.4rem; --fw-h3:700;        /* título de tarjeta de servicio */
   --fs-lead:1.05rem; --lh-lead:1.6;   /* bajadas / subtítulos */
   --fs-body:.95rem; --fs-small:.9rem; /* listas / texto de apoyo */
   --fs-sub:.88rem; --fw-sub:600;      /* línea de apoyo bajo el título de tarjeta */
-  --bs-line:rgba(120,160,255,.16); --bs-glow:0 0 0 1px rgba(63,193,176,.35),0 20px 50px rgba(59,130,246,.22);
+  --bs-line:rgba(11,23,48,.12);
+  --bs-glow:0 0 0 1px rgba(63,193,176,.35),0 20px 50px rgba(59,130,246,.22);
+  /* Colores de acento (paleta compartida) */
+  --c-teal:#2dd4bf; --c-violet:#a78bfa; --c-orange:#fb923c; --c-green:#4ade80; --c-yellow:#facc15; --c-pink:#f472b6; --c-blue:#60a5fa;
 }
-body.theme-bs{background:var(--bs-bg);color:#e6ecff;
-  background-image:radial-gradient(900px 500px at 85% -5%,rgba(63,193,176,.16),transparent 60%),radial-gradient(800px 600px at 0% 25%,rgba(59,130,246,.14),transparent 60%),radial-gradient(700px 500px at 100% 70%,rgba(63,193,176,.10),transparent 60%);
+/* Tokens globales: anulan los oscuros que declara main-assets.css */
+:root{
+  --bg-primary:#f4f7fc; --bg-card:#0f1c42; --bg-card-hover:#16275a;
+  --text-main:#0b1730; --text-muted:#53648a;
+  --accent-cyan:#097481; --accent-mint:#0f9d76; --accent-red:#e11d48;
+  --border-color:rgba(11,23,48,.12); --border-hover:rgba(9,116,129,.40);
+  --background-color:#f4f7fc; --default-color:#2a3a5f; --heading-color:#0b1730;
+  --accent-color:#097481; --surface-color:#ffffff; --contrast-color:#ffffff;
+  --nav-color:#53648a; --nav-hover-color:#0b1730;
+  --nav-mobile-background-color:#ffffff; --nav-dropdown-background-color:#ffffff;
+  --nav-dropdown-color:#53648a; --nav-dropdown-hover-color:#097481;
+}
+body.theme-bs{--accent-color:#097481;--heading-color:var(--ink);background-color:var(--bs-bg);color:var(--ink-2);
+  background-image:
+    radial-gradient(900px 520px at 85% -6%,rgba(63,193,176,.22),transparent 62%),
+    radial-gradient(800px 600px at -4% 22%,rgba(99,102,241,.14),transparent 62%),
+    radial-gradient(760px 520px at 104% 64%,rgba(251,146,60,.12),transparent 62%),
+    radial-gradient(700px 500px at 0% 96%,rgba(167,139,250,.15),transparent 62%);
   background-attachment:fixed}
 /* main-assets.css pinta TODAS las <section> con fondo sólido (var(--background-color)).
-   Aquí lo anulamos para que se vea el fondo azul con auroras del body. */
+   Aquí lo anulamos para que se vea el fondo claro con auroras del body. */
 body.theme-bs section,body.theme-bs .section{background-color:transparent}
+
+/* ====================================================================
+   SUPERFICIES OSCURAS (tarjetas): re-declaran los tokens en modo oscuro
+   =================================================================== */
+.theme-bs .bs-glass,
+.theme-bs .bs-bento-card,
+.theme-bs .feature-card-main,
+.theme-bs .metodologia-card,
+.theme-bs .testimonio-card,
+.theme-bs .paso-card-item,
+.theme-bs .pasos-card-container,
+.theme-bs .atom-card,
+.theme-bs .sesion-card,
+.theme-bs .hero-badges-card,
+.theme-bs .hero-floating-badge,
+.theme-bs .floating-card,
+.theme-bs .industria-pill,
+.theme-bs .tab-btn,
+.theme-bs .accordion-item,
+.theme-bs .skill-card,
+.theme-bs .experience-card,
+.theme-bs .service-item,
+.theme-bs .testimonial-item,
+.theme-bs .critic-review,
+.theme-bs .overall-rating,
+.theme-bs .faq-item,
+.theme-bs .contact-form,
+.theme-bs .education-content,
+.theme-bs .timeline-item,
+.theme-bs .feature-item,
+.theme-bs .service-menu,
+.theme-bs .service-info,
+.theme-bs .ley-chip,
+.theme-bs .post-cta,
+.theme-bs .post-faq details,
+.theme-bs .blog-card-cat,
+.theme-bs .blog-pager button{
+  --text-main:#ffffff; --text-muted:#a9b8d8;
+  --ink:#ffffff; --ink-2:#d3ddf6; --ink-3:#a9b8d8;
+  --default-color:#cbd6f2; --heading-color:#ffffff;
+  --accent-color:#3fc1b0; --accent-cyan:#3fd0e0;
+  --surface-color:#0f1c42; --contrast-color:#04141a;
+  --border-color:rgba(255,255,255,.12); --border-hover:rgba(63,193,176,.40);
+  --bs-line:rgba(160,190,255,.20); --check-color:#3fc1b0;
+  color:var(--ink-2);
+}
+/* Fondo de las tarjetas: azul marino con un resplandor del color de cada tarjeta (--c) */
+.theme-bs .bs-glass,
+.theme-bs .feature-card-main,
+.theme-bs .metodologia-card,
+.theme-bs .testimonio-card,
+.theme-bs .paso-card-item,
+.theme-bs .pasos-card-container,
+.theme-bs .atom-card,
+.theme-bs .skill-card,
+.theme-bs .experience-card,
+.theme-bs .service-item,
+.theme-bs .testimonial-item,
+.theme-bs .critic-review,
+.theme-bs .overall-rating,
+.theme-bs .faq-item,
+.theme-bs .contact-form,
+.theme-bs .education-content,
+.theme-bs .timeline-item,
+.theme-bs .feature-item,
+.theme-bs .service-menu,
+.theme-bs .service-info{
+  background:
+    radial-gradient(520px 240px at 100% 0%,color-mix(in srgb,var(--c,var(--bs-teal)) 24%,transparent),transparent 70%),
+    linear-gradient(160deg,#1a2c61 0%,#0f1c42 52%,#0a1230 100%);
+  border:1px solid var(--bs-line);
+  box-shadow:0 18px 40px -14px rgba(11,23,48,.42);
+}
+.theme-bs .feature-card-main:hover,
+.theme-bs .metodologia-card:hover,
+.theme-bs .testimonio-card:hover,
+.theme-bs .paso-card-item:hover,
+.theme-bs .atom-card:hover,
+.theme-bs .skill-card:hover,
+.theme-bs .experience-card:hover,
+.theme-bs .service-item:hover,
+.theme-bs .testimonial-item:hover,
+.theme-bs .faq-item:hover{border-color:rgba(63,193,176,.50)}
+/* Botones ghost y enlaces dentro de tarjetas oscuras */
+.theme-bs .bs-glass .bs-btn-ghost,
+.theme-bs .bs-bento-card .bs-btn-ghost,
+.theme-bs .feature-card-main .bs-btn-ghost,
+.theme-bs .metodologia-card .bs-btn-ghost,
+.theme-bs .testimonio-card .bs-btn-ghost,
+.theme-bs .paso-card-item .bs-btn-ghost,
+.theme-bs .pasos-card-container .bs-btn-ghost,
+.theme-bs .atom-card .bs-btn-ghost,
+.theme-bs .sesion-card .bs-btn-ghost,
+.theme-bs .hero-badges-card .bs-btn-ghost,
+.theme-bs .hero-floating-badge .bs-btn-ghost,
+.theme-bs .floating-card .bs-btn-ghost,
+.theme-bs .industria-pill .bs-btn-ghost,
+.theme-bs .tab-btn .bs-btn-ghost,
+.theme-bs .accordion-item .bs-btn-ghost,
+.theme-bs .skill-card .bs-btn-ghost,
+.theme-bs .experience-card .bs-btn-ghost,
+.theme-bs .service-item .bs-btn-ghost,
+.theme-bs .testimonial-item .bs-btn-ghost,
+.theme-bs .critic-review .bs-btn-ghost,
+.theme-bs .overall-rating .bs-btn-ghost,
+.theme-bs .faq-item .bs-btn-ghost,
+.theme-bs .contact-form .bs-btn-ghost,
+.theme-bs .education-content .bs-btn-ghost,
+.theme-bs .timeline-item .bs-btn-ghost,
+.theme-bs .feature-item .bs-btn-ghost,
+.theme-bs .service-menu .bs-btn-ghost,
+.theme-bs .service-info .bs-btn-ghost,
+.theme-bs .ley-chip .bs-btn-ghost,
+.theme-bs .post-cta .bs-btn-ghost,
+.theme-bs .post-faq details .bs-btn-ghost,
+.theme-bs .blog-card-cat .bs-btn-ghost,
+.theme-bs .blog-pager button .bs-btn-ghost{color:#fff;border-color:rgba(160,190,255,.32);background:rgba(255,255,255,.06)}
+
 /* ---------- Barra superior y menú ---------- */
 .theme-bs .top-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 2rem;background:var(--bs-cta);color:var(--bs-cta-text);font-size:.8rem;font-weight:500}
-.theme-bs header{background:rgba(5,8,20,.82);border-bottom:1px solid var(--bs-line)}
-.theme-bs .nav-links a{font-weight:500;padding:.4rem 0;border-bottom:2px solid transparent}
-.theme-bs .nav-links a:hover,.theme-bs .nav-links a.active{color:#fff;border-bottom-color:var(--bs-teal)}
+.theme-bs header{background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--bs-line);box-shadow:0 8px 28px rgba(11,23,48,.06)}
+.theme-bs .atom-logo img,.theme-bs .site-logo,.theme-bs .bs-footer-logo{filter:var(--logo-filter)}
+.theme-bs .nav-links a{font-weight:500;padding:.4rem 0;border-bottom:2px solid transparent;color:var(--ink-3)}
+.theme-bs .nav-links a:hover,.theme-bs .nav-links a.active{color:var(--ink);border-bottom-color:var(--bs-teal)}
 .theme-bs .nav-cta{background:var(--bs-cta);color:var(--bs-cta-text);border-radius:6px;padding:.65rem 1.4rem}
 /* Clases reutilizables del color CTA */
 .theme-bs .bg-cta{background:var(--bs-cta);color:var(--bs-cta-text)}
 .theme-bs .text-cta{color:var(--bs-cta)}
+
 /* ---------- Átomos ---------- */
-.theme-bs .bs-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border:1px solid var(--bs-line);border-radius:9999px;background:rgba(255,255,255,.04);font-size:.72rem;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:#bcd0ff;margin-bottom:1.2rem}
-.theme-bs .bs-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bs-teal);box-shadow:0 0 10px var(--bs-teal)}
+.theme-bs .bs-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border:1px solid rgba(11,23,48,.14);border-radius:9999px;background:rgba(255,255,255,.78);box-shadow:0 2px 10px rgba(11,23,48,.05);font-size:.72rem;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:#2c3e66;margin-bottom:1.2rem}
+.theme-bs .bs-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bs-teal);box-shadow:0 0 0 4px rgba(63,193,176,.20)}
 .theme-bs .text-gradient{background:var(--bs-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .theme-bs .bs-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.8rem;border-radius:9999px;font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.25s}
-.theme-bs .bs-btn-teal{background:var(--bs-teal);color:#04141a}
-.theme-bs .bs-btn-teal:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(63,193,176,.35)}
-.theme-bs .bs-btn-ghost{border:1px solid var(--bs-line);color:#fff;background:rgba(255,255,255,.04)}
-.theme-bs .bs-btn-ghost:hover{border-color:var(--bs-teal)}
-.theme-bs .bs-glass{background:linear-gradient(160deg,rgba(18,28,56,.7),rgba(8,13,30,.85));border:1px solid var(--bs-line);border-radius:1.25rem;padding:2rem;backdrop-filter:blur(8px);transition:.3s}
-.theme-bs .bs-glass:hover{border-color:rgba(63,193,176,.4)}
+.theme-bs .bs-btn-teal{background:var(--bs-teal);color:#04141a;box-shadow:0 8px 22px rgba(63,193,176,.30)}
+.theme-bs .bs-btn-teal:hover{filter:brightness(1.06);transform:translateY(-2px);box-shadow:0 12px 28px rgba(63,193,176,.42)}
+.theme-bs .bs-btn-ghost{border:1px solid rgba(11,23,48,.28);color:var(--ink);background:rgba(255,255,255,.65)}
+.theme-bs .bs-btn-ghost:hover{border-color:var(--bs-teal-ink);background:#fff}
+.theme-bs .bs-glass{border-radius:1.25rem;padding:2rem;transition:.3s}
 .theme-bs .bs-section{max-width:1200px;margin:0 auto;padding:5.5rem 2rem}
-.theme-bs .bs-title{font-size:var(--fs-h2);font-weight:var(--fw-h2);color:#fff;line-height:var(--lh-h2);margin-bottom:.8rem}
+.theme-bs .bs-title{font-size:var(--fs-h2);font-weight:var(--fw-h2);color:var(--ink);line-height:var(--lh-h2);margin-bottom:.8rem}
 .theme-bs .bs-lead{color:var(--text-muted);font-size:var(--fs-lead);font-weight:400;line-height:var(--lh-lead);max-width:760px}
 .theme-bs .bs-check{list-style:none;padding:0;margin:0 0 1.5rem}
-.theme-bs .bs-check li{display:flex;gap:.6rem;margin-bottom:.7rem;color:#cdd8f5;font-size:.95rem}
-.theme-bs .bs-check li::before{content:"✔";color:var(--bs-teal);font-weight:700}
+.theme-bs .bs-check li{display:flex;gap:.6rem;margin-bottom:.7rem;color:var(--ink-2);font-size:.95rem}
+.theme-bs .bs-check li::before{content:"✔";color:var(--check-color);font-weight:700}
+/* Textos con color blanco "en línea" que quedan FUERA de las tarjetas (hero, bajadas) */
+.theme-bs .bs-hero [style*="color:#fff"],.theme-bs .bs-hero [style*="color: #fff"],
+.theme-bs .bs-section>.bs-lead [style*="color:#fff"],.theme-bs .bs-section>.bs-lead [style*="color: #fff"]{color:var(--ink)!important}
+
 /* ---------- Hero ---------- */
 .theme-bs .bs-hero{max-width:1200px;margin:0 auto;padding:4.5rem 2rem 3rem;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
-.theme-bs .bs-hero h1,.theme-bs .bs-h1{font-size:var(--fs-h1);font-weight:var(--fw-h1);line-height:var(--lh-h1);letter-spacing:normal;color:#fff;margin-bottom:1.2rem}
+.theme-bs .bs-hero h1,.theme-bs .bs-h1{font-size:var(--fs-h1);font-weight:var(--fw-h1);line-height:var(--lh-h1);letter-spacing:normal;color:var(--ink);margin-bottom:1.2rem}
 .theme-bs .bs-hero-img{border-radius:1.5rem;width:100%;box-shadow:var(--bs-glow)}
+
 /* ---------- Bento ---------- */
 .theme-bs .bs-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2rem;margin-top:2.5rem}
 .theme-bs .bs-bento-card{position:relative;overflow:hidden;border-radius:1.25rem;border:1px solid var(--bs-line);min-height:240px;display:flex;align-items:flex-end;background-size:cover;background-position:center}
-.theme-bs .bs-bento-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,20,.2),rgba(5,8,20,.92))}
+.theme-bs .bs-bento-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,20,.15),rgba(5,8,20,.90))}
 .theme-bs .bs-bento-card>div{position:relative;padding:1.6rem}
 .theme-bs .bs-bento-card h3{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.4rem}
-.theme-bs .bs-bento-card p{font-size:.88rem;color:#b6c4e6;margin:0;line-height:1.5}
+.theme-bs .bs-bento-card p{font-size:.88rem;color:#c3cfec;margin:0;line-height:1.5}
 .theme-bs .bento-xl{grid-column:span 4;min-height:340px}.theme-bs .bento-md{grid-column:span 2}.theme-bs .bento-lg{grid-column:span 3}
+
 /* ---------- Planes (tipos de proyecto, sin precios) ---------- */
 .theme-bs .bs-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem;align-items:stretch}
 .theme-bs .bs-plan{position:relative;display:flex;flex-direction:column;justify-content:space-between}
@@ -70,7 +229,8 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .bs-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--bs-blue);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.3rem .9rem;border-radius:9999px}
 .theme-bs .bs-plan .kicker{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bs-teal);font-weight:700}
 .theme-bs .bs-plan h3{font-size:1.4rem;color:#fff;font-weight:700;margin:.4rem 0 .6rem}
-.theme-bs .bs-ico{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:rgba(63,193,176,.12);border:1px solid rgba(63,193,176,.3);margin-bottom:1rem}
+.theme-bs .bs-ico{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:rgba(63,193,176,.14);border:1px solid rgba(63,193,176,.32);margin-bottom:1rem}
+
 /* ---------- Pasos, proyectos, FAQ ---------- */
 .theme-bs .bs-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
 .theme-bs .bs-step-n{font-size:2.4rem;font-weight:800;background:var(--bs-grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
@@ -79,41 +239,86 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .bs-project img{width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:1px solid var(--bs-line)}
 .theme-bs .bs-project>div{padding:1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
 .theme-bs .bs-faq{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
+
 /* ---------- Formulario (se mantiene, solo cambia el aspecto) ---------- */
 .theme-bs .sesion-card{border-color:rgba(63,193,176,.35);box-shadow:var(--bs-glow)}
 .theme-bs .sesion-card::before{background:var(--bs-grad)}
 .theme-bs .sesion-card input,.theme-bs .sesion-card select,.theme-bs .sesion-card textarea{background:transparent!important;border:0!important;border-bottom:1px solid var(--bs-line)!important;border-radius:0!important}
 .theme-bs .sesion-card input:focus{outline:0;border-bottom-color:var(--bs-teal)!important}
 .theme-bs .sesion-card button[type=submit],.theme-bs .sesion-card .atom-btn-primary{background:var(--bs-teal);color:#04141a;border-radius:9999px;text-transform:uppercase;letter-spacing:1px}
-/* ---------- Footer ---------- */
-.theme-bs .bs-footer{margin-top:4rem;border-top:1px solid var(--bs-line);background:linear-gradient(180deg,transparent,rgba(5,8,20,.9))}
+
+/* ---------- Footer (claro) ---------- */
+.theme-bs .bs-footer{margin-top:4rem;border-top:1px solid var(--bs-line);background:linear-gradient(180deg,transparent,rgba(11,23,48,.05))}
 .theme-bs .bs-footer-logo{display:block;margin:0 auto;padding:4rem 2rem 2rem;max-width:380px;width:70%}
 .theme-bs .bs-footer-grid{max-width:1200px;margin:0 auto;padding:2rem 2rem 3rem;display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:2.5rem}
-.theme-bs .bs-footer h4{font-size:1rem;color:#fff;padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);display:inline-block;margin-bottom:1rem}
-.theme-bs .bs-footer a{display:block;color:var(--text-muted);text-decoration:none;font-size:.88rem;margin-bottom:.6rem}
-.theme-bs .bs-footer a:hover{color:var(--bs-teal)}
-.theme-bs .bs-footer small{display:block;font-size:.7rem;letter-spacing:1.2px;text-transform:uppercase;color:#6f82b3;margin-top:.8rem}
-.theme-bs .bs-footer p{font-size:.88rem;color:#d3dcf5;margin:0}
+.theme-bs .bs-footer h4{font-size:1rem;color:var(--ink);padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);display:inline-block;margin-bottom:1rem}
+.theme-bs .bs-footer a{display:block;color:var(--ink-3);text-decoration:none;font-size:.88rem;margin-bottom:.6rem}
+.theme-bs .bs-footer a:hover{color:var(--bs-teal-ink)}
+.theme-bs .bs-footer small{display:block;font-size:.7rem;letter-spacing:1.2px;text-transform:uppercase;color:#5f7196;margin-top:.8rem}
+.theme-bs .bs-footer p{font-size:.88rem;color:var(--ink-2);margin:0}
+
 /* ---------- Compatibilidad: componentes del diseño anterior (index y otras páginas) ---------- */
-.theme-bs .feature-card-main,.theme-bs .metodologia-card,.theme-bs .testimonio-card,.theme-bs .paso-card-item,.theme-bs .atom-card{background:linear-gradient(160deg,rgba(18,28,56,.7),rgba(8,13,30,.85));border:1px solid var(--bs-line);border-radius:1.25rem}
-.theme-bs .feature-card-main:hover,.theme-bs .metodologia-card:hover,.theme-bs .testimonio-card:hover,.theme-bs .paso-card-item:hover,.theme-bs .atom-card:hover{border-color:rgba(63,193,176,.45)}
+.theme-bs .feature-card-main,.theme-bs .metodologia-card,.theme-bs .testimonio-card,.theme-bs .paso-card-item,.theme-bs .atom-card{border-radius:1.25rem}
 .theme-bs .atom-btn-primary{background:var(--bs-teal);color:#04141a;text-transform:uppercase;letter-spacing:1px}
-.theme-bs .atom-btn-outline{border-color:var(--bs-line);background:rgba(255,255,255,.04)}
-.theme-bs .atom-btn-outline:hover{border-color:var(--bs-teal)}
+.theme-bs .atom-btn-outline{border-color:rgba(11,23,48,.28);background:rgba(255,255,255,.65)}
+.theme-bs .atom-btn-outline:hover{border-color:var(--bs-teal-ink);background:#fff}
+/* Dentro de una tarjeta oscura, el botón outline vuelve a ser claro */
+.theme-bs .bs-glass .atom-btn-outline,
+.theme-bs .bs-bento-card .atom-btn-outline,
+.theme-bs .feature-card-main .atom-btn-outline,
+.theme-bs .metodologia-card .atom-btn-outline,
+.theme-bs .testimonio-card .atom-btn-outline,
+.theme-bs .paso-card-item .atom-btn-outline,
+.theme-bs .pasos-card-container .atom-btn-outline,
+.theme-bs .atom-card .atom-btn-outline,
+.theme-bs .sesion-card .atom-btn-outline,
+.theme-bs .hero-badges-card .atom-btn-outline,
+.theme-bs .hero-floating-badge .atom-btn-outline,
+.theme-bs .floating-card .atom-btn-outline,
+.theme-bs .industria-pill .atom-btn-outline,
+.theme-bs .tab-btn .atom-btn-outline,
+.theme-bs .accordion-item .atom-btn-outline,
+.theme-bs .skill-card .atom-btn-outline,
+.theme-bs .experience-card .atom-btn-outline,
+.theme-bs .service-item .atom-btn-outline,
+.theme-bs .testimonial-item .atom-btn-outline,
+.theme-bs .critic-review .atom-btn-outline,
+.theme-bs .overall-rating .atom-btn-outline,
+.theme-bs .faq-item .atom-btn-outline,
+.theme-bs .contact-form .atom-btn-outline,
+.theme-bs .education-content .atom-btn-outline,
+.theme-bs .timeline-item .atom-btn-outline,
+.theme-bs .feature-item .atom-btn-outline,
+.theme-bs .service-menu .atom-btn-outline,
+.theme-bs .service-info .atom-btn-outline,
+.theme-bs .ley-chip .atom-btn-outline,
+.theme-bs .post-cta .atom-btn-outline,
+.theme-bs .post-faq details .atom-btn-outline,
+.theme-bs .blog-card-cat .atom-btn-outline,
+.theme-bs .blog-pager button .atom-btn-outline{border-color:rgba(160,190,255,.32);background:rgba(255,255,255,.06);color:#fff}
+
 /* ---------- Compatibilidad: plantilla (christian-chacon.html) ---------- */
-body.theme-bs{--accent-color:var(--bs-teal);--heading-color:#ffffff}
-.theme-bs .skill-card,.theme-bs .experience-card,.theme-bs .service-item,.theme-bs .testimonial-item,.theme-bs .faq-item,.theme-bs .floating-card{background:linear-gradient(160deg,rgba(18,28,56,.7),rgba(8,13,30,.85));border:1px solid var(--bs-line)}
-.theme-bs .skill-card:hover,.theme-bs .experience-card:hover,.theme-bs .service-item:hover,.theme-bs .testimonial-item:hover,.theme-bs .faq-item:hover{border-color:rgba(63,193,176,.45)}
-/* Portafolio: título bajo el logo siempre en blanco (la plantilla lo pintaba con --contrast-color, que es oscuro) */
+.theme-bs .skill-card,.theme-bs .experience-card,.theme-bs .service-item,.theme-bs .testimonial-item,.theme-bs .faq-item{border-radius:1.25rem}
+/* Portafolio: título bajo el logo siempre en blanco (va sobre la imagen oscura) */
 .theme-bs .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title{color:#ffffff}
-/* ---------- Tipografía unificada: títulos de tarjeta, líneas de apoyo y textos (index y demás páginas) ---------- */
-.theme-bs .bs-card-title{font-size:var(--fs-h3);font-weight:var(--fw-h3);line-height:1.25;color:#fff;margin:0 0 .5rem}
+/* Hero de la plantilla: el HTML trae una imagen oscura fija y un velo; aquí pasa a fondo claro */
+body.theme-bs #hero.hero{background:
+    radial-gradient(760px 420px at 88% 20%,rgba(167,139,250,.22),transparent 62%),
+    radial-gradient(700px 420px at 6% 70%,rgba(63,193,176,.22),transparent 62%),
+    linear-gradient(180deg,#f7faff,#eaf1fb)!important}
+body.theme-bs #hero.hero::before{background:transparent!important}
+/* Títulos de la plantilla: el HTML los fuerza en blanco con !important; aquí se vuelven oscuros */
+body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-title-sm{color:var(--ink)!important}
+
+/* ---------- Tipografía unificada: títulos de tarjeta, líneas de apoyo y textos ---------- */
+.theme-bs .bs-card-title{font-size:var(--fs-h3);font-weight:var(--fw-h3);line-height:1.25;color:var(--heading-color);margin:0 0 .5rem}
 .theme-bs .bs-card-sub{font-size:var(--fs-sub);font-weight:var(--fw-sub);line-height:1.4;color:var(--bs-teal);margin:0 0 1rem}
-.theme-bs .bs-pain{font-size:1.3rem;line-height:1.5;color:#fff}
-.theme-bs .metodologia-list li{font-size:var(--fs-body);line-height:1.5;color:#cdd8f5}
+.theme-bs .bs-pain{font-size:1.3rem;line-height:1.5;color:var(--ink)}
+.theme-bs .metodologia-list li{font-size:var(--fs-body);line-height:1.5;color:var(--ink-2)}
 .theme-bs .metodologia-list li span.check{color:var(--bs-teal)}
-.theme-bs .paso-content h3{font-size:1.1rem;font-weight:700;color:#fff}
-.theme-bs .industrias-title{color:var(--text-muted);font-weight:400;letter-spacing:1.5px}
+.theme-bs .paso-content h3{font-size:1.1rem;font-weight:700;color:var(--heading-color)}
+.theme-bs .industrias-title{color:var(--ink-3);font-weight:400;letter-spacing:1.5px}
+
 /* ---------- Responsive ---------- */
 @media(max-width:991px){
  .theme-bs .bs-hero,.theme-bs .bs-plans,.theme-bs .bs-projects,.theme-bs .bs-faq{grid-template-columns:1fr}
@@ -122,165 +327,85 @@ body.theme-bs{--accent-color:var(--bs-teal);--heading-color:#ffffff}
  .theme-bs .bs-plan.popular{transform:none}
  .theme-bs .top-bar>div:last-child{display:none}
 }
+@media(max-width:900px){
+ /* Menú móvil: panel claro */
+ .theme-bs .nav-links{background:#ffffff;box-shadow:0 14px 30px rgba(11,23,48,.14)}
+}
 @media(max-width:560px){.theme-bs .bs-steps,.theme-bs .bs-footer-grid{grid-template-columns:1fr}.theme-bs .bs-section{padding:3.5rem 1.2rem}}
 
 
-
-
-
 /* ====================================================================
-   ESTILOS ESPECÍFICOS: SERVICIOS DE DISEÑO WEB (ChaconMarketing)
+   ESTILOS ESPECÍFICOS: SERVICIOS DE DISEÑO WEB / MARKETING (ChaconMarketing)
+   Acentos de color por sección y por tarjeta (versión clara)
    ==================================================================== */
 
-:root {
-  --c-teal: #2dd4bf;
-  --c-violet: #a78bfa;
-  --c-orange: #fb923c;
-  --c-green: #4ade80;
-  --c-yellow: #facc15;
-  --c-pink: #f472b6;
-}
-
-/* Fondo con luces de color para romper lo plano */
-main {
+/* Fondo con luces de color suaves para romper lo plano */
+.theme-bs main{
   background:
-    radial-gradient(820px 460px at 88% 4%, rgba(167, 139, 250, .16), transparent 62%),
-    radial-gradient(700px 420px at 6% 30%, rgba(45, 212, 191, .11), transparent 62%),
-    radial-gradient(760px 460px at 92% 52%, rgba(251, 146, 60, .10), transparent 62%),
-    radial-gradient(720px 440px at 8% 78%, rgba(74, 222, 128, .09), transparent 62%),
-    radial-gradient(760px 440px at 90% 94%, rgba(167, 139, 250, .12), transparent 62%);
+    radial-gradient(820px 460px at 88% 4%, rgba(167,139,250,.13), transparent 62%),
+    radial-gradient(700px 420px at 6% 30%, rgba(45,212,191,.12), transparent 62%),
+    radial-gradient(760px 460px at 92% 52%, rgba(251,146,60,.09), transparent 62%),
+    radial-gradient(720px 440px at 8% 78%, rgba(74,222,128,.09), transparent 62%),
+    radial-gradient(760px 440px at 90% 94%, rgba(167,139,250,.11), transparent 62%);
 }
 
 /* Hero */
-.bs-hero-img {
-  border: 1px solid rgba(167, 139, 250, .4);
-  border-radius: 24px;
-  box-shadow: 0 0 46px rgba(167, 139, 250, .30), 0 0 90px rgba(45, 212, 191, .16);
-}
+.bs-hero-img{border:1px solid rgba(124,92,230,.35);border-radius:24px;box-shadow:0 20px 50px -10px rgba(99,102,241,.35),0 0 60px rgba(45,212,191,.18)}
 
-/* Acentos por sección */
-.acc-teal { --acc: var(--c-teal); }
-.acc-violet { --acc: var(--c-violet); }
-.acc-orange { --acc: var(--c-orange); }
-.acc-green { --acc: var(--c-green); }
-
-.bs-section[class*="acc-"] .bs-chip {
-  color: var(--acc) !important;
-  border-color: color-mix(in srgb, var(--acc) 55%, transparent) !important;
-  background: color-mix(in srgb, var(--acc) 12%, transparent) !important;
+/* Acentos por sección (el texto del chip se oscurece para leerse sobre fondo claro) */
+.acc-teal{--acc:var(--c-teal)} .acc-violet{--acc:var(--c-violet)} .acc-orange{--acc:var(--c-orange)} .acc-green{--acc:var(--c-green)}
+.bs-section[class*="acc-"] .bs-chip{
+  color:color-mix(in srgb,var(--acc) 50%,#0b1730)!important;
+  border-color:color-mix(in srgb,var(--acc) 55%,transparent)!important;
+  background:color-mix(in srgb,var(--acc) 16%,#ffffff)!important;
 }
-
-.bs-section[class*="acc-"] .bs-title::after {
-  content: "";
-  display: block;
-  width: 72px;
-  height: 4px;
-  margin-top: .8rem;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--acc), transparent);
-}
-
-.bs-section[class*="acc-"][style*="text-align:center"] .bs-title::after {
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(90deg, transparent, var(--acc), transparent);
-}
+.bs-section[class*="acc-"] .bs-title::after{content:"";display:block;width:72px;height:4px;margin-top:.8rem;border-radius:4px;background:linear-gradient(90deg,var(--acc),transparent)}
+.bs-section[class*="acc-"][style*="text-align:center"] .bs-title::after{margin-left:auto;margin-right:auto;background:linear-gradient(90deg,transparent,var(--acc),transparent)}
 
 /* Interacción general de tarjetas */
-.bs-plan,
-.bs-steps>.bs-glass,
-.bs-project,
-.bs-faq>.bs-glass {
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.bs-plan:hover,
-.bs-steps>.bs-glass:hover,
-.bs-project:hover,
-.bs-faq>.bs-glass:hover {
-  transform: translateY(-4px);
-}
+.bs-plan,.bs-steps>.bs-glass,.bs-project,.bs-faq>.bs-glass{transition:transform .25s ease,box-shadow .25s ease}
+.bs-plan:hover,.bs-steps>.bs-glass:hover,.bs-project:hover,.bs-faq>.bs-glass:hover{transform:translateY(-4px)}
 
 /* Puntos de partida: tarjetas con borde de color */
-.bs-faq>.bs-glass:nth-child(6n+1) { --c: var(--c-orange); }
-.bs-faq>.bs-glass:nth-child(6n+2) { --c: var(--c-yellow); }
-.bs-faq>.bs-glass:nth-child(6n+3) { --c: var(--c-pink); }
-.bs-faq>.bs-glass:nth-child(6n+4) { --c: var(--c-violet); }
-.bs-faq>.bs-glass:nth-child(6n+5) { --c: var(--c-teal); }
-.bs-faq>.bs-glass:nth-child(6n+6) { --c: var(--c-green); }
-
-.bs-faq>.bs-glass {
-  border-left: 4px solid var(--c, var(--c-teal)) !important;
-  box-shadow: 0 0 20px color-mix(in srgb, var(--c, var(--c-teal)) 18%, transparent);
-}
+.bs-faq>.bs-glass:nth-child(6n+1){--c:var(--c-orange)}
+.bs-faq>.bs-glass:nth-child(6n+2){--c:var(--c-yellow)}
+.bs-faq>.bs-glass:nth-child(6n+3){--c:var(--c-pink)}
+.bs-faq>.bs-glass:nth-child(6n+4){--c:var(--c-violet)}
+.bs-faq>.bs-glass:nth-child(6n+5){--c:var(--c-teal)}
+.bs-faq>.bs-glass:nth-child(6n+6){--c:var(--c-green)}
+.bs-faq>.bs-glass{border-left:4px solid var(--c,var(--c-teal))!important;box-shadow:0 18px 38px -14px rgba(11,23,48,.40),0 0 22px color-mix(in srgb,var(--c,var(--c-teal)) 20%,transparent)}
 
 /* Base sólida (bento) */
-.bs-bento>.bs-bento-card:nth-child(1) { --c: var(--c-teal); }
-.bs-bento>.bs-bento-card:nth-child(2) { --c: var(--c-yellow); }
-.bs-bento>.bs-bento-card:nth-child(3) { --c: var(--c-violet); }
-.bs-bento>.bs-bento-card:nth-child(4) { --c: var(--c-orange); }
-
-.bs-bento-card {
-  border: 1px solid color-mix(in srgb, var(--c, var(--c-teal)) 65%, transparent) !important;
-  box-shadow: 0 0 30px color-mix(in srgb, var(--c, var(--c-teal)) 26%, transparent);
-  background-size: cover;
-  background-position: center;
-}
-
-.bs-bento-card h3 { color: var(--c, var(--c-teal)) !important; }
+.bs-bento>.bs-bento-card:nth-child(1){--c:var(--c-teal)}
+.bs-bento>.bs-bento-card:nth-child(2){--c:var(--c-yellow)}
+.bs-bento>.bs-bento-card:nth-child(3){--c:var(--c-violet)}
+.bs-bento>.bs-bento-card:nth-child(4){--c:var(--c-orange)}
+.bs-bento-card{border:1px solid color-mix(in srgb,var(--c,var(--c-teal)) 65%,transparent)!important;box-shadow:0 18px 40px -14px rgba(11,23,48,.45),0 0 30px color-mix(in srgb,var(--c,var(--c-teal)) 24%,transparent);background-size:cover;background-position:center}
+.bs-bento-card h3{color:var(--c,var(--c-teal))!important}
 
 /* Planes */
-#landing-conversion { --c: var(--c-violet); }
-#sitio-corporativo { --c: var(--c-teal); }
-#catalogo { --c: var(--c-orange); }
+#landing-conversion{--c:var(--c-violet)} #sitio-corporativo{--c:var(--c-teal)} #catalogo{--c:var(--c-orange)}
+.bs-plan{border:1px solid color-mix(in srgb,var(--c) 55%,transparent)!important;border-top:4px solid var(--c)!important;box-shadow:0 18px 40px -14px rgba(11,23,48,.45),0 0 26px color-mix(in srgb,var(--c) 22%,transparent)}
+.bs-plan .kicker{color:var(--c)!important}
+.bs-plan h3{color:#fff}
+.bs-plan .bs-ico{background:color-mix(in srgb,var(--c) 18%,transparent)!important;box-shadow:0 0 18px color-mix(in srgb,var(--c) 35%,transparent)}
+#landing-conversion .bs-btn-ghost{border-color:var(--c-violet)!important;color:#ddd6fe!important}
+#catalogo .bs-btn-ghost{border-color:var(--c-orange)!important;color:#fed7aa!important}
 
-.bs-plan {
-  border: 1px solid color-mix(in srgb, var(--c) 55%, transparent) !important;
-  border-top: 4px solid var(--c) !important;
-  box-shadow: 0 0 26px color-mix(in srgb, var(--c) 22%, transparent);
-}
-
-.bs-plan .kicker { color: var(--c) !important; }
-.bs-plan h3 { color: #fff; }
-
-.bs-plan .bs-ico {
-  background: color-mix(in srgb, var(--c) 18%, transparent) !important;
-  box-shadow: 0 0 18px color-mix(in srgb, var(--c) 35%, transparent);
-}
-
-#landing-conversion .bs-btn-ghost { border-color: var(--c-violet) !important; color: #ddd6fe !important; }
-#catalogo .bs-btn-ghost { border-color: var(--c-orange) !important; color: #fed7aa !important; }
-
-/* Metodología */
-.bs-steps>.bs-glass:nth-child(1) { --c: var(--c-yellow); }
-.bs-steps>.bs-glass:nth-child(2) { --c: var(--c-green); }
-.bs-steps>.bs-glass:nth-child(3) { --c: var(--c-orange); }
-.bs-steps>.bs-glass:nth-child(4) { --c: var(--c-violet); }
-
-.bs-steps>.bs-glass {
-  border: 1px solid color-mix(in srgb, var(--c) 60%, transparent) !important;
-  border-top: 4px solid var(--c) !important;
-  box-shadow: 0 0 24px color-mix(in srgb, var(--c) 26%, transparent);
-}
-
-.bs-steps .bs-step-n {
-  color: var(--c) !important;
-  -webkit-text-fill-color: var(--c) !important;
-  background: none !important;
-  text-shadow: 0 0 20px color-mix(in srgb, var(--c) 55%, transparent);
-}
+/* Metodología: amarillo, verde, naranja y violeta */
+.bs-steps>.bs-glass:nth-child(1){--c:var(--c-yellow)}
+.bs-steps>.bs-glass:nth-child(2){--c:var(--c-green)}
+.bs-steps>.bs-glass:nth-child(3){--c:var(--c-orange)}
+.bs-steps>.bs-glass:nth-child(4){--c:var(--c-violet)}
+.bs-steps>.bs-glass{border:1px solid color-mix(in srgb,var(--c) 60%,transparent)!important;border-top:4px solid var(--c)!important;box-shadow:0 18px 38px -14px rgba(11,23,48,.42),0 0 24px color-mix(in srgb,var(--c) 24%,transparent)}
+.bs-steps .bs-step-n{color:var(--c)!important;-webkit-text-fill-color:var(--c)!important;background:none!important;text-shadow:0 0 20px color-mix(in srgb,var(--c) 45%,transparent)}
 
 /* Proyectos */
-.bs-projects>.bs-project:nth-child(1) { --c: var(--c-teal); }
-.bs-projects>.bs-project:nth-child(2) { --c: var(--c-violet); }
-.bs-projects>.bs-project:nth-child(3) { --c: var(--c-orange); }
-.bs-projects>.bs-project:nth-child(4) { --c: var(--c-green); }
-.bs-projects>.bs-project:nth-child(5) { --c: var(--c-yellow); }
-.bs-projects>.bs-project:nth-child(6) { --c: var(--c-pink); }
-
-.bs-project {
-  border: 1px solid color-mix(in srgb, var(--c, var(--c-teal)) 45%, transparent) !important;
-  box-shadow: 0 0 22px color-mix(in srgb, var(--c, var(--c-teal)) 18%, transparent);
-}
-
-.bs-project .kicker { color: var(--c, var(--c-teal)) !important; }
+.bs-projects>.bs-project:nth-child(1){--c:var(--c-teal)}
+.bs-projects>.bs-project:nth-child(2){--c:var(--c-violet)}
+.bs-projects>.bs-project:nth-child(3){--c:var(--c-orange)}
+.bs-projects>.bs-project:nth-child(4){--c:var(--c-green)}
+.bs-projects>.bs-project:nth-child(5){--c:var(--c-yellow)}
+.bs-projects>.bs-project:nth-child(6){--c:var(--c-pink)}
+.bs-project{border:1px solid color-mix(in srgb,var(--c,var(--c-teal)) 45%,transparent)!important;box-shadow:0 18px 38px -14px rgba(11,23,48,.40),0 0 22px color-mix(in srgb,var(--c,var(--c-teal)) 18%,transparent)}
+.bs-project .kicker{color:var(--c,var(--c-teal))!important}

@@ -21,53 +21,55 @@
 
 /* Global Colors & Design Tokens (Unificados con index.html) */
 :root { 
-  --bg-primary: #070a13;
-  --bg-card: #0b0f19;
-  --bg-card-hover: #131827;
+  /* VERSIÓN CLARA (mismos valores que variables.css y bs-theme.css) */
+  --bg-primary: #f4f7fc;
+  --bg-card: #0f1c42;
+  --bg-card-hover: #16275a;
   
-  --text-main: #ffffff;
-  --text-muted: #94a3b8;
+  --text-main: #0b1730;
+  --text-muted: #53648a;
   
-  --accent-cyan: #22d3ee;
-  --accent-mint: #34d399;
-  --accent-red: #f43f5e;
+  --accent-cyan: #097481;
+  --accent-mint: #0f9d76;
+  --accent-red: #e11d48;
   
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(34, 211, 238, 0.3);
+  --border-color: rgba(11, 23, 48, 0.12);
+  --border-hover: rgba(9, 116, 129, 0.4);
 
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Mapeo para clases de la plantilla (christian-chacon y proyectos) */
-  --background-color: #070a13;
-  --default-color: #f2f2f2;
-  --heading-color: #ffffff;
-  --accent-color: #22d3ee;
-  --surface-color: #0b0f19;
-  --contrast-color: #070a13;
+  --background-color: #f4f7fc;
+  --default-color: #2a3a5f;
+  --heading-color: #0b1730;
+  --accent-color: #097481;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: #94a3b8;
-  --nav-hover-color: #22d3ee;
-  --nav-mobile-background-color: #0b0f19;
-  --nav-dropdown-background-color: #0b0f19;
-  --nav-dropdown-color: #94a3b8;
-  --nav-dropdown-hover-color: #22d3ee;
+  --nav-color: #53648a;
+  --nav-hover-color: #0b1730;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #53648a;
+  --nav-dropdown-hover-color: #097481;
 }
 
 /* Color Presets */
+/* En la versión clara ambos presets son bandas claras (la "oscura" solo es un tono más marcado) */
 .light-background {
-  --background-color: #0b0f19;
-  --surface-color: #131827;
+  --background-color: #eef3fb;
+  --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #04060b;
-  --default-color: #94a3b8;
-  --heading-color: #ffffff;
-  --accent-color: #22d3ee;
-  --surface-color: #0b0f19;
+  --background-color: #e6edf9;
+  --default-color: #2a3a5f;
+  --heading-color: #0b1730;
+  --accent-color: #097481;
+  --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
 
@@ -112,7 +114,7 @@ h6 {
 
 /* Top Bar superior de contacto */
 .top-bar {
-  background: #111827;
+  background: #e6edf9;
   border-bottom: 1px solid var(--border-color);
   padding: 0.5rem 2rem;
   font-size: 0.8rem;
@@ -127,7 +129,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(7, 10, 19, 0.9);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
 }
@@ -192,7 +194,7 @@ header {
 }
 
 .nav-links a:hover, .nav-links a.active {
-  color: var(--accent-cyan);
+  color: var(--text-main);
 }
 
 /* Botón Hamburguesa */
@@ -237,13 +239,13 @@ header {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--bg-card, #0b0f19);
+    background-color: #ffffff;
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 0;
     gap: 1rem;
     border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 14px 30px rgba(11, 23, 48, 0.14);
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -264,7 +266,7 @@ header {
 
 /* Footer Modular */
 footer {
-  background: #04060b;
+  background: #e8eff9;
   border-top: 1px solid var(--border-color);
   padding: 4rem 2rem 2rem;
   margin-top: 4rem;
@@ -355,7 +357,7 @@ footer {
   border-radius: 1.5rem;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 22px 44px -12px rgba(11, 23, 48, 0.45);
   line-height: 0;
   margin-bottom: 1.5rem;
 }
