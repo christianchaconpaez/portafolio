@@ -12,7 +12,7 @@
 .theme-bs .bs-hero-visual .floating-elements{position:absolute;top:0;left:0;right:0;bottom:0;z-index:3}
 .theme-bs .bs-hero-visual .floating-card{position:absolute;display:flex;align-items:center;gap:10px;padding:6px 15px;border-radius:15px;white-space:nowrap;background:rgba(11,15,25,.92);border:1px solid var(--bs-line);box-shadow:0 14px 30px -8px rgba(11,23,48,.40);animation:bsFloat 6s ease-in-out infinite}
 .theme-bs .bs-hero-visual .floating-card i{font-size:1.5rem;color:var(--bs-teal)}
-.theme-bs .bs-hero-visual .floating-card span{font-weight:600;color:#fff}
+.theme-bs .bs-hero-visual .floating-card span{font-weight:600;color:#f2f2f2}
 .theme-bs .bs-hero-visual .floating-card.card-1{top:10%;left:-10%;animation-delay:0s}
 .theme-bs .bs-hero-visual .floating-card.card-2{top:60%;right:-15%;animation-delay:2s}
 .theme-bs .bs-hero-visual .floating-card.card-3{bottom:15%;left:-5%;animation-delay:4s}

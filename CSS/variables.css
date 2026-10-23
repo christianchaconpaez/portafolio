@@ -8,8 +8,8 @@
   --bg-card: #0f1c42;          /* superficie oscura de las tarjetas */
   --bg-card-hover: #16275a;
   
-  --text-main: #0b1730;
-  --text-muted: #53648a;
+  --text-main: #050c1a;
+  --text-muted: #2a3b60;
   
   --accent-cyan: #097481;
   --accent-mint: #0f9d76;
@@ -22,7 +22,7 @@
 
   /* Aliases para compatibilidad */
   --background-color: var(--bg-primary);
-  --default-color: #2a3a5f;
+  --default-color: #14203b;
   --heading-color: var(--text-main);
   --accent-color: var(--accent-cyan);
   --surface-color: var(--bg-card);

@@ -21,7 +21,7 @@
   --bs-cta:var(--bs-coral); --bs-cta-text:#ffffff;
   --bs-grad:linear-gradient(90deg,#0e9f8e,#2563eb 60%,#7c3aed);
   /* Textos de la página: títulos / cuerpo / apoyo */
-  --ink:#0b1730; --ink-2:#2a3a5f; --ink-3:#53648a;
+  --ink:#050c1a; --ink-2:#14203b; --ink-3:#2a3b60;
   --check-color:#0b8a7a;
   /* Logo: el archivo es blanco; este filtro lo vuelve oscuro. Si subes un logo oscuro, pon: none */
   --logo-filter:brightness(0);
@@ -40,14 +40,14 @@
 /* Tokens globales: anulan los oscuros que declara main-assets.css */
 :root{
   --bg-primary:#f4f7fc; --bg-card:#0f1c42; --bg-card-hover:#16275a;
-  --text-main:#0b1730; --text-muted:#53648a;
+  --text-main:#050c1a; --text-muted:#2a3b60;
   --accent-cyan:#097481; --accent-mint:#0f9d76; --accent-red:#e11d48;
   --border-color:rgba(11,23,48,.12); --border-hover:rgba(9,116,129,.40);
-  --background-color:#f4f7fc; --default-color:#2a3a5f; --heading-color:#0b1730;
+  --background-color:#f4f7fc; --default-color:#14203b; --heading-color:#050c1a;
   --accent-color:#097481; --surface-color:#ffffff; --contrast-color:#ffffff;
-  --nav-color:#53648a; --nav-hover-color:#0b1730;
+  --nav-color:#2a3b60; --nav-hover-color:#050c1a;
   --nav-mobile-background-color:#ffffff; --nav-dropdown-background-color:#ffffff;
-  --nav-dropdown-color:#53648a; --nav-dropdown-hover-color:#097481;
+  --nav-dropdown-color:#2a3b60; --nav-dropdown-hover-color:#097481;
 }
 body.theme-bs{--accent-color:#097481;--heading-color:var(--ink);background-color:var(--bs-bg);color:var(--ink-2);
   background-image:
@@ -96,9 +96,9 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .post-faq details,
 .theme-bs .blog-card-cat,
 .theme-bs .blog-pager button{
-  --text-main:#ffffff; --text-muted:#a9b8d8;
-  --ink:#ffffff; --ink-2:#d3ddf6; --ink-3:#a9b8d8;
-  --default-color:#cbd6f2; --heading-color:#ffffff;
+  --text-main:#f2f2f2; --text-muted:#f2f2f2;
+  --ink:#f2f2f2; --ink-2:#f2f2f2; --ink-3:#f2f2f2;
+  --default-color:#f2f2f2; --heading-color:#f2f2f2;
   --accent-color:#3fc1b0; --accent-cyan:#3fd0e0;
   --surface-color:#0f1c42; --contrast-color:#04141a;
   --border-color:rgba(255,255,255,.12); --border-hover:rgba(63,193,176,.40);
@@ -175,7 +175,7 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .post-cta .bs-btn-ghost,
 .theme-bs .post-faq details .bs-btn-ghost,
 .theme-bs .blog-card-cat .bs-btn-ghost,
-.theme-bs .blog-pager button .bs-btn-ghost{color:#fff;border-color:rgba(160,190,255,.32);background:rgba(255,255,255,.06)}
+.theme-bs .blog-pager button .bs-btn-ghost{color:#f2f2f2;border-color:rgba(160,190,255,.32);background:rgba(255,255,255,.06)}
 
 /* ---------- Barra superior y menú ---------- */
 .theme-bs .top-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 2rem;background:var(--bs-cta);color:var(--bs-cta-text);font-size:.8rem;font-weight:500}
@@ -189,7 +189,7 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .text-cta{color:var(--bs-cta)}
 
 /* ---------- Átomos ---------- */
-.theme-bs .bs-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border:1px solid rgba(11,23,48,.14);border-radius:9999px;background:rgba(255,255,255,.78);box-shadow:0 2px 10px rgba(11,23,48,.05);font-size:.72rem;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:#2c3e66;margin-bottom:1.2rem}
+.theme-bs .bs-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border:1px solid #2c3e66;border-radius:9999px;background:#2c3e66;box-shadow:0 2px 10px rgba(11,23,48,.18);font-size:.72rem;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:#f2f2f2;margin-bottom:1.2rem}
 .theme-bs .bs-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bs-teal);box-shadow:0 0 0 4px rgba(63,193,176,.20)}
 .theme-bs .text-gradient{background:var(--bs-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .theme-bs .bs-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.8rem;border-radius:9999px;font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.25s}
@@ -218,8 +218,8 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .bs-bento-card{position:relative;overflow:hidden;border-radius:1.25rem;border:1px solid var(--bs-line);min-height:240px;display:flex;align-items:flex-end;background-size:cover;background-position:center}
 .theme-bs .bs-bento-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,20,.15),rgba(5,8,20,.90))}
 .theme-bs .bs-bento-card>div{position:relative;padding:1.6rem}
-.theme-bs .bs-bento-card h3{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.4rem}
-.theme-bs .bs-bento-card p{font-size:.88rem;color:#c3cfec;margin:0;line-height:1.5}
+.theme-bs .bs-bento-card h3{font-size:1.2rem;font-weight:700;color:#f2f2f2;margin-bottom:.4rem}
+.theme-bs .bs-bento-card p{font-size:.88rem;color:#f2f2f2;margin:0;line-height:1.5}
 .theme-bs .bento-xl{grid-column:span 4;min-height:340px}.theme-bs .bento-md{grid-column:span 2}.theme-bs .bento-lg{grid-column:span 3}
 
 /* ---------- Planes (tipos de proyecto, sin precios) ---------- */
@@ -228,7 +228,7 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .bs-plan.popular{border-color:rgba(63,193,176,.6);box-shadow:var(--bs-glow);transform:translateY(-8px)}
 .theme-bs .bs-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--bs-blue);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.3rem .9rem;border-radius:9999px}
 .theme-bs .bs-plan .kicker{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bs-teal);font-weight:700}
-.theme-bs .bs-plan h3{font-size:1.4rem;color:#fff;font-weight:700;margin:.4rem 0 .6rem}
+.theme-bs .bs-plan h3{font-size:1.4rem;color:#f2f2f2;font-weight:700;margin:.4rem 0 .6rem}
 .theme-bs .bs-ico{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:rgba(63,193,176,.14);border:1px solid rgba(63,193,176,.32);margin-bottom:1rem}
 
 /* ---------- Pasos, proyectos, FAQ ---------- */
@@ -254,7 +254,7 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .bs-footer h4{font-size:1rem;color:var(--ink);padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);display:inline-block;margin-bottom:1rem}
 .theme-bs .bs-footer a{display:block;color:var(--ink-3);text-decoration:none;font-size:.88rem;margin-bottom:.6rem}
 .theme-bs .bs-footer a:hover{color:var(--bs-teal-ink)}
-.theme-bs .bs-footer small{display:block;font-size:.7rem;letter-spacing:1.2px;text-transform:uppercase;color:#5f7196;margin-top:.8rem}
+.theme-bs .bs-footer small{display:block;font-size:.7rem;letter-spacing:1.2px;text-transform:uppercase;color:#2a3b60;margin-top:.8rem}
 .theme-bs .bs-footer p{font-size:.88rem;color:var(--ink-2);margin:0}
 
 /* ---------- Compatibilidad: componentes del diseño anterior (index y otras páginas) ---------- */
@@ -295,12 +295,12 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .post-cta .atom-btn-outline,
 .theme-bs .post-faq details .atom-btn-outline,
 .theme-bs .blog-card-cat .atom-btn-outline,
-.theme-bs .blog-pager button .atom-btn-outline{border-color:rgba(160,190,255,.32);background:rgba(255,255,255,.06);color:#fff}
+.theme-bs .blog-pager button .atom-btn-outline{border-color:rgba(160,190,255,.32);background:rgba(255,255,255,.06);color:#f2f2f2}
 
 /* ---------- Compatibilidad: plantilla (christian-chacon.html) ---------- */
 .theme-bs .skill-card,.theme-bs .experience-card,.theme-bs .service-item,.theme-bs .testimonial-item,.theme-bs .faq-item{border-radius:1.25rem}
 /* Portafolio: título bajo el logo siempre en blanco (va sobre la imagen oscura) */
-.theme-bs .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title{color:#ffffff}
+.theme-bs .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title{color:#f2f2f2}
 /* Hero de la plantilla: el HTML trae una imagen oscura fija y un velo; aquí pasa a fondo claro */
 body.theme-bs #hero.hero{background:
     radial-gradient(760px 420px at 88% 20%,rgba(167,139,250,.22),transparent 62%),
@@ -355,9 +355,9 @@ body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-tit
 /* Acentos por sección (el texto del chip se oscurece para leerse sobre fondo claro) */
 .acc-teal{--acc:var(--c-teal)} .acc-violet{--acc:var(--c-violet)} .acc-orange{--acc:var(--c-orange)} .acc-green{--acc:var(--c-green)}
 .bs-section[class*="acc-"] .bs-chip{
-  color:color-mix(in srgb,var(--acc) 50%,#0b1730)!important;
-  border-color:color-mix(in srgb,var(--acc) 55%,transparent)!important;
-  background:color-mix(in srgb,var(--acc) 16%,#ffffff)!important;
+  color:#f2f2f2!important;
+  border-color:#2c3e66!important;
+  background:#2c3e66!important;
 }
 .bs-section[class*="acc-"] .bs-title::after{content:"";display:block;width:72px;height:4px;margin-top:.8rem;border-radius:4px;background:linear-gradient(90deg,var(--acc),transparent)}
 .bs-section[class*="acc-"][style*="text-align:center"] .bs-title::after{margin-left:auto;margin-right:auto;background:linear-gradient(90deg,transparent,var(--acc),transparent)}
@@ -387,10 +387,10 @@ body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-tit
 #landing-conversion{--c:var(--c-violet)} #sitio-corporativo{--c:var(--c-teal)} #catalogo{--c:var(--c-orange)}
 .bs-plan{border:1px solid color-mix(in srgb,var(--c) 55%,transparent)!important;border-top:4px solid var(--c)!important;box-shadow:0 18px 40px -14px rgba(11,23,48,.45),0 0 26px color-mix(in srgb,var(--c) 22%,transparent)}
 .bs-plan .kicker{color:var(--c)!important}
-.bs-plan h3{color:#fff}
+.bs-plan h3{color:#f2f2f2}
 .bs-plan .bs-ico{background:color-mix(in srgb,var(--c) 18%,transparent)!important;box-shadow:0 0 18px color-mix(in srgb,var(--c) 35%,transparent)}
-#landing-conversion .bs-btn-ghost{border-color:var(--c-violet)!important;color:#ddd6fe!important}
-#catalogo .bs-btn-ghost{border-color:var(--c-orange)!important;color:#fed7aa!important}
+#landing-conversion .bs-btn-ghost{border-color:var(--c-violet)!important;color:#f2f2f2!important}
+#catalogo .bs-btn-ghost{border-color:var(--c-orange)!important;color:#f2f2f2!important}
 
 /* Metodología: amarillo, verde, naranja y violeta */
 .bs-steps>.bs-glass:nth-child(1){--c:var(--c-yellow)}
@@ -409,3 +409,10 @@ body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-tit
 .bs-projects>.bs-project:nth-child(6){--c:var(--c-pink)}
 .bs-project{border:1px solid color-mix(in srgb,var(--c,var(--c-teal)) 45%,transparent)!important;box-shadow:0 18px 38px -14px rgba(11,23,48,.40),0 0 22px color-mix(in srgb,var(--c,var(--c-teal)) 18%,transparent)}
 .bs-project .kicker{color:var(--c,var(--c-teal))!important}
+
+
+/* ====================================================================
+   TEXTOS BLANCOS "EN LÍNEA" DENTRO DE TARJETAS OSCURAS -> #f2f2f2
+   =================================================================== */
+.theme-bs :is(.bs-glass,.bs-bento-card,.feature-card-main,.metodologia-card,.testimonio-card,.paso-card-item,.pasos-card-container,.atom-card,.sesion-card,.hero-floating-badge,.floating-card,.skill-card,.experience-card,.service-item,.testimonial-item,.faq-item,.contact-form,.timeline-item,.feature-item,.post-cta) [style*="color:#fff"],
+.theme-bs :is(.bs-glass,.bs-bento-card,.feature-card-main,.metodologia-card,.testimonio-card,.paso-card-item,.pasos-card-container,.atom-card,.sesion-card,.hero-floating-badge,.floating-card,.skill-card,.experience-card,.service-item,.testimonial-item,.faq-item,.contact-form,.timeline-item,.feature-item,.post-cta) [style*="color: #fff"]{color:#f2f2f2!important}

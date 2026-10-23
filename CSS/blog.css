@@ -31,14 +31,14 @@
   border-radius: 9999px; 
   font-size: .82rem; 
   font-weight: 600; 
-  color: var(--ink-2, #2a3a5f); 
+  color: var(--ink-2, #14203b); 
   background: #ffffff; 
   border: 1px solid rgba(11,23,48,.16); 
   transition: all .2s ease; 
 }
 
 .blog-filter:hover { 
-  color: var(--ink, #0b1730); 
+  color: var(--ink, #050c1a); 
   border-color: var(--bs-teal-ink, #0a7a6e); 
   box-shadow: 0 6px 16px -6px rgba(11,23,48,.25); 
 }
@@ -97,7 +97,7 @@
   font-weight: 700; 
   letter-spacing: .5px; 
   text-transform: uppercase; 
-  color: #fff; 
+  color: #f2f2f2; 
   background: rgba(10,18,48,.85); 
   border: 1px solid rgba(63,193,176,.6); 
   backdrop-filter: blur(6px); 
@@ -109,14 +109,14 @@
   margin: 1rem 0 .7rem; 
   padding-bottom: .7rem; 
   font-size: .8rem; 
-  color: var(--ink-3, #53648a); 
+  color: var(--ink-3, #2a3b60); 
   border-bottom: 1px solid rgba(11,23,48,.14); 
 }
 
 .blog-card h3 { 
   font-size: 1.2rem; 
   line-height: 1.35; 
-  color: var(--ink, #0b1730); 
+  color: var(--ink, #050c1a); 
   margin: 0 0 .6rem; 
   transition: color .2s ease; 
 }
@@ -128,7 +128,7 @@
 .blog-card p { 
   font-size: .9rem; 
   line-height: 1.55; 
-  color: var(--ink-3, #53648a); 
+  color: var(--ink-3, #2a3b60); 
   margin: 0; 
 }
 
@@ -150,7 +150,7 @@
   border-radius: 9999px; 
   font-size: .88rem; 
   font-weight: 600; 
-  color: #fff; 
+  color: #f2f2f2; 
   background: #12224f; 
   border: 1px solid rgba(160,190,255,.30); 
   transition: all .2s ease; 
@@ -168,12 +168,12 @@
 
 .blog-pager-info { 
   font-size: .85rem; 
-  color: var(--ink-3, #53648a); 
+  color: var(--ink-3, #2a3b60); 
 }
 
 .blog-empty { 
   text-align: center; 
-  color: var(--ink-3, #53648a); 
+  color: var(--ink-3, #2a3b60); 
   padding: 2rem 0; 
 }
 
