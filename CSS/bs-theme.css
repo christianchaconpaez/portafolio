@@ -459,6 +459,26 @@ body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-tit
 .theme-bs .skill-card .bg-light .bi,
 .theme-bs .skill-card .bg-light .text-primary{color:#0b2a6b!important}
 
+/* Recuadros blancos uniformes: mismo alto, mismo padding y mismo ancho de ícono (el texto queda alineado) */
+.theme-bs .skill-card .bg-light{
+  box-sizing:border-box;
+  height:100%;                     /* todos los recuadros de una fila igualan al más alto */
+  min-height:48px;                 /* alto mínimo común */
+  padding:.5rem .75rem!important;  /* 8px arriba/abajo, 12px a los lados (pisa p-2 de Bootstrap) */
+}
+.theme-bs .skill-card .bg-light i{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex:none;width:1.5rem;height:1.5rem;line-height:1;
+  margin-right:.5rem!important;
+}
+.theme-bs .skill-card .bg-light span{line-height:1.25}
+/* Logo de Figma (imagen SVG): mismo azul oscuro #0b2a6b y mismo tamaño visual que los iconos de Bootstrap.
+   Un <img> no hereda "color", por eso se tiñe con filter (brightness(0) aplana el logo a negro y luego se colorea). */
+.theme-bs .skill-card .bg-light img[src*="figma-logo"]{
+  width:1.5rem!important;height:1.35rem!important;margin-right:.5rem!important;flex:none;object-fit:contain;
+  filter:brightness(0) saturate(100%) invert(26%) sepia(84%) saturate(3377%) hue-rotate(217deg) brightness(42%) contrast(99%);
+}
+
 /* ---------- 2b) Textos sobre fondo oscuro: #f2f2f2 sólido ---------- */
 .theme-bs .about .about-content .journey-timeline .timeline-item .description,
 .theme-bs .resume .experience-section .experience-cards .experience-card .card-body p,
