@@ -416,3 +416,163 @@ body.theme-bs .bs-h1,body.theme-bs main h2.bs-title,body.theme-bs main h2.bs-tit
    =================================================================== */
 .theme-bs :is(.bs-glass,.bs-bento-card,.feature-card-main,.metodologia-card,.testimonio-card,.paso-card-item,.pasos-card-container,.atom-card,.sesion-card,.hero-floating-badge,.floating-card,.skill-card,.experience-card,.service-item,.testimonial-item,.faq-item,.contact-form,.timeline-item,.feature-item,.post-cta) [style*="color:#fff"],
 .theme-bs :is(.bs-glass,.bs-bento-card,.feature-card-main,.metodologia-card,.testimonio-card,.paso-card-item,.pasos-card-container,.atom-card,.sesion-card,.hero-floating-badge,.floating-card,.skill-card,.experience-card,.service-item,.testimonial-item,.faq-item,.contact-form,.timeline-item,.feature-item,.post-cta) [style*="color: #fff"]{color:#f2f2f2!important}
+
+
+/* ====================================================================
+   PÁGINA "SOBRE MÍ" (christian-chacon.html)
+   1) Hero: texto rotativo con el mismo degradado de marketing / diseño web
+   2) Textos oscuros sobre fondo claro y #f2f2f2 sobre fondo oscuro
+   3) Más color: Servicios, tarjetas "about", timeline, skills y experiencia
+   =================================================================== */
+
+/* ---------- 1) Hero: degradado en el texto que rota ---------- */
+/* main-assets.css pinta .hero .hero-title .typed con color sólido (más específico que .text-gradient) */
+.theme-bs .hero .hero-title .typed.text-gradient{
+  background:var(--bs-grad);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+  display:inline-block;padding-right:.08em;  /* evita que se corte la última letra */
+}
+.theme-bs .hero .hero-title .typed-cursor{color:var(--bs-teal-ink);-webkit-text-fill-color:var(--bs-teal-ink)}
+
+/* ---------- 2a) Textos sobre fondo claro: sólidos y oscuros (sin transparencias) ---------- */
+.theme-bs .section-title p,
+.theme-bs .hero .lead,
+.theme-bs .hero .hero-stats .stat-item .stat-label,
+.theme-bs .about .profile-image-wrapper .signature-section .quote,
+.theme-bs .about .about-content .intro p,
+.theme-bs .about .about-content .skills-grid .skill-item p,
+.theme-bs .about .about-content .cta-section .fun-fact .text,
+.theme-bs .skills .skills-summary p,
+.theme-bs .skills .skills-summary .summary-stats .stat-item .stat-info .stat-label,
+.theme-bs .resume .section-header .section-subtitle{color:var(--ink-2)}
+.theme-bs .about .about-content .skills-grid .skill-item h4,
+.theme-bs .skills .skills-summary h3{color:var(--ink)}
+.theme-bs .about .about-content .intro h2{color:var(--ink)!important}
+
+/* Pastillas claras (bg-light) dentro de tarjetas oscuras: texto oscuro, no #f2f2f2 */
+.theme-bs .skill-card .bg-light{background:#ffffff!important;border-color:rgba(11,23,48,.14)!important}
+.theme-bs .skill-card .bg-light span{color:var(--ink)!important}
+
+/* ---------- 2b) Textos sobre fondo oscuro: #f2f2f2 sólido ---------- */
+.theme-bs .about .about-content .journey-timeline .timeline-item .description,
+.theme-bs .resume .experience-section .experience-cards .experience-card .card-body p,
+.theme-bs .resume .experience-section .experience-cards .experience-card .card-body .achievements li,
+.theme-bs .resume .education-section .education-timeline .education-item .education-content p,
+.theme-bs .services .service-item p,
+.theme-bs .services .service-item li,
+.theme-bs .testimonials .testimonials-container .testimonial-item .testimonial-profile div h4{color:#f2f2f2}
+
+/* Timeline "about": al pasar el mouse, la fila no se aclara (antes el texto blanco se perdía) */
+.theme-bs .about .about-content .journey-timeline .timeline-item:hover{
+  background:linear-gradient(160deg,#1f3478,#142457);
+  border-left-color:var(--c,var(--bs-teal));
+}
+
+/* ---------- 3) Más vida y color (paleta cálida + acentos) ---------- */
+
+/* Servicios: 3 tarjetas con color propio (naranja, rosa, violeta) */
+.services .row>div:nth-child(1) .service-item{--c:var(--c-orange)}
+.services .row>div:nth-child(2) .service-item{--c:var(--c-pink)}
+.services .row>div:nth-child(3) .service-item{--c:var(--c-violet)}
+.theme-bs .services .service-item{
+  border:1px solid color-mix(in srgb,var(--c) 60%,transparent);
+  border-top:4px solid var(--c);
+  box-shadow:0 18px 40px -14px rgba(11,23,48,.45),0 0 26px color-mix(in srgb,var(--c) 26%,transparent);
+}
+.theme-bs .services .service-item::before{background-color:var(--c)}
+.theme-bs .services .service-item .icon i{
+  display:inline-grid;place-items:center;width:64px;height:64px;border-radius:16px;
+  font-size:1.9rem;color:var(--c);
+  background:color-mix(in srgb,var(--c) 20%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 55%,transparent);
+  box-shadow:0 0 22px color-mix(in srgb,var(--c) 40%,transparent);
+}
+.theme-bs .services .service-item:hover .icon i{color:var(--c)}
+.theme-bs .services .service-item li::marker{color:var(--c);font-size:1.1em}
+.theme-bs .services .service-item h3{color:#f2f2f2}
+
+/* About: 3 tarjetas claras con tinte de color */
+.about .skills-grid .skill-item:nth-child(1){--c:var(--c-orange)}
+.about .skills-grid .skill-item:nth-child(2){--c:var(--c-pink)}
+.about .skills-grid .skill-item:nth-child(3){--c:var(--c-violet)}
+.theme-bs .about .about-content .skills-grid .skill-item{
+  background:color-mix(in srgb,var(--c) 14%,#ffffff);
+  border:1px solid color-mix(in srgb,var(--c) 60%,transparent);
+  border-top:4px solid var(--c);
+  box-shadow:0 10px 24px -12px color-mix(in srgb,var(--c) 50%,transparent);
+}
+.theme-bs .about .about-content .skills-grid .skill-item .skill-icon{background:var(--c);color:#1a0f05;box-shadow:0 6px 16px -4px color-mix(in srgb,var(--c) 70%,transparent)}
+
+/* About: timeline con acentos amarillo / naranja / rosa */
+.about .journey-timeline .timeline-item:nth-child(1){--c:var(--c-yellow)}
+.about .journey-timeline .timeline-item:nth-child(2){--c:var(--c-orange)}
+.about .journey-timeline .timeline-item:nth-child(3){--c:var(--c-pink)}
+.theme-bs .about .about-content .journey-timeline .timeline-item{border-left:5px solid var(--c)}
+.theme-bs .about .about-content .journey-timeline .timeline-item .year{color:var(--c)}
+
+/* About: dato curioso (café) en cálido */
+.theme-bs .about .about-content .cta-section .fun-fact{
+  background:color-mix(in srgb,var(--c-yellow) 22%,#ffffff);
+  border:1px solid color-mix(in srgb,var(--c-orange) 60%,transparent);
+}
+
+/* Skills: 4 tarjetas con barra superior e icono de color */
+.skills .skills-grid .row>div:nth-child(1) .skill-card{--c:var(--c-teal)}
+.skills .skills-grid .row>div:nth-child(2) .skill-card{--c:var(--c-violet)}
+.skills .skills-grid .row>div:nth-child(3) .skill-card{--c:var(--c-orange)}
+.skills .skills-grid .row>div:nth-child(4) .skill-card{--c:var(--c-yellow)}
+.theme-bs .skills .skills-grid .skill-card{border:1px solid color-mix(in srgb,var(--c) 55%,transparent)}
+.theme-bs .skills .skills-grid .skill-card:before{height:4px;background:var(--c)}
+.theme-bs .skills .skills-grid .skill-card .skill-header i{color:var(--c);background:color-mix(in srgb,var(--c) 20%,transparent)}
+
+/* Experiencia: barra lateral de color en cada puesto */
+.resume .experience-cards .experience-card:nth-child(4n+1){--c:var(--c-orange)}
+.resume .experience-cards .experience-card:nth-child(4n+2){--c:var(--c-pink)}
+.resume .experience-cards .experience-card:nth-child(4n+3){--c:var(--c-violet)}
+.resume .experience-cards .experience-card:nth-child(4n+4){--c:var(--c-yellow)}
+.theme-bs .resume .experience-section .experience-cards .experience-card::before{width:5px;background:var(--c)}
+.theme-bs .resume .experience-section .experience-cards .experience-card .duration{color:#1a0f05;background:var(--c)}
+
+/* Formación: marcadores de color */
+.resume .education-timeline .education-item:nth-child(3n+1){--c:var(--c-teal)}
+.resume .education-timeline .education-item:nth-child(3n+2){--c:var(--c-orange)}
+.resume .education-timeline .education-item:nth-child(3n+3){--c:var(--c-pink)}
+.theme-bs .resume .education-timeline .education-item .timeline-marker{background:var(--c);border-color:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 28%,transparent)}
+.theme-bs .resume .education-timeline .education-item .education-content{border-left:4px solid var(--c)}
+
+
+
+/* ---------- Footer (oscuro: fondo azul profundo, textos y logo en blanco) ---------- */
+.theme-bs .bs-footer{
+  margin-top:4rem;
+  border-top:1px solid rgba(160,190,255,.22);
+  background:linear-gradient(135deg,#0a1230 0%,#0f1c42 45%,#1e3a8a 100%);
+  color:#f2f2f2;
+}
+.theme-bs .bs-footer-logo{
+  display:block;margin:0 auto;
+  padding:2rem 2rem 1rem;              /* antes 4rem 2rem 2rem */
+  max-width:380px;width:70%;
+  filter:none;                          /* el SVG ya es blanco: sin oscurecer */
+}
+.theme-bs .bs-footer-grid{
+  max-width:1200px;margin:0 auto;
+  padding:1rem 2rem 1.5rem;            /* antes 2rem 2rem 3rem */
+  display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:2.5rem;
+}
+.theme-bs .bs-footer h4{
+  font-size:1rem;color:#f2f2f2;
+  padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);
+  display:inline-block;margin-bottom:1rem;
+}
+.theme-bs .bs-footer a{
+  display:block;color:#f2f2f2;text-decoration:none;
+  font-size:.88rem;margin-bottom:.6rem;transition:color .2s;
+}
+.theme-bs .bs-footer a:hover{color:var(--bs-teal)}
+.theme-bs .bs-footer small{
+  display:block;font-size:.7rem;letter-spacing:1.2px;
+  text-transform:uppercase;color:#f2f2f2;margin-top:.8rem;
+}
+.theme-bs .bs-footer p{font-size:.88rem;color:#f2f2f2;margin:0}
