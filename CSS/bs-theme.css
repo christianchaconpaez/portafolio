@@ -180,7 +180,7 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 /* ---------- Barra superior y menú ---------- */
 .theme-bs .top-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 2rem;background:var(--bs-cta);color:var(--bs-cta-text);font-size:.8rem;font-weight:500}
 .theme-bs header{background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--bs-line);box-shadow:0 8px 28px rgba(11,23,48,.06)}
-.theme-bs .atom-logo img,.theme-bs .site-logo,.theme-bs .bs-footer-logo{filter:var(--logo-filter)}
+.theme-bs .atom-logo img,.theme-bs .site-logo{filter:var(--logo-filter)}
 .theme-bs .nav-links a{font-weight:500;padding:.4rem 0;border-bottom:2px solid transparent;color:var(--ink-3)}
 .theme-bs .nav-links a:hover,.theme-bs .nav-links a.active{color:var(--ink);border-bottom-color:var(--bs-teal)}
 .theme-bs .nav-cta{background:var(--bs-cta);color:var(--bs-cta-text);border-radius:6px;padding:.65rem 1.4rem}
@@ -247,15 +247,39 @@ body.theme-bs section,body.theme-bs .section{background-color:transparent}
 .theme-bs .sesion-card input:focus{outline:0;border-bottom-color:var(--bs-teal)!important}
 .theme-bs .sesion-card button[type=submit],.theme-bs .sesion-card .atom-btn-primary{background:var(--bs-teal);color:#04141a;border-radius:9999px;text-transform:uppercase;letter-spacing:1px}
 
-/* ---------- Footer (claro) ---------- */
-.theme-bs .bs-footer{margin-top:4rem;border-top:1px solid var(--bs-line);background:linear-gradient(180deg,transparent,rgba(11,23,48,.05))}
-.theme-bs .bs-footer-logo{display:block;margin:0 auto;padding:4rem 2rem 2rem;max-width:380px;width:70%}
-.theme-bs .bs-footer-grid{max-width:1200px;margin:0 auto;padding:2rem 2rem 3rem;display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:2.5rem}
-.theme-bs .bs-footer h4{font-size:1rem;color:var(--ink);padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);display:inline-block;margin-bottom:1rem}
-.theme-bs .bs-footer a{display:block;color:var(--ink-3);text-decoration:none;font-size:.88rem;margin-bottom:.6rem}
-.theme-bs .bs-footer a:hover{color:var(--bs-teal-ink)}
-.theme-bs .bs-footer small{display:block;font-size:.7rem;letter-spacing:1.2px;text-transform:uppercase;color:#2a3b60;margin-top:.8rem}
-.theme-bs .bs-footer p{font-size:.88rem;color:var(--ink-2);margin:0}
+/* ---------- Footer (oscuro: fondo azul profundo, textos y logo en blanco) ---------- */
+.theme-bs .bs-footer{
+  margin-top:4rem;
+  border-top:1px solid rgba(160,190,255,.22);
+  background:linear-gradient(135deg,#0a1230 0%,#0f1c42 45%,#1e3a8a 100%);
+  color:#f2f2f2;
+}
+.theme-bs .bs-footer-logo{
+  display:block;margin:0 auto;
+  padding:2rem 2rem 1rem;              /* antes 4rem 2rem 2rem */
+  max-width:380px;width:70%;
+  filter:none;                          /* el SVG ya es blanco: sin oscurecer */
+}
+.theme-bs .bs-footer-grid{
+  max-width:1200px;margin:0 auto;
+  padding:1rem 2rem 1.5rem;            /* antes 2rem 2rem 3rem */
+  display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:2.5rem;
+}
+.theme-bs .bs-footer h4{
+  font-size:1rem;color:#f2f2f2;
+  padding-bottom:.4rem;border-bottom:2px solid var(--bs-teal);
+  display:inline-block;margin-bottom:1rem;
+}
+.theme-bs .bs-footer a{
+  display:block;color:#f2f2f2;text-decoration:none;
+  font-size:.88rem;margin-bottom:.6rem;transition:color .2s;
+}
+.theme-bs .bs-footer a:hover{color:var(--bs-teal)}
+.theme-bs .bs-footer small{
+  display:block;font-size:.7rem;letter-spacing:1.2px;
+  text-transform:uppercase;color:#f2f2f2;margin-top:.8rem;
+}
+.theme-bs .bs-footer p{font-size:.88rem;color:#f2f2f2;margin:0}
 
 /* ---------- Compatibilidad: componentes del diseño anterior (index y otras páginas) ---------- */
 .theme-bs .feature-card-main,.theme-bs .metodologia-card,.theme-bs .testimonio-card,.theme-bs .paso-card-item,.theme-bs .atom-card{border-radius:1.25rem}
