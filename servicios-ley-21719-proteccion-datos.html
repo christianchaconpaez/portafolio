@@ -164,9 +164,11 @@
                 </ul>
                 <div class="d-flex flex-wrap gap-3"><a href="#contacto" class="bs-btn bs-btn-teal">Solicitar diagnóstico
                         web gratuito</a><a href="#servicios-ley" class="bs-btn bs-btn-ghost">Ver servicios</a></div>
-                <p class="bs-lead" style="margin-top:1.8rem;font-size:.9rem;"><strong style="color:#fff;">En una
-                        frase:</strong> Asesoría e implementación en sitios web de empresas chilenas los requisitos de
-                    la Ley N° 21.719: consentimiento, cookies, derechos ARCOP+, políticas de privacidad y
+
+
+                <p class="bs-lead mt-4 fs-9"><strong class="">Asesoría e implementación en sitios web de empresas
+                        chilenas los requisitos de
+                        la Ley N° 21.719</strong>, consentimiento del usuario, banner de cookies, derechos de usuario ARCOP+, políticas de privacidad y
                     seguridad.</p>
             </div>
             <div class="ley-hero-media">
@@ -461,144 +463,156 @@
             <a href="#contacto" class="bs-btn bs-btn-teal">Agendar diagnóstico de cumplimiento web</a>
         </section>
 
-         <!-- ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO?  -->
-    <section id="contacto" class="revision-digital-section">
-      <div class="revision-digital-grid">
+        <!-- ¿REVISAMOS TU PRESENCIA DIGITAL SIN COSTO?  -->
+        <section id="contacto" class="revision-digital-section">
+            <div class="revision-digital-grid">
 
-        <!-- Columna Izquierda: Títulos y textos -->
-        <div>
-          <div class="text-start mx-auto" style="max-width: 1200px;">
-            <span class="bs-chip">HABLEMOS DE TU PROYECTO</span>
-            <!-- Título con degradado de amarillo a naranja -->
-            <h2 class="bs-title text-gradient-yellow-orange">
-              ¿Revisamos tu presencia digital sin costo?
-            </h2>
-          </div>
+                <!-- Columna Izquierda: Títulos y textos -->
+                <div>
+                    <div class="text-start mx-auto" style="max-width: 1200px;">
+                        <span class="bs-chip">HABLEMOS DE TU PROYECTO</span>
+                        <!-- Título con degradado de amarillo a naranja -->
+                        <h2 class="bs-title text-gradient-yellow-orange">
+                            ¿Revisamos tu presencia digital sin costo?
+                        </h2>
+                    </div>
 
-          <p class="mt-4 skills-summary"
-            style="color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
-            Agendemos una conversación de 20 minutos. Analizaremos tu situación actual, detectaremos qué está frenando
-            tus consultas comerciales y definiremos los primeros pasos para resolverlo. Sin compromisos ni presiones.
-          </p>
+                    <p class="mt-4 skills-summary"
+                        style="color: var(--text-main); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+                        Agendemos una conversación de 20 minutos. Analizaremos tu situación actual, detectaremos qué
+                        está frenando
+                        tus consultas comerciales y definiremos los primeros pasos para resolverlo. Sin compromisos ni
+                        presiones.
+                    </p>
 
-          <div class="d-flex flex-column" style="gap: 0.8rem; font-size: 0.9rem; color: var();">
-            <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
-            <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
-            <div class="d-flex align-items-center gap-2"
-              style="margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
-              <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong> en Chile.
+                    <div class="d-flex flex-column" style="gap: 0.8rem; font-size: 0.9rem; color: var();">
+                        <div>✉️ <strong>Correo:</strong> christian.chacon.paez@gmail.com</div>
+                        <div>📍 <strong>Ubicación:</strong> Santiago de Chile (Atención remota a todo el país)</div>
+                        <div class="d-flex align-items-center gap-2"
+                            style="margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">
+                            <span>⚖️</span> Tratamiento de datos protegido conforme a la <strong>Ley N° 21.719</strong>
+                            en Chile.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta de Sesión de Diagnóstico con Formulario (Borde y Neón Naranja) -->
+                <div class="sesion-card sesion-card-orange">
+                    <div>
+                        <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
+
+                        <h3 class="bs-card-title mb-2">
+                            Solicita tu sesión de diagnóstico
+                        </h3>
+
+                        <!-- Texto cambiado a color naranja -->
+                        <p class="fw-semibold mb-4 text-orange-custom" style="font-size: 0.9rem; line-height: 1.4;">
+                            Completa tus datos para habilitar la agenda.
+                        </p>
+
+                        <!-- Formulario conectado mediante iframe oculto (Google Sheets) -->
+                        <form id="agendarForm"
+                            action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec"
+                            method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
+                            <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
+                                <div class="col-6">
+                                    <label class="d-block"
+                                        style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Nombre
+                                        *</label>
+                                    <input type="text" name="nombre" id="campoNombre" placeholder="Ej. Juan"
+                                        class="w-100"
+                                        style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                        required>
+                                </div>
+                                <div class="col-6">
+                                    <label class="d-block"
+                                        style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Apellido
+                                        *</label>
+                                    <input type="text" name="apellido" id="campoApellido" placeholder="Ej. Pérez"
+                                        class="w-100"
+                                        style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                        required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="d-block"
+                                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Correo
+                                    Electrónico
+                                    *</label>
+                                <input type="email" name="correo" id="campoCorreo" placeholder="correo@ejemplo.com"
+                                    class="w-100"
+                                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="d-block"
+                                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Teléfono
+                                    de Contacto
+                                    *</label>
+                                <input type="tel" name="telefono" id="campoTelefono" placeholder="+56 9 1234 5678"
+                                    class="w-100"
+                                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
+                                    required>
+                            </div>
+
+                            <!-- Casilla de consentimiento -->
+                            <div class="d-flex align-items-start" style="gap: 0.6rem; margin-top: 0.3rem;">
+                                <input type="checkbox" name="consentimiento" id="campoConsentimiento" value="Sí"
+                                    style="margin-top: 0.2rem; cursor: pointer; accent-color: var(--accent-cyan);">
+                                <label for="campoConsentimiento"
+                                    style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; cursor: pointer;">
+                                    Acepto recibir mensajes y correos con información adicional y material de
+                                    promociones.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <!-- Botón de Agendar con clase en tonos naranjos -->
+                        <button type="button" id="btnAgendar" disabled class="atom-btn w-100 form-submit-btn-orange">
+                            Agendar Reunión →
+                        </button>
+                    </div>
+                </div>
+
             </div>
-          </div>
-        </div>
-
-        <!-- Columna Derecha: Tarjeta de Sesión de Diagnóstico con Formulario (Borde y Neón Naranja) -->
-        <div class="sesion-card sesion-card-orange">
-          <div>
-            <div style="color: var(--accent-mint); font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
-
-            <h3 class="bs-card-title mb-2">
-              Solicita tu sesión de diagnóstico
-            </h3>
-
-            <!-- Texto cambiado a color naranja -->
-            <p class="fw-semibold mb-4 text-orange-custom" style="font-size: 0.9rem; line-height: 1.4;">
-              Completa tus datos para habilitar la agenda.
-            </p>
-
-            <!-- Formulario conectado mediante iframe oculto (Google Sheets) -->
-            <form id="agendarForm"
-              action="https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec"
-              method="POST" target="hidden_iframe" class="d-flex flex-column mb-4" style="gap: 0.9rem;">
-              <div class="row" style="--bs-gutter-x: 0.8rem; --bs-gutter-y: 0;">
-                <div class="col-6">
-                  <label class="d-block"
-                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Nombre *</label>
-                  <input type="text" name="nombre" id="campoNombre" placeholder="Ej. Juan" class="w-100"
-                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
-                    required>
-                </div>
-                <div class="col-6">
-                  <label class="d-block"
-                    style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Apellido *</label>
-                  <input type="text" name="apellido" id="campoApellido" placeholder="Ej. Pérez" class="w-100"
-                    style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
-                    required>
-                </div>
-              </div>
-              <div>
-                <label class="d-block"
-                  style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Correo Electrónico
-                  *</label>
-                <input type="email" name="correo" id="campoCorreo" placeholder="correo@ejemplo.com" class="w-100"
-                  style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
-                  required>
-              </div>
-              <div>
-                <label class="d-block"
-                  style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">Teléfono de Contacto
-                  *</label>
-                <input type="tel" name="telefono" id="campoTelefono" placeholder="+56 9 1234 5678" class="w-100"
-                  style="padding: 0.6rem 0.8rem; background: #070a13; border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 0.9rem;"
-                  required>
-              </div>
-
-              <!-- Casilla de consentimiento -->
-              <div class="d-flex align-items-start" style="gap: 0.6rem; margin-top: 0.3rem;">
-                <input type="checkbox" name="consentimiento" id="campoConsentimiento" value="Sí"
-                  style="margin-top: 0.2rem; cursor: pointer; accent-color: var(--accent-cyan);">
-                <label for="campoConsentimiento"
-                  style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.3; cursor: pointer;">
-                  Acepto recibir mensajes y correos con información adicional y material de promociones.
-                </label>
-              </div>
-            </form>
-          </div>
-
-          <div>
-            <!-- Botón de Agendar con clase en tonos naranjos -->
-            <button type="button" id="btnAgendar" disabled class="atom-btn w-100 form-submit-btn-orange">
-              Agendar Reunión →
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
+        </section>
 
     </main>
 
     <!-- ================= FOOTER ================= -->
-<footer class="bs-footer">
-    <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
-    
-    <div class="bs-footer-grid">
-        <div>
-            <p>Transformando servicios excelentes en negocios visibles y creíbles.</p>
-            
+    <footer class="bs-footer">
+        <img class="bs-footer-logo" src="img/logo-chacon-marketing-blanco.svg" alt="Chacón Marketing" loading="lazy">
+
+        <div class="bs-footer-grid">
+            <div>
+                <p>Transformando servicios excelentes en negocios visibles y creíbles.</p>
+
+            </div>
+            <div>
+                <h4>Servicios</h4>
+                <a href="servicios-marketing-b2b.html">Marketing B2B</a>
+                <a href="servicios-diseno-web.html">Diseño Web WordPress</a>
+                <a href="servicios-ley-21719-proteccion-datos.html">Ley 21.719</a>
+                <a href="christian-chacon.html#portfolio">Proyectos</a>
+                <a href="blog.html">Blog</a>
+                <a href="christian-chacon.html">Sobre mí</a>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <small>WhatsApp</small>
+                <p>+56 9 4783 9131</p>
+                <small>Email</small>
+                <p>christian.chacon.paez@gmail.com</p>
+            </div>
+            <div>
+                <h4>Redes</h4>
+                <a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+            </div>
         </div>
-        <div>
-            <h4>Servicios</h4>
-            <a href="servicios-marketing-b2b.html">Marketing B2B</a>
-            <a href="servicios-diseno-web.html">Diseño Web WordPress</a>
-            <a href="servicios-ley-21719-proteccion-datos.html">Ley 21.719</a>
-            <a href="christian-chacon.html#portfolio">Proyectos</a>
-            <a href="blog.html">Blog</a>
-            <a href="christian-chacon.html">Sobre mí</a>
-        </div>
-        <div>
-            <h4>Contacto</h4>
-            <small>WhatsApp</small>
-            <p>+56 9 4783 9131</p>
-            <small>Email</small>
-            <p>christian.chacon.paez@gmail.com</p>
-        </div>
-        <div>
-            <h4>Redes</h4>
-            <a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank"
-                rel="noopener noreferrer">LinkedIn</a>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- Enlace al Script Modular (sin cambios) -->
     <script src="JS/main.js"></script>
