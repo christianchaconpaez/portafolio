@@ -1,0 +1,191 @@
+/* CHACÓN MARKETING V3.0 — Base V2.0 del cliente, corregida (tildes / ñ) + SEO/GEO en HTML */
+/* ============================================================
+  CHACÓN MARKETING - TU CSS
+  Como editar sin romper nada:
+  - Colores: cambia solo las variables en :root
+  - Bordes: todas las cards usan 12px, todos los botones usan 999px (pildora)
+  - No toques Bootstrap, todo lo tuyo esta aqui
+============================================================ */
+:root{
+  --negro:#111111;
+  --gris-claro:#f4f2ee;
+  --naranja:#e85d2a;
+  --azul:#2501c8;
+  --celeste:#51a9e4;
+  --amarillo:#f3db00;
+  --verde:#00bd1c;
+  --violeta:#8700d5;
+  --rojo:#e40000;
+  --borde:#e6e1da;
+  --radio-card:12px;
+  --radio-boton:999px;
+}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--negro);background:#fff;line-height:1.6}
+h1,h2,h3{letter-spacing:-0.02em;line-height:1.05}
+.section{padding:84px 0}
+.section-title{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:800;margin:12px 0 36px}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+.eyebrow-light{color:#ffb59a}
+.eyebrow-white{color:#f6f5f5}
+.section-dark{background:var(--negro);color:#fff}
+.section-light{background:var(--gris-claro)}
+.section-orange{background:var(--naranja)}
+
+
+/* BOTONES: todos naranja y pildora - tu pedido */
+.btn-pill{border-radius:var(--radio-boton)!important;padding-left:22px;padding-right:22px}
+.btn{border-radius:var(--radio-boton)}
+/* Todos los botones del sitio son naranjos, sin excepcion */
+.btn-dark,.btn-light,.btn-outline-dark{
+  background-color:var(--naranja)!important;
+  border-color:var(--naranja)!important;
+  color:#fff!important;
+}
+.btn-dark:hover,.btn-light:hover,.btn-outline-dark:hover{
+  background-color:#c94e1e!important;
+  border-color:#c94e1e!important;
+  color:#fff!important;
+}
+
+/* HEADER */
+.header{background:#fff;border-bottom:1px solid var(--borde)}
+.logo{font-weight:900;letter-spacing:-.02em;color:var(--negro)!important}
+.logo span{color:var(--naranja)}
+.nav-link{color:var(--negro)!important;font-weight:500}
+
+/* HERO */
+.hero{padding:72px 0 40px}
+.hero h1{font-size:clamp(2.0rem,6vw,4.5rem);font-weight:900}
+.hero h1 span{font-size:clamp(1.6rem,6vw,3.6rem);font-weight:900; color:var(--naranja)}
+.hero-sub{max-width:720px;font-size:1.15rem;color:#555;margin:20px 0 28px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0;color:#555}
+.hero-proof i{color:#ccc;font-style:normal}
+.hero-img{position:relative;border-radius:var(--radio-card);overflow:hidden;background:var(--gris-claro);min-height:280px;display:flex;align-items:center;justify-content:center;margin-top:20px}
+.hero-img img{width:100%;height:100%;object-fit:cover;border-radius:var(--radio-card)}
+.hero-img-placeholder{color:#888;text-align:center;padding:40px}
+
+/* PILDORAS INDUSTRIAS */
+.pill{border:1px solid var(--borde);border-radius:var(--radio-boton);padding:8px 16px;background:#fff;font-weight:500;font-size:.9rem}
+.industries{padding:10px 0 30px}
+.pill-orange{border:0px solid var(--borde);border-radius:var(--radio-boton);padding:8px 16px;background:#e85d2a;font-weight:500;font-size:.9rem;}
+.industries{padding:10px 0 30px}
+
+/* CARDS: todas 12px */
+.card-dolor,.service-card,.case-card,.testi,.step,.contact-form{border-radius:var(--radio-card)}
+.card-dolor{border:0px solid var(--borde);padding:28px;height:100%;background:var(--naranja)}
+.card-dolor h3{font-size:1.25rem;font-weight:700}
+.card-dolor-dark{background:var(--negro);color:#fff}
+
+.service-card{background:#e7d7ce;color:var(--negro);padding:32px;height:100%}
+.service-card .number{display:block;font-size:2.2rem;font-weight:900;color:#e85d2a;margin-bottom:12px}
+.service-card h3{font-size:1.4rem;font-weight:800}
+.result{border-top:1px solid var(--borde);padding-top:14px;margin-top:16px}
+.badge-alert{background:var(--naranja);color:#fff;border-radius:var(--radio-boton);padding:6px 12px;font-size:.75rem;font-weight:700;display:inline-block;margin-bottom:12px}
+.case-card{border:1px solid var(--borde);padding:28px;height:100%}
+.tag{border:1px solid var(--borde);border-radius:var(--radio-boton);padding:5px 12px;font-size:.8rem;display:inline-block;margin-bottom:14px}
+.big-result{font-size:1.8rem;font-weight:900;margin-top:16px}
+.big-result small{font-size:.9rem;font-weight:500;color:#666}
+.testi{background:#fff;padding:28px;height:100%}
+.testi p{font-size:1.05rem}
+.testi footer{margin-top:20px;color:#555}
+.step{border:1px solid var(--borde);padding:26px;height:100%;background:#fff}
+.step span{font-size:2rem;font-weight:900;color:var(--naranja)}
+.about-photo{background:#2a2a2a;border-radius:var(--radio-card);min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:4rem;font-weight:900;color:#fff;text-align:center}
+.about-photo small{font-size:.9rem;font-weight:400;color:#aaa}
+.timeline{list-style:none;padding:0;margin:24px 0}
+.timeline li{padding:10px 0;border-top:1px solid #333}
+
+/* FORMULARIO */
+.contact-form{border:1px solid var(--borde);padding:28px;background:#fff}
+.contact-form label{font-weight:600;margin:14px 0 6px;display:block}
+.contact-form .form-control,.contact-form .form-select{border-radius:var(--radio-card)!important;padding:12px 14px}
+.contact-form small{display:block;margin-top:12px;color:#777}
+.footer{border-top:1px solid var(--borde);padding:28px 0;font-size:.9rem}
+@media(max-width:768px){.section{padding:56px 0}}
+
+
+
+.text-orange {
+  color:#e85d2a!important;
+
+}
+
+.bg-orange {
+  background:var(--naranja)
+}
+
+
+/* Marco para capturas de portafolio */
+.portfolio-marco {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 22px 44px -12px rgba(11, 23, 48, 0.45);
+  line-height: 0;
+  margin-bottom: 1.5rem;
+}
+
+.card-dolor-orange{
+  border:0px solid; 
+  border-radius:24px;
+  padding:28px;
+  background:var(--naranja)
+}
+
+/* Portafolio: imagen desde cada card (HTML) o, si falta, imagen por defecto. Ruta relativa al CSS: css/ -> ../img/portfolio/ */
+.portafolio-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 0;
+  background-color: #222;
+  background-image: var(--portafolio-bg, url("../img/portfolio/safesmart.webp"));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.portafolio-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.portafolio-card > * {
+  position: relative;
+  z-index: 1;
+}
+.portafolio-card h3,
+.portafolio-card p {
+  color: #fff;
+}
+.portafolio-card .tag {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.bg-azul{
+  background-color: var(--azul)
+}
+
+.bg-celeste{
+  background-color: var(--celeste)
+}
+
+.bg-amarillo{
+  background-color: var(--amarillo)
+}
+
+.bg-verde{
+  background-color: var(--verde)
+}
+
+.bg-violeta{
+  background-color: var(--violeta)
+}
+
+.bg-rojo{
+  background-color: var(--rojo)
+}
