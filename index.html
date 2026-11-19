@@ -23,12 +23,12 @@
   <meta property="og:url" content="https://chaconmarketing.cl/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chacón Marketing | Consultoría Marketing B2B en Chile | SEO, GEO y Diseño Web">
-  
+
   <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="img/favicon-chacon-marketing-blanco.svg">
-    <link rel="alternate icon" href="img/favicon-chacon-marketing-blanco.svg">
-    
-    <meta name="twitter:description"
+  <link rel="icon" type="image/svg+xml" href="img/favicon-chacon-marketing-blanco.svg">
+  <link rel="alternate icon" href="img/favicon-chacon-marketing-blanco.svg">
+
+  <meta name="twitter:description"
     content="Consultoría de marketing B2B en Santiago, Chile. Ordenamos tu propuesta comercial, posicionamos tu empresa en Google y en las IAs (SEO + GEO) y diseñamos sitios web B2B que generan consultas calificadas. Agenda tu diagnóstico gratuito de 20 minutos.">
   <script
     type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Chacón Marketing","url":"https://chaconmarketing.cl/","description":"Consultoría de marketing B2B en Santiago, Chile. Ordenamos tu propuesta comercial, posicionamos tu empresa en Google y en las IAs (SEO + GEO) y diseñamos sitios web B2B que generan consultas calificadas. Agenda tu diagnóstico gratuito de 20 minutos.","areaServed":"Chile","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressRegion":"Región Metropolitana","addressCountry":"CL"},"founder":{"@type":"Person","name":"Christian Chacón Páez","jobTitle":"Consultor de Marketing B2B"},"email":"hola@chaconmarketing.cl","telephone":"+56 9 4783 9131","priceRange":"$$","knowsAbout":["Marketing B2B","SEO","GEO","Diseño Web B2B","Ley 21.719","Google Ads","LinkedIn B2B"]}</script>
@@ -71,20 +71,30 @@
     <!-- HERO - Para cambiar el titular, edita el <h1> -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow">Consultoría Marketing B2B - Santiago, Chile</p>
-        <h1>Tu web debe generar consultas.<br><span>No solo existir.</span></h1>
-        <p class="lead hero-sub">Ayudo a empresas B2B en Chile a ordenar su propuesta comercial, posicionarse en Google
-          y en las IAs, y convertir su sitio en una fuente constante de clientes que sí valen la pena.</p>
-        <div class="d-flex flex-wrap gap-3">
-          <a href="#contacto" class="btn btn-dark btn-pill btn-lg">Agenda tu diagnóstico</a>
-          <a href="#casos" class="btn btn-outline-dark btn-pill btn-lg">Ver casos reales</a>
+        <div class="div"><p class="eyebrow">Consultoría Marketing B2B</p>
+            <h1>Tu web debe generar consultas.<br><span>No solo existir.</span></h1></div>
+        <div class="row">
+          <div class="col-lg-6">
+            
+            <p class="lead hero-sub">Ayudo a empresas B2B en Chile a ordenar su propuesta comercial, posicionarse en
+              Google
+              y en las IAs, y convertir su sitio en una fuente constante de clientes que sí valen la pena.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#contacto" class="btn btn-dark btn-pill btn-lg">Agenda tu diagnóstico</a>
+              <a href="#casos" class="btn btn-outline-dark btn-pill btn-lg">Ver casos reales</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <img class="img-fluid p-0 m-0" src="img/laptop-embudo-de-marketing.webp" alt="">
+          </div>
+
         </div>
-        <div class="hero-proof">
-          <span><strong>Cikbus</strong> +33% retención</span><i>•</i>
-          <span><strong>Hidrosistemas</strong> / Soluciones Zeus</span><i>•</i>
-          <span><strong>Emgesa</strong> - minería</span>
-        </div>
-        
+
+
+
+
+
       </div>
     </section>
 
@@ -224,7 +234,8 @@
     <section class="section section-light">
       <div class="container">
         <p class="eyebrow">Testimonios</p>
-        <h2 class="section-title">La confianza de quienes<br>han <span class="text-orange">trabajado conmigo.</span></h2>
+        <h2 class="section-title">La confianza de quienes<br>han <span class="text-orange">trabajado conmigo.</span>
+        </h2>
         <div class="row g-4">
           <div class="col-lg-4">
             <blockquote class="testi">
@@ -310,204 +321,221 @@
 
 
 
-<!-- CONTACTO -->
-<section id="contacto" class="section bg-orange">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-6">
-        <p class="eyebrow-white">Hablemos de tu proyecto</p>
-        <h2 class="section-title">Revisamos tu presencia digital sin costo?</h2>
-        <p class="lead">Conversación de 20 minutos, sin compromiso. Analizamos que esta frenando tus consultas y
-          definimos los primeros pasos.</p>
-        <p><strong>Email:</strong> hola@chaconmarketing.cl<br><strong>WhatsApp:</strong> +56 9 4783
-          9131<br><strong>Ubicación:</strong> Santiago de Chile - atención remota a todo el país</p>
-      </div>
-      <div class="col-lg-6">
-
-        <!-- Formulario -->
-        <form class="contact-form" id="form-contacto" action="javascript:void(0);" method="post" onsubmit="return false;">
-          <label>Nombre *</label>
-          <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
-
-          <label>Apellido *</label>
-          <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Tu apellido" required>
-
-          <label>Teléfono *</label>
-          <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+56 9 1234 5678"
-            required>
-
-          <label>Correo *</label>
-          <input type="email" id="correo" name="correo" class="form-control" placeholder="tu@empresa.cl" required>
-
-          <label>Web</label>
-          <input type="text" id="web" name="web" class="form-control" placeholder="tuempresa.cl" inputmode="url"
-            autocomplete="url">
-
-          <label>Qué te frena hoy?</label>
-          <select id="servicio" name="servicio" class="form-select">
-            <option>Mi web no genera consultas</option>
-            <option>Nadie entiende que hacemos</option>
-            <option>Dependemos del boca a boca</option>
-            <option>Necesito adecuar mi web a la Ley 21.719</option>
-            <option>Quiero cotizar una web nueva</option>
-          </select>
-
-          <style>
-            /* Checkbox más oscuro para que se vea sobre el fondo naranja */
-            #consentimiento {
-              width: 20px;
-              height: 20px;
-              accent-color: #333333;
-              border: 2px solid #333333;
-              background-color: #ffffff;
-              cursor: pointer;
-            }
-
-            #consentimiento:checked {
-              background-color: #333333;
-              border-color: #333333;
-            }
-          </style>
-
-          <div class="form-check mt-3">
-            <input class="form-check-input" type="checkbox" id="consentimiento" name="consentimiento">
-            <label class="form-check-label" for="consentimiento">
-              Acepto que me contactes para responder a esta solicitud y enviarme información relacionada, conforme a
-              la Ley N° 21.719.
-            </label>
+    <!-- CONTACTO -->
+    <section id="contacto" class="section bg-orange">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <p class="eyebrow-white">Hablemos de tu proyecto</p>
+            <h2 class="section-title">Revisamos tu presencia digital sin costo?</h2>
+            <p class="lead">Conversación de 20 minutos, sin compromiso. Analizamos que esta frenando tus consultas y
+              definimos los primeros pasos.</p>
+            <p><strong>Email:</strong> hola@chaconmarketing.cl<br><strong>WhatsApp:</strong> +56 9 4783
+              9131<br><strong>Ubicación:</strong> Santiago de Chile - atención remota a todo el país</p>
           </div>
+          <div class="col-lg-6">
 
-          <button type="submit" class="btn btn-dark btn-pill btn-lg w-100 mt-3">Solicitar mi diagnóstico</button>
-          <small>Te respondo en menos de 24 horas. Tus datos se tratan conforme a la Ley N° 21.719.</small>
-        </form>
+            <!-- Formulario -->
+            <form class="contact-form" id="form-contacto" action="javascript:void(0);" method="post"
+              onsubmit="return false;">
+              <label>Nombre *</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
 
-        <script>
-          document.getElementById("form-contacto").addEventListener("submit", async function (e) {
-            e.preventDefault();
+              <label>Apellido *</label>
+              <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Tu apellido" required>
 
-            // Detecta sola la página de donde viene la consulta
-            let pagina = window.location.pathname.split("/").pop();
-            if (!pagina) pagina = "index.html";
+              <label>Teléfono *</label>
+              <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+56 9 1234 5678"
+                required>
 
-            // Normaliza la web: si escribe chaconmarketing.cl, lo guarda como https://chaconmarketing.cl
-            let webValor = document.getElementById("web").value.trim();
-            if (webValor && !webValor.startsWith("http://") && !webValor.startsWith("https://")) {
-              webValor = "https://" + webValor;
-            }
+              <label>Correo *</label>
+              <input type="email" id="correo" name="correo" class="form-control" placeholder="tu@empresa.cl" required>
 
-            const datos = {
-              nombre: document.getElementById("nombre").value.trim(),
-              apellido: document.getElementById("apellido").value.trim(),
-              telefono: document.getElementById("telefono").value.trim(),
-              correo: document.getElementById("correo").value.trim(),
-              web: webValor,
-              servicio: document.getElementById("servicio").value,
-              consentimiento: document.getElementById("consentimiento").checked ? "SÍ" : "NO",
-              pagina: pagina
-            };
+              <label>Web</label>
+              <input type="text" id="web" name="web" class="form-control" placeholder="tuempresa.cl" inputmode="url"
+                autocomplete="url">
 
-            // Abrimos la pestaña al tiro, para que el navegador no la bloquee como popup
-            const pestanaCalendar = window.open("", "_blank");
+              <label>Qué te frena hoy?</label>
+              <select id="servicio" name="servicio" class="form-select">
+                <option>Mi web no genera consultas</option>
+                <option>Nadie entiende que hacemos</option>
+                <option>Dependemos del boca a boca</option>
+                <option>Necesito adecuar mi web a la Ley 21.719</option>
+                <option>Quiero cotizar una web nueva</option>
+              </select>
 
-            try {
-              // Se manda como formulario, que es lo que Apps Script lee mejor
-              const formData = new URLSearchParams(datos);
+              <style>
+                /* Checkbox más oscuro para que se vea sobre el fondo naranja */
+                #consentimiento {
+                  width: 20px;
+                  height: 20px;
+                  accent-color: #333333;
+                  border: 2px solid #333333;
+                  background-color: #ffffff;
+                  cursor: pointer;
+                }
 
-              await fetch("https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec", {
-                method: "POST",
-                mode: "no-cors",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: formData.toString()
+                #consentimiento:checked {
+                  background-color: #333333;
+                  border-color: #333333;
+                }
+              </style>
+
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="consentimiento" name="consentimiento">
+                <label class="form-check-label" for="consentimiento">
+                  Acepto que me contactes para responder a esta solicitud y enviarme información relacionada, conforme a
+                  la Ley N° 21.719.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-dark btn-pill btn-lg w-100 mt-3">Solicitar mi diagnóstico</button>
+              <small>Te respondo en menos de 24 horas. Tus datos se tratan conforme a la Ley N° 21.719.</small>
+            </form>
+
+            <script>
+              document.getElementById("form-contacto").addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                // Detecta sola la página de donde viene la consulta
+                let pagina = window.location.pathname.split("/").pop();
+                if (!pagina) pagina = "index.html";
+
+                // Normaliza la web: si escribe chaconmarketing.cl, lo guarda como https://chaconmarketing.cl
+                let webValor = document.getElementById("web").value.trim();
+                if (webValor && !webValor.startsWith("http://") && !webValor.startsWith("https://")) {
+                  webValor = "https://" + webValor;
+                }
+
+                const datos = {
+                  nombre: document.getElementById("nombre").value.trim(),
+                  apellido: document.getElementById("apellido").value.trim(),
+                  telefono: document.getElementById("telefono").value.trim(),
+                  correo: document.getElementById("correo").value.trim(),
+                  web: webValor,
+                  servicio: document.getElementById("servicio").value,
+                  consentimiento: document.getElementById("consentimiento").checked ? "SÍ" : "NO",
+                  pagina: pagina
+                };
+
+                // Abrimos la pestaña al tiro, para que el navegador no la bloquee como popup
+                const pestanaCalendar = window.open("", "_blank");
+
+                try {
+                  // Se manda como formulario, que es lo que Apps Script lee mejor
+                  const formData = new URLSearchParams(datos);
+
+                  await fetch("https://script.google.com/macros/s/AKfycbwbhfEsL_R0wwYCIZD4l_mK0yb6z35tBL6QyH4bwdxMfsKtwuoIfczwz5lQcQSQLPLgmw/exec", {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: formData.toString()
+                  });
+
+                  // Ya se guardó en Sheets, mandamos Calendar a la pestaña nueva
+                  if (pestanaCalendar) {
+                    pestanaCalendar.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
+                  } else {
+                    window.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
+                  }
+
+                  // Dejamos el formulario limpio y con mensaje en tu página
+                  e.target.reset();
+                  alert("¡Listo! Te abrimos Calendar en otra pestaña para que reserves tu hora.");
+
+                } catch (error) {
+                  if (pestanaCalendar) {
+                    pestanaCalendar.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
+                  } else {
+                    window.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
+                  }
+                }
+
               });
+            </script>
 
-              // Ya se guardó en Sheets, mandamos Calendar a la pestaña nueva
-              if (pestanaCalendar) {
-                pestanaCalendar.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
-              } else {
-                window.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
-              }
-
-              // Dejamos el formulario limpio y con mensaje en tu página
-              e.target.reset();
-              alert("¡Listo! Te abrimos Calendar en otra pestaña para que reserves tu hora.");
-
-            } catch (error) {
-              if (pestanaCalendar) {
-                pestanaCalendar.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
-              } else {
-                window.location.href = "https://calendar.app.google/Gyuwu4YgdzC3TCHa6";
-              }
-            }
-
-          });
-        </script>
-
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
   </main>
 
-<!-- FOOTER -->
-<footer style="background-color: #000000; color: #ffffff; padding: 60px 0 30px 0;">
-  <div class="container">
-    <!-- Logo centrado -->
-    <div style="text-align: center; margin-bottom: 40px;">
-      <a href="index.html" style="color: #ffffff; text-decoration: none; font-size: 28px; font-weight: 400; letter-spacing: 1px;">
-        CHACON<span style="font-weight: 800;">MARKETING</span>
-      </a>
+  <!-- FOOTER -->
+  <footer style="background-color: #000000; color: #ffffff; padding: 60px 0 30px 0;">
+    <div class="container">
+      <!-- Logo centrado -->
+      <div style="text-align: center; margin-bottom: 40px;">
+        <a href="index.html"
+          style="color: #ffffff; text-decoration: none; font-size: 28px; font-weight: 400; letter-spacing: 1px;">
+          CHACON<span style="font-weight: 800;">MARKETING</span>
+        </a>
+      </div>
+
+      <div class="row g-5">
+        <!-- Tagline -->
+        <div class="col-md-3">
+          <p style="color: #ffffff; font-size: 15px; line-height: 1.6; margin: 0;">
+            Transformando servicios excelentes en negocios visibles y creíbles.
+          </p>
+        </div>
+
+        <!-- Servicios -->
+        <div class="col-md-3">
+          <h5
+            style="color: #ffffff; font-size: 17px; font-weight: 700; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #FF6B00; display: inline-block;">
+            Servicios</h5>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><a href="servicios-marketing-b2b.html"
+                style="color: #ffffff; text-decoration: none; font-size: 14px;">Marketing B2B</a></li>
+            <li><a href="servicios-diseno-web.html"
+                style="color: #ffffff; text-decoration: none; font-size: 14px;">Diseño Web WordPress</a></li>
+            <li><a href="servicios-ley-21719-proteccion-datos.html"
+                style="color: #ffffff; text-decoration: none; font-size: 14px;">Ley 21.719</a></li>
+            <li><a href="index.html#proyectos"
+                style="color: #ffffff; text-decoration: none; font-size: 14px;">Proyectos</a></li>
+            <li><a href="blog.html" style="color: #ffffff; text-decoration: none; font-size: 14px;">Blog</a></li>
+            <li><a href="christian-chacon.html" style="color: #ffffff; text-decoration: none; font-size: 14px;">Sobre
+                mí</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="col-md-3">
+          <h5
+            style="color: #ffffff; font-size: 17px; font-weight: 700; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #FF6B00; display: inline-block;">
+            Contacto</h5>
+          <p style="margin: 0 0 18px 0; line-height: 1.6;">
+            <small style="color: #cccccc; letter-spacing: 1px;">WHATSAPP</small><br>
+            <a href="https://wa.me/56947839131" target="_blank"
+              style="color: #ffffff; text-decoration: none; font-size: 14px;">+56 9 4783 9131</a>
+          </p>
+          <p style="margin: 0; line-height: 1.6;">
+            <small style="color: #cccccc; letter-spacing: 1px;">EMAIL</small><br>
+            <a href="mailto:christian.chacon.paez@gmail.com"
+              style="color: #ffffff; text-decoration: none; word-break: break-all; font-size: 14px;">christian.chacon.paez@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- Redes -->
+        <div class="col-md-3">
+          <h5
+            style="color: #ffffff; font-size: 17px; font-weight: 700; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #FF6B00; display: inline-block;">
+            Redes</h5>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank"
+                style="color: #ffffff; text-decoration: none; font-size: 14px;">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div style="border-top: 1px solid #333333; margin-top: 40px; padding-top: 20px; text-align: center;">
+        <small style="color: #999999;">© 2026 Chacón Marketing · Santiago de Chile · Tus datos se tratan conforme a la
+          Ley N° 21.719</small>
+      </div>
     </div>
-
-    <div class="row g-5">
-      <!-- Tagline -->
-      <div class="col-md-3">
-        <p style="color: #ffffff; font-size: 15px; line-height: 1.6; margin: 0;">
-          Transformando servicios excelentes en negocios visibles y creíbles.
-        </p>
-      </div>
-
-      <!-- Servicios -->
-      <div class="col-md-3">
-        <h5 style="color: #ffffff; font-size: 17px; font-weight: 700; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #FF6B00; display: inline-block;">Servicios</h5>
-        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-          <li><a href="servicios-marketing-b2b.html" style="color: #ffffff; text-decoration: none; font-size: 14px;">Marketing B2B</a></li>
-          <li><a href="servicios-diseno-web.html" style="color: #ffffff; text-decoration: none; font-size: 14px;">Diseño Web WordPress</a></li>
-          <li><a href="servicios-ley-21719-proteccion-datos.html" style="color: #ffffff; text-decoration: none; font-size: 14px;">Ley 21.719</a></li>
-          <li><a href="index.html#proyectos" style="color: #ffffff; text-decoration: none; font-size: 14px;">Proyectos</a></li>
-          <li><a href="blog.html" style="color: #ffffff; text-decoration: none; font-size: 14px;">Blog</a></li>
-          <li><a href="christian-chacon.html" style="color: #ffffff; text-decoration: none; font-size: 14px;">Sobre mí</a></li>
-        </ul>
-      </div>
-
-      <!-- Contacto -->
-      <div class="col-md-3">
-        <h5 style="color: #ffffff; font-size: 17px; font-weight: 700; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #FF6B00; display: inline-block;">Contacto</h5>
-        <p style="margin: 0 0 18px 0; line-height: 1.6;">
-          <small style="color: #cccccc; letter-spacing: 1px;">WHATSAPP</small><br>
-          <a href="https://wa.me/56947839131" target="_blank" style="color: #ffffff; text-decoration: none; font-size: 14px;">+56 9 4783 9131</a>
-        </p>
-        <p style="margin: 0; line-height: 1.6;">
-          <small style="color: #cccccc; letter-spacing: 1px;">EMAIL</small><br>
-          <a href="mailto:christian.chacon.paez@gmail.com" style="color: #ffffff; text-decoration: none; word-break: break-all; font-size: 14px;">christian.chacon.paez@gmail.com</a>
-        </p>
-      </div>
-
-      <!-- Redes -->
-      <div class="col-md-3">
-        <h5 style="color: #ffffff; font-size: 17px; font-weight: 700; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #FF6B00; display: inline-block;">Redes</h5>
-        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-          <li><a href="https://www.linkedin.com/in/christian-chacon-paez/" target="_blank" style="color: #ffffff; text-decoration: none; font-size: 14px;">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Barra inferior -->
-    <div style="border-top: 1px solid #333333; margin-top: 40px; padding-top: 20px; text-align: center;">
-      <small style="color: #999999;">© 2026 Chacón Marketing · Santiago de Chile · Tus datos se tratan conforme a la Ley N° 21.719</small>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
